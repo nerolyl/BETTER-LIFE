@@ -7,3 +7,6 @@
     line-height: calc (1em+0.5rem);
     position: relative;
 }
+body{
+    background-color: #EBEAE1;
+}
