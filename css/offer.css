@@ -1,0 +1,67 @@
+.sub_titel_bg{
+    background-color:#ffffff;
+    margin-right: 5rem;
+    margin-left: 5rem;
+    margin-top: 3rem; 
+    border-radius: 1.5625rem;
+    height: 7rem;
+}
+.sub_titel {
+    font-size: 3.2rem;
+    padding-left: 5rem;
+    padding-top: 1rem;
+    color:#5A246B;
+
+}
+.imgs_OFFER_contianer{
+display: flex;
+padding-top: 2rem;
+float:left;
+margin-bottom: 2rem;
+animation-name:nero ;
+position: relative;
+animation-duration: 5s;
+
+}
+.img_OFFER img{
+    max-width: 100%;
+    
+}
+.img_txt_OFFER_1{
+    padding-left: 3rem;
+    padding-right: 5rem;
+  
+}
+.img_txt_OFFER_2{
+    padding-left: rem;
+    padding-right: 5rem;
+
+}
+.img_txt_OFFER_3{
+
+    padding-right: 3rem;
+}
+.text_OFFER{
+    font-family: Abril Fatface;
+    color: #5A246B;
+    font-size: 1.3rem;
+    max-width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@keyframes nero {
+0% { right: -2000px ;}
+25%{ right: -500px;}
+50%{ right: -100px;}
+75%{ right: 0px;}
+100%{ left: 0px;}
+
+ 
+}
+@media (prefers-reduced-motion: no-preference) {
+    div {
+      animation-timeline: view();
+      ;
+    }
+  }
