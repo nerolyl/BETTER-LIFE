@@ -1,0 +1,50 @@
+.register_imgs{
+    display: flex;
+    padding-top: 2rem;
+    z-index: -1;
+
+}
+.register_imgs img {
+ max-width: 75%;
+}
+.register_img{
+    padding-left: 10%;
+    margin-right: -13%;
+}
+.input_con{
+    padding-top: 7%;
+    padding-left: 50%;
+    position: absolute;
+    
+}
+.input_siz{
+  
+    height: 2rem;
+    width: 250%;
+}
+.input_con2{
+    padding-top: 23%;
+    padding-left: 50%;
+    position: absolute;
+}
+.input_siz1{
+    width: 8.5rem;
+}
+
+.radio_f{
+    padding-top: 28%;
+    padding-left: 50%;
+    position: absolute;
+    
+}
+#FEMALE{
+    margin-left: 1REM;
+
+}
+.bb{
+    position: absolute;
+    padding-top: 35%;
+    padding-left: 70%;
+}
+
+
