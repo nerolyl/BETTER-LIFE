@@ -1,0 +1,4 @@
+UPDATE users
+SET weight = 65
+WHERE id =2 ;
+SELECT * FROM username;

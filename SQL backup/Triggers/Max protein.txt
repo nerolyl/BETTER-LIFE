@@ -1,0 +1,3 @@
+CREATE TRIGGER `insert_max_protein` 
+BEFORE INSERT ON `users`
+ FOR EACH ROW SET NEW.max_protein = (NEW.weight / 0.8)

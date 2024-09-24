@@ -1,0 +1,2 @@
+CREATE TRIGGER `update_max_carbs` BEFORE UPDATE ON `users`
+ FOR EACH ROW SET NEW.max_carbs = (NEW.max_calorie * 0.65) / 4

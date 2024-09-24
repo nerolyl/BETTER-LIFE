@@ -25,16 +25,16 @@
             </div>
             <div class="inputs">
                 <form action="includes/formhandler.inc.php" method="post">
-                    <input type="text"placeholder="Username" name="username"> <br>
-                    <input type="text" name="email" id="email" placeholder="Email"> <br>
-                    <input type="password" name="pwd" id="pwd" placeholder="Password"><br>
+                    <input type="text"placeholder="Username" name="username" required> <br>
+                    <input type="text" name="email" id="email" placeholder="Email" required> <br>
+                    <input type="password" name="pwd" id="pwd" placeholder="Password" required><br>
                     <!--<input type="password" name="" id="" placeholder="Retype Password"><br>-->
-                    <input type="Weight" name="weight" placeholder="Weight (kg)">
-                    <input type="Hight" name="height" placeholder="Height (cm)">
-                    <input type="Age"  name="age" placeholder="Age">
-                    <input type="radio" id="male" name="gender">
+                    <input type="Weight" name="weight" placeholder="Weight (kg)" required>
+                    <input type="Hight" name="height" placeholder="Height (cm)" required>
+                    <input type="Age"  name="age" placeholder="Age" required>
+                    <input type="radio" id="male" name="gender" value=(-5)>
                     <label class="label_stayle" for="male" id="">MALE</label>
-                    <input type="radio" id="FEMALE" name="gender">
+                    <input type="radio" id="FEMALE" name="gender" value=(161)>
                     <label class="label_stayle" for="FEMALE" id="">FEMALE</label><br>
                     <div class="register_btn">
                         <a href="#">Login</a>

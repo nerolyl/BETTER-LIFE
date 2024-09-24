@@ -1,0 +1,6 @@
+CREATE TRIGGER `before_max_cal` BEFORE UPDATE ON `users`
+ FOR EACH ROW SET NEW.max_calorie = (NEW.weight * 10) + (NEW.height * 6.25) - (NEW.age * 5) - (NEW.gender)
+
+CREATE TRIGGER `insert_max_cal` 
+BEFORE INSERT ON `users`
+ FOR EACH ROW SET NEW.max_calorie = (NEW.weight * 10) + (NEW.height * 6.25) - (NEW.age * 5) - (NEW.gender)
