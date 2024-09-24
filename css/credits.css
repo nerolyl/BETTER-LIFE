@@ -1,0 +1,167 @@
+body{
+    background-color : #331031;
+    font-family: Abril Fatface;
+    color: #D85C36;
+}
+.credits_img{
+    margin-top: -2rem;
+    margin-bottom: 2rem;
+}
+.credits_img img{
+    width: 100vw;
+    height: 100vh;
+}
+.anmi{
+    animation-name: left_1;
+}
+.anmi2{
+    animation-name: right_1;
+}
+.anmi3{
+    animation-name: right_2;
+}
+.anmi4{
+    animation-name: left_2;
+}
+.turki h1{
+font-size: 5rem;
+margin-left: 6rem;
+}
+.turki h2{
+    font-size: 4rem;
+    margin-left: 45rem;
+    margin-top: 2rem;
+}
+.rakan{
+    margin-top: 13rem;
+}
+.rakan h1{
+    font-size: 5rem;
+    margin-left: 6rem;
+}
+.rakan h2{
+        font-size: 4rem;
+        margin-left: 24rem;
+        margin-top: 2rem;
+}
+.coders{
+    margin-top: 13rem;
+}
+.coders h1{
+    font-size: 5rem;
+    margin-left: 5rem;
+    margin-bottom: 2rem;
+}
+.coders h2{
+    font-size: 4rem;
+    margin-left: 30rem;
+}
+.Supervisor{
+    margin-top: 13rem;
+    margin-bottom: 4rem;
+}
+.Supervisor h1{
+    font-size: 5rem;
+    margin-left: 5rem;
+    margin-bottom: 2rem;
+}
+.Supervisor h2{
+    font-size: 4rem;
+    margin-left: 30rem;
+}
+/* left to right*/
+@keyframes left_1 {
+    0% { left: -2000px ;}
+    25%{ left: -500px;}
+    50%{ left: -100px;}
+    75%{ left: 0px;}
+    100%{ right: 0px;}
+    
+     
+}
+@media (prefers-reduced-motion: no-preference) {
+        div {
+          animation-timeline: view();
+          ;
+        }
+}
+
+/* right to left*/
+@keyframes right_1 {
+        0% { right: -2000px ;}
+        25%{ right: -500px;}
+        50%{ right: -100px;}
+        75%{ right: 0px;}
+        100%{ right: 0px;}
+        
+         
+}
+@media (prefers-reduced-motion: no-preference) {
+            div {
+              animation-timeline: view();
+              ;
+            }
+}
+
+/* right to left 1*/
+@keyframes right_2 {
+            0% { right: -500px ;}
+            25%{ right: 0px;}
+            
+             
+}
+@media (prefers-reduced-motion: no-preference) {
+                div {
+                  animation-timeline: view();
+                  ;
+                }
+}
+
+/* left to right 1*/
+@keyframes left_2 {
+    0% { left: -500px ;}
+    25%{ left: -0px;}
+        
+    }
+@media (prefers-reduced-motion: no-preference) {
+        div {
+          animation-timeline: view();
+          ;
+        }
+      }
+@media (min-width :1701px ){
+    .turki h1{
+        font-size: 7rem;
+        margin-left: 6rem;
+        }
+        .turki h2{
+            font-size: 6rem;
+            margin-left: 65rem;
+            margin-top: 4rem;
+        }
+        .rakan h1{
+            font-size: 7rem;
+            margin-left: 6rem;
+        }
+        .rakan h2{
+                font-size: 6rem;
+                margin-left: 35rem;
+                margin-top: 4rem;
+        }
+        .coders h1{
+            font-size: 7rem;
+            margin-left: 6rem;
+        }
+        .coders h2{
+            font-size: 6rem;
+            margin-left: 43rem;
+        }
+        .Supervisor h1{
+            font-size: 7rem;
+            margin-left: 6rem;
+        }
+        .Supervisor h2{
+            font-size: 6rem;
+            margin-left: 43rem;
+        }
+      }
