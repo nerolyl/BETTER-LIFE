@@ -1,0 +1,221 @@
+
+.register_imgs {
+    display: flex;
+    max-width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 3%;
+    
+}
+.register_imgs img{
+    width: 30rem;
+    height: 41rem;    
+}
+
+.inputs{
+    position: absolute;
+    margin-left: 32.5rem;
+    margin-top: 6rem;
+    
+}
+.label_stayle{
+    font-size: rem;
+}
+input[type=text]{
+    padding-left: 0.5rem;
+    margin: 0.5rem 0rem;
+    border-radius: 1.5rem;
+    font-weight: bold;
+    font-family: Abril Fatface;
+    font-size: 2rem;
+    color: #5A246B;
+    border: 0px ;
+    
+
+}
+input[type=Email]{
+    padding-left: 0.5rem;
+    margin: 0.5rem 0rem;
+    border-radius: 1.5rem;
+    font-weight: bold;
+    font-family: Abril Fatface;
+    font-size: 2rem;
+    color: #5A246B;
+    border: 0px ;
+    
+}
+input[type=Password]{
+    padding-left: 0.5rem;
+    margin: 0.5rem 0rem;
+    border-radius: 1.5rem;
+    font-family: Abril Fatface;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #5A246B;
+    border: 0px ;
+}
+input[type=Weight]{
+    border-radius: 1.5rem;
+    color: #5A246B;
+    border: 0px ;
+    font-weight: bold;
+    font-family: Abril Fatface;
+    font-size: 0.8rem;
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+    margin-top: 0.5rem;
+}
+input[type=Hight]{
+    border-radius: 1.5rem;
+    color: #5A246B;
+    border: 0px ;
+    font-weight: bold;
+    font-family: Abril Fatface;
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+}
+input[type=Age]{
+    padding: 0.5rem;
+    border-radius: 1.5rem;
+    color: #5A246B;
+    border: 0px ;
+    font-weight: bold;
+    font-family: Abril Fatface;
+    font-size: 0.8rem;
+    
+}
+input[type=radio]{
+    margin: 0.5rem ;
+}
+
+.register_btn{
+    display: flex;
+    margin-top: 3rem;
+    margin-left: 5rem;
+    align-items: center;
+}
+.register_btn button {
+    font-family: Abril Fatface;
+    font-size: 1.5rem;
+    width: 10rem;
+    height: 2rem;
+    border-radius: 1.5rem;
+    border: 0px ;
+    background-color: #5A246B;
+    color: #fff;
+}
+.label_stayle{
+ color: #5A246B;
+ font-family: Abril Fatface;
+}
+.register_btn a{
+    font-size: 1.5rem;
+    padding-right: 5rem;
+}
+/* others monitor */
+@media (min-width :1701px ){
+    .register_imgs{
+        margin-top: 1%;
+    }
+    .register_imgs img{
+        width: 40rem;
+        height: 55rem;    
+    }
+    .inputs{
+        margin-left: 43rem;
+        margin-top: 8rem;
+    }
+    input[type=text]{
+        font-size: 2.7rem;
+    }
+    input[type=Email]{
+        font-size: 2.7rem;
+    }
+    input[type=Password]{
+        font-size: 2.7rem;
+    }
+    input[type=Weight]{
+        
+        font-size: 1.2rem;
+       
+    }
+    input[type=Hight]{
+        font-size: 1.2rem;
+    }
+    input[type=Age]{
+
+        font-size: 1.2rem;
+        
+    }
+    input[type=radio]{
+        margin: 1rem ;
+    }
+    .register_btn button {
+        font-size: 2.5rem;
+        width: 15rem;
+        height: 4rem;
+        border-radius: 2rem;
+    }
+    .register_btn a{
+        font-size: 2rem;
+        padding-right: 5rem;
+    }
+    .label_stayle{
+        font-size: 1.5rem;
+    }
+}
+/* nero monitor */
+@media(min-width: 2500px){
+    .register_imgs{
+        margin-top: 4%;
+    }
+    .register_imgs img{
+        width: 50rem;
+        height: 65rem;    
+    }
+    .inputs{
+        margin-left: 54rem;
+        margin-top: 9rem;
+    }
+    input[type=text]{
+        font-size: 3.4rem;
+    }
+    input[type=Email]{
+        font-size: 3.4rem;
+    }
+    input[type=Password]{
+        font-size: 3.4rem;
+    }
+    input[type=Weight]{
+        
+        font-size: 1.6rem;
+       
+    }
+    input[type=Hight]{
+        font-size: 1.6rem;
+    }
+    input[type=Age]{
+
+        font-size: 1.6rem;
+        
+    }
+    input[type=radio]{
+        margin: 1.5rem ;
+    }
+    .register_btn{
+        margin-left: 10rem;
+    }
+    .register_btn button {
+        font-size: 3rem;
+        width: 15rem;
+        height: 4rem;
+        border-radius: 2rem;
+    }
+    .register_btn a{
+        font-size: 2.5rem;
+        padding-right: 8rem;
+    }
+    .label_stayle{
+        font-size: 1.8rem;
+    }
+}
