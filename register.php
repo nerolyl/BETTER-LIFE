@@ -26,7 +26,7 @@
             <div class="inputs">
                 <form action="includes/formhandler.inc.php" method="post">
                     <input type="text"placeholder="Username" name="username" required> <br>
-                    <input type="text" name="email" id="email" placeholder="Email" required> <br>
+                    <input type="email" name="email" id="email" placeholder="Email" required> <br>
                     <input type="password" name="pwd" id="pwd" placeholder="Password" required><br>
                     <!--<input type="password" name="" id="" placeholder="Retype Password"><br>-->
                     <input type="Weight" name="weight" placeholder="Weight (kg)" required>
