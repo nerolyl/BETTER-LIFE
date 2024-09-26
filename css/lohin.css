@@ -41,13 +41,13 @@ input[type=Password]{
     border: 0px ;
 }
 
-.register_btn{
+.login_btn{
     display: flex;
     margin-top: 3rem;
     margin-left: 5rem;
     align-items: center;
 }
-.register_btn button {
+.login_btn button{
     font-family: Abril Fatface;
     font-size: 1.5rem;
     width: 10rem;
@@ -56,9 +56,15 @@ input[type=Password]{
     border: 0px ;
     background-color: #5A246B;
     color: #fff;
+    
 }
+.btn1:hover {
+    background-color: #D85C36;
+    color: white;
+  }
 
-.register_btn a{
+.login_btn a{
     font-size: 1.5rem;
-    padding-right: 5rem;
+    padding-right: 3rem;
+    text-decoration: none;
 }
