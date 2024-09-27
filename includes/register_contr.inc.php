@@ -47,3 +47,4 @@ function is_email_taken(object $pdo,string $email) {
 
 }
 
+

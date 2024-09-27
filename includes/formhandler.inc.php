@@ -34,6 +34,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
 
         if ($error) {
             $_SESSION["error_register"] = $error;
+
             header("Location: ../register.php");
             die();
         }
@@ -54,7 +55,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
         $pdo = null;
         $stmt = null; 
 
-        header("Location: ../register.php");
+        header("Location: ../Login.php");
+
+    
 
         die();
 

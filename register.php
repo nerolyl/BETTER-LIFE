@@ -1,7 +1,6 @@
 <?php
 require_once 'includes/config_session.inc.php';
 require_once 'includes/register_view.inc.php';
-
 ?>
 
 <!DOCTYPE html>
@@ -43,15 +42,15 @@ require_once 'includes/register_view.inc.php';
                     <input type="radio" id="FEMALE" name="gender" value=161>
                     <label class="label_stayle" for="FEMALE" id="">FEMALE</label><br>
                     <div class="register_btn">
-                        <a href="#">Login</a>
+                        <a href="Login.php">Login</a>
                         <button >Register</button>
                     </div>
                 </form>
-
+                <h1 class="form-error">test</h1>
                 <?php
                 check_register_error () ;
                 ?>
-
+                
             </div>
         </div>
 
