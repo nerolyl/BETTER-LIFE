@@ -22,7 +22,7 @@ function is_username_wrong(bool | array $result){
 
 }
 
-function is_password_wrong(string $pwd){
+/*function is_password_wrong(string $pwd){
     if (!password_verify($pwd)) {
         return true; 
 
@@ -31,4 +31,4 @@ function is_password_wrong(string $pwd){
         return false;
     }
 
-}
+}*/

@@ -20,9 +20,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
                         $error["login_incorrect"] = "Incorrect login info";
                     }
 
-                    if (!is_username_wrong($result) && is_password_wrong ($pwd, $result["pwd"])) {
-                        $error["login_incorrect"] = "Incorrect login info";
-                    }
+                    /*if (!is_username_wrong($result) && is_password_wrong ($pwd, $result["pwd"])) {
+                        $error["login_incorrect"] = "Incorrect login info 2";
+                    }*/
 
                     require_once 'config_session.inc.php';
         
@@ -36,11 +36,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
         $sessionid = $newSessionId . "_" . $result ["id"];
         session_id($sessionid);
 
-        $_SESSION[user_id] = $result["id"];
-        $_SESSION[user_username] = htmlspecialchars($result["username"]);
+        $_SESSION["user_id"] = $result["id"];
+        $_SESSION["user_username"] = htmlspecialchars($result["username"]);
         $_SESSION["last_regeneation"] = time();
-        header();
-        $pdo = null;    
+
+        header("Location: ../register.php");
+
+        $pdo = null;        
         $statment = null;
 
         die();
