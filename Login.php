@@ -1,3 +1,8 @@
+<?php
+require_once 'includes/config_session.inc.php';
+require_once 'includes/login_view.inc.php';
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -23,14 +28,20 @@
         <img src="img/Form Poster.png" alt="">
     </div>
     <div class="inputs">
-        <form action="includes/formhandler.inc.php" method="post">
-            <input type="text"placeholder="Username"> <br>
-            <input type="password" name="" id="" placeholder="Password"><br>
+        <form action="includes/formhandler2.inc.php" method="post">
+            <input type="text"placeholder="Username" name="username"> <br>
+            <input type="password" name="pwd" id="pwd" placeholder="Password"><br>
             <div class="login_btn">
                 <a href="register.php">register</a>
                 <button class="btn1">Log in</button>
             </div>
         </form>
+        
+        <?php
+        check_login_error();
+
+        ?>
+
     </div>
 </div>
     </section>
