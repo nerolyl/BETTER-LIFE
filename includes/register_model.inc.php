@@ -30,3 +30,5 @@ function create_user(object $pdo,string $username, string $pwd, string $email, $
     $stmt-> bindParam(":email", $email);
     $stmt->execute();
     }
+
+
