@@ -1,0 +1,57 @@
+header{
+    display: flex;
+    background-color: aliceblue;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+}
+
+.better_life_header{
+    font-size: 3rem;
+    left: 1rem;
+}
+.better_life_header a{
+    text-decoration:none;
+}
+
+
+.ul_header{
+    display: flex;
+    list-style-type:none
+}
+
+.items{
+      padding-top: 1rem;
+    font-family: "Lexend Deca";
+    font-size: 1.5rem;
+    margin-left: 25rem;
+}
+.i_header{
+padding-right: 2.3rem;
+}
+.items a{
+    text-decoration: none;
+}
+
+
+/**/
+@media (min-width :1701px ){
+    .better_life_header{
+        font-size: 3.5rem;
+    } 
+    .items{
+      font-size: 1.5rem;
+      margin-left: 50rem;
+  }
+}
+
+
+@media(min-width: 2500px){
+    .better_life_header{
+        font-size: 5rem;
+    } 
+    .items{
+      font-size: 2.5rem;
+      margin-left: 70rem;
+  }
+
+}
