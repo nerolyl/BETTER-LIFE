@@ -10,24 +10,148 @@
     height: 5rem;
     border-radius: 1rem;
 }
-.items_con{
-
-}
 .line_con{
-
+    display: flex;
 }
 
-.line{
-    position: absolute;
+.line_1{
     margin-top: 2rem;
     background-color: #5A246B;
     width: 5rem;
     height: 0.8rem;
+    align-items: center;
+    display: flex;
+    margin-left: 0.5rem;
+}
+.line{
+    margin-top: 2rem;
+    background-color: #5A246B;
+    width: 5rem;
+    height: 0.4rem;
+    align-items: center;
+    display: flex;
+    margin-left: 5rem;
 }
 
-.circe{
+.circle{
+    
     height: 5rem;
     width: 5rem;
-    background-color: antiquewhite;
+    border-style: solid;
+    border-color: #5A246B;
+    width: 5rem;
     border-radius: 100%;
+    margin-left: 5rem;
+    margin-right: -5rem;
+}
+
+.rectangle{
+    width: 2.5rem ;
+    max-width: max-content;
+    margin-left: 1.1rem;
+    margin-top: 0.8rem;
+}
+
+/*others monitor*/
+@media (min-width :1440px ){
+    .back_line{
+        height: 6rem;
+        border-radius: 2rem;
+    }
+
+
+    .line_1{
+        margin-top: 2.5rem;
+        width: 7rem;
+        height: 0.8rem;
+        margin-left: 1.5rem;
+    }
+    .line{
+        margin-top: 2.5rem;
+        width: 7rem;
+        height: 0.4rem;
+        margin-left: 5rem;
+    }
+
+    .circle{
+        height: 5rem;
+        width: 5rem;
+        margin-left: 6.7rem;
+        margin-right: -5rem;
+    }
+    
+    .rectangle{
+        width: 2.5rem ;
+        margin-left: 1.1rem;
+        margin-top: 0.rem;
+    }
+
+}
+
+
+@media (min-width :1701px ){
+
+    .line_1{
+        margin-top: 2.5rem;
+        width: 9rem;
+        height: 0.8rem;
+        margin-left: 2rem;
+    }
+    .line{
+        margin-top: 2.5rem;
+        width: 9rem;
+        height: 0.4rem;
+        margin-left: 5.5rem;
+    }
+
+    .circle{
+        height: 5.5rem;
+        width: 5.5rem;
+        margin-left: 9rem;
+        margin-right: -9rem;
+    }
+    
+    .rectangle{
+        width: 3rem ;
+        margin-top: 0.7rem;
+    }
+
+}
+
+
+/*nero monitor*/
+@media(min-width: 2500px){
+    .back_line{
+        margin-top: 2rem;
+        height: 7rem;
+        border-radius: 2rem;
+
+    }
+
+    .line_1{
+        margin-top: 3rem;
+        width: 15rem;
+        height: 1.5rem;
+        margin-left: 2rem;
+    }
+    .line{
+        margin-top: 3rem;
+        width: 15rem;
+        height: 0.8rem;
+        margin-left: 5.9rem;
+    }
+
+    .circle{
+        height: 6rem;
+        width: 6rem;
+        margin-left: 14rem;
+        margin-right: -9rem;
+    }
+    
+    .rectangle{
+        width: 4rem ;
+        margin-top: 0.7rem;
+        margin-left: 1.2rem;
+    }
+
 }
