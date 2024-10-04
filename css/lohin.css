@@ -68,3 +68,7 @@ input[type=Password]{
     padding-right: 3rem;
     text-decoration: none;
 }
+.form_error {
+    color: red;
+    margin-left: 10rem;
+}

@@ -112,6 +112,13 @@ input[type=radio]{
     font-size: 1.5rem;
     padding-right: 5rem;
 }
+
+
+.form_error {
+    color: red;
+    margin-top: 2rem;
+    margin-left: 14rem;
+}
 /* others monitor */
 @media (min-width :1701px ){
     .register_imgs{
@@ -219,3 +226,4 @@ input[type=radio]{
         font-size: 1.8rem;
     }
 }
+
