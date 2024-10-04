@@ -1,5 +1,33 @@
 .check_in{
     border-radius: 0.5rem;
     margin: 2rem 2rem 0 ;
-    background-color: aliceblue
+}
+
+.back_line{
+    display: block;
+    margin-top: -0.8rem;
+    background-color: #FFFFFF;
+    height: 5rem;
+    border-radius: 1rem;
+}
+.items_con{
+
+}
+.line_con{
+
+}
+
+.line{
+    position: absolute;
+    margin-top: 2rem;
+    background-color: #5A246B;
+    width: 5rem;
+    height: 0.8rem;
+}
+
+.circe{
+    height: 5rem;
+    width: 5rem;
+    background-color: antiquewhite;
+    border-radius: 100%;
 }
