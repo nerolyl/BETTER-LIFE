@@ -1,0 +1,22 @@
+.chart_fram{
+    border-radius: 1rem;
+    margin: 1rem 25rem 0px 2rem;
+    color: #5A246B80;
+    font-family: Inter;
+    background-color: #FFFFFF;
+}
+
+.num{
+    margin-bottom: 3rem;
+}
+.chart_num{
+    margin-left: 2rem;
+}
+
+.chart_day{
+    display: flex;
+    margin-left: 7rem;
+}
+.day{
+    margin-right: 3rem;
+}

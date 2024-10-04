@@ -1,0 +1,59 @@
+.cal_cal_con{
+    display: flex;
+}
+.cal_fram{
+    color:#5A246B ;
+    font-family: Lexend Deca;
+    margin: 1rem 2rem 0rem 2rem;
+    background-color: #ffffff;
+    width: 25%;
+    border-radius: 1rem;
+
+}
+.titel_cal{
+    margin-left: 1rem;
+}
+
+.h1_cal{
+    display: flex;
+    font-size: 1.5rem;
+    margin-left: 1.5rem;
+}
+
+.img_cal{
+    margin-left: 12rem;
+}
+.img_cal_1{
+    position: absolute;
+    margin-bottom: 4rem;
+    margin-top: -4rem;
+    margin-left: 0.2rem;
+}
+
+@media (min-width :1440px ){
+    .img_cal{
+        margin-left: 15rem;
+    }
+    .img_cal_1{
+        position: absolute;
+        margin-bottom: 4rem;
+        margin-top: -4rem;
+        margin-left: 0.2rem;
+    }
+    
+}
+
+@media (min-width :1701px ){
+    .img_cal{
+        margin-left: 22rem;
+    }
+}
+
+
+
+@media(min-width: 2500px){
+
+    .img_cal{
+        margin-left: 32rem;
+    }
+}
