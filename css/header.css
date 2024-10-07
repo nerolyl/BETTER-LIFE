@@ -19,16 +19,24 @@ header{
     list-style-type:none
 }
 
+button{
+    border: none;
+    background-color: #FFFFFF;
+    font-family: "Lexend Deca";
+    font-size: 1.5rem;
+    color: #5A246B;
+}
 .items{
       padding-top: 1rem;
     font-family: "Lexend Deca";
     font-size: 1.5rem;
     margin-left: 25rem;
 }
-.i_header{
+
+.i_header {
 padding-right: 2.3rem;
 }
-.items a{
+.items a {
     text-decoration: none;
 }
 
@@ -42,6 +50,7 @@ padding-right: 2.3rem;
       font-size: 1.5rem;
       margin-left: 50rem;
   }
+  
 }
 
 
@@ -53,5 +62,10 @@ padding-right: 2.3rem;
       font-size: 2.5rem;
       margin-left: 70rem;
   }
+  button{
+
+    font-size: 2.5rem;
+
+}
 
 }
