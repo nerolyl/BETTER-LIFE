@@ -1,4 +1,49 @@
+.chart {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin-top: 1rem;
+    margin-left: 2rem;
+    padding: 0;
+    display: flex;
+    height: 24rem;
+    
+}
 #myChart {
-    max-width: 600px;
-    margin: auto;
+    border-radius: 1rem;
+    padding-right: 3rem;
+    padding-left: 3rem;
+    background-color: #FFFFFF;
+    max-width: 42rem;
+}
+@media (min-width :1440px ){
+    .chart {
+        height: 32rem;
+        
+    }
+    #myChart {
+        max-width: 58rem;
+    }
+}
+
+@media (min-width :1701px ){
+    .chart {
+        height: 32rem;
+        
+    }
+    #myChart {
+        max-width: 70rem;
+    }
+
+}
+
+@media(min-width: 2500px){
+    .chart {
+        height: 51rem;
+        
+    }
+    #myChart {
+        max-width: 100rem;
+    }
+
+
 }

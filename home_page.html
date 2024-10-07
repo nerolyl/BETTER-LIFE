@@ -16,9 +16,11 @@
     <link rel="stylesheet" href="css/master.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <title>Document</title>
 </head>
 <body>
+
   <header>
     <div class="better_life_header">
       <a href=""><b>BETTER LIFE</b></a>
@@ -139,12 +141,13 @@
     </div>
   </div>
 </section>
-<section class="chart">
-
+ <section class="chart">
   <canvas id="myChart"></canvas>
-<script src="js/chart.js">  
-</script>
-</section>
+    <script src="js/chart.js">
+    </script>
+ </section> 
+ 
+        
 <section class="chat_bot">
         <script type="text/javascript">
             (function(d, t) {
@@ -157,8 +160,11 @@
                   });
                 }
                 v.src = "https://cdn.voiceflow.com/widget/bundle.mjs"; v.type = "text/javascript"; s.parentNode.insertBefore(v, s);
-            })(document, 'script');
-          </script>
+              })(document, 'script');
+            </script>
+            
 </section>
+          
+          
 </body>
 </html>
