@@ -28,7 +28,7 @@
         <li class="i_header"><a href="">Home </a></li>
         <li class="i_header"><a href="">Profile </a></li>
         <li class="i_header"><a href="">Settings </a></li>
-        <li class="i_header"><a href="">Log out </a></li>
+        <li class="i_header"><form action="includes/logout.inc.php" method="post"><<button>log out</button></form></li>
       </ul>
     </div>
   </header>
