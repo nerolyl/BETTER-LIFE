@@ -16,11 +16,9 @@
     <link rel="stylesheet" href="css/master.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <title>Document</title>
 </head>
 <body>
-
   <header>
     <div class="better_life_header">
       <a href=""><b>BETTER LIFE</b></a>
@@ -30,7 +28,7 @@
         <li class="i_header"><a href="">Home </a></li>
         <li class="i_header"><a href="">Profile </a></li>
         <li class="i_header"><a href="">Settings </a></li>
-        <li class="i_header"><button>log out</button></li>
+        <li class="i_header"><form action="includes/logout.inc.php" method="post"><<button>log out</button></form></li>
       </ul>
     </div>
   </header>
@@ -141,13 +139,28 @@
     </div>
   </div>
 </section>
- <section class="chart">
-  <canvas id="myChart"></canvas>
-    <script src="js/chart.js">
-    </script>
- </section> 
- 
-        
+<section class="chart">
+  <div class="chart_con">
+    <div class="chart_fram">
+      <div class="chart_num">
+        <h1 class="num">3000</h1>
+        <h1 class="num">1800</h1>
+        <h1 class="num">1200</h1>
+        <h1 class="num">600</h1>
+        <h1 class="num">0</h1>
+      </div>
+      <div class="chart_day">
+        <h1 class="day">Sun</h1>
+        <h1 class="day">Mon</h1>
+        <h1 class="day">Tue</h1>
+        <h1 class="day">Wed</h1>
+        <h1 class="day">Thur</h1>
+        <h1 class="day">fRI</h1>
+        <h1 class="day">Sat</h1>
+      </div>
+    </div>
+  </div>
+</section>
 <section class="chat_bot">
         <script type="text/javascript">
             (function(d, t) {
@@ -160,11 +173,8 @@
                   });
                 }
                 v.src = "https://cdn.voiceflow.com/widget/bundle.mjs"; v.type = "text/javascript"; s.parentNode.insertBefore(v, s);
-              })(document, 'script');
-            </script>
-            
+            })(document, 'script');
+          </script>
 </section>
-          
-          
 </body>
 </html>
