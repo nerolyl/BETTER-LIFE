@@ -50,10 +50,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // Store user information in the session
         $_SESSION["user_id"] = $result["id"];
         $_SESSION["user_username"] = htmlspecialchars($result["username"]); // Escape username to prevent XSS
+        $_SESSION["user_max_calorie"] = htmlspecialchars($result["max_calorie"]);
         $_SESSION["last_regeneation"] = time(); // Set the time of the last session regeneration
 
-        // Redirect to the register page after successful login
-        header("Location: ../register.php");
+
+        // Redirect to the Home Page after successful login
+        header("Location: ../home_page.php");   
 
         // Close the database connection
         $pdo = null;

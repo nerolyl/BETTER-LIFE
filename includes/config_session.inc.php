@@ -57,12 +57,14 @@ function session_regenerate_id_loggedin()
 {
     session_regenerate_id(true); // Regenerate session ID and delete the old one
 
-    $usrId = $_SESSION["user_id"]; // Get the user ID from the session
+    $userId = $_SESSION["user_id"]; // Get the user ID from the session
 
     // Create a new session ID and append the user ID for better tracking
     $newSessionId = session_create_id();
-    $sessionid = $newSessionId . "_" . $usrId;
+    $sessionid = $newSessionId . "_" . $userId;
     session_id($sessionid); // Set the new session ID
 
     $_SESSION["last_regeneation"] = time(); // Update the last regeneration time
 }
+
+

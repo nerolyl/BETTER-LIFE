@@ -1,3 +1,12 @@
+<?php
+require_once 'includes/config_session.inc.php';
+require_once 'includes/dbh.inc.php';
+require_once 'includes/login_view.inc.php';
+require_once 'includes/login_model.inc.php';
+require_once 'includes/homepage_view.inc.php';
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,7 +25,8 @@
     <link rel="stylesheet" href="css/master.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Homepage</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
   <header>
@@ -25,10 +35,10 @@
     </div>
     <div class="items">
       <ul class="ul_header">
-        <li class="i_header"><a href="">Home </a></li>
-        <li class="i_header"><a href="">Profile </a></li>
+        <li class="i_header"><a href=""><?php output_username(); ?></a></li>
+        <li class="i_header"><a href="home_page.php">Home </a></li>
         <li class="i_header"><a href="">Settings </a></li>
-        <li class="i_header"><form action="includes/logout.inc.php" method="post"><<button>log out</button></form></li>
+        <li class="i_header"><form action="includes/logout.inc.php" method="post"><button> log out</button></form></li>
       </ul>
     </div>
   </header>
@@ -88,7 +98,7 @@
       <div class="h1_cal">
         <h1>0</h1>
         <h1>/</h1>
-        <h1>0</h1>
+        <h1><?php  echo "Max Calorie: " . $max_calorie ?></h1>
       </div>
       <div class="img_cal">
         <img class="img_cal_1" src="img/plus-circle.png" alt="">
@@ -140,26 +150,9 @@
   </div>
 </section>
 <section class="chart">
-  <div class="chart_con">
-    <div class="chart_fram">
-      <div class="chart_num">
-        <h1 class="num">3000</h1>
-        <h1 class="num">1800</h1>
-        <h1 class="num">1200</h1>
-        <h1 class="num">600</h1>
-        <h1 class="num">0</h1>
-      </div>
-      <div class="chart_day">
-        <h1 class="day">Sun</h1>
-        <h1 class="day">Mon</h1>
-        <h1 class="day">Tue</h1>
-        <h1 class="day">Wed</h1>
-        <h1 class="day">Thur</h1>
-        <h1 class="day">fRI</h1>
-        <h1 class="day">Sat</h1>
-      </div>
-    </div>
-  </div>
+<canvas id="myChart"></canvas>
+    <script src="js/chart.js">
+    </script>
 </section>
 <section class="chat_bot">
         <script type="text/javascript">
