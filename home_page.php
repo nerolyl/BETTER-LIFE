@@ -98,7 +98,7 @@ require_once 'includes/homepage_view.inc.php';
       <div class="h1_cal">
         <h1>0</h1>
         <h1>/</h1>
-        <h1><?php  echo "Max Calorie: " . $max_calorie ?></h1>
+        <h1><?php  output_max_calorie(); ?></h1>
       </div>
       <div class="img_cal">
         <img class="img_cal_1" src="img/plus-circle.png" alt="">
@@ -140,7 +140,7 @@ require_once 'includes/homepage_view.inc.php';
       <div class="h1_cal">
         <h1>0</h1>
         <h1>/</h1>
-        <h1>0</h1>
+        <h1> 0 </h1>
       </div>
       <div class="img_cal">
         <img class="img_cal_1" src="img/plus-circle.png" alt="">
