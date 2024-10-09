@@ -51,6 +51,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $_SESSION["user_id"] = $result["id"];
         $_SESSION["user_username"] = htmlspecialchars($result["username"]); // Escape username to prevent XSS
         $_SESSION["user_max_calorie"] = htmlspecialchars($result["max_calorie"]);
+        $_SESSION["user_max_carbs"] = htmlspecialchars($result["max_carbs"]);
+        $_SESSION["user_max_protein"] = htmlspecialchars($result["max_protein"]);
         $_SESSION["last_regeneation"] = time(); // Set the time of the last session regeneration
 
 
