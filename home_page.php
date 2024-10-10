@@ -96,9 +96,9 @@ require_once 'includes/homepage_view.inc.php';
         <h2>Calorie</h2>
       </div>
       <div class="h1_cal">
-        <h1>0</h1>
+        <h1><?php  output_calorie(); ?></h1>
         <h1>/</h1>
-        <h1><?php  output_max_calorie(); ?></h1>
+        <h1><?php  output_max_calorie(); ?><sub>kcal</sub></h1>
       </div>
       <div class="img_cal">
         <img class="img_cal_1" src="img/plus-circle.png" alt="">
@@ -110,9 +110,9 @@ require_once 'includes/homepage_view.inc.php';
         <h2>Protein</h2>
       </div>
       <div class="h1_cal">
-        <h1>0</h1>
+        <h1><?php output_protein() ?></h1>
         <h1>/</h1>
-        <h1> <?php output_max_protein() ?></h1>
+        <h1> <?php output_max_protein() ?><sub>g</sub></h1>
       </div>
       <div class="img_cal">
         <img class="img_cal_1" src="img/plus-circle.png" alt="">
@@ -124,9 +124,9 @@ require_once 'includes/homepage_view.inc.php';
         <h2>Carbs</h2>
       </div>
       <div class="h1_cal">
-        <h1>0</h1>
+        <h1><?php output_carbs() ?></h1>
         <h1>/</h1>
-        <h1><?php output_max_carbs() ?></h1>
+        <h1><?php output_max_carbs() ?><sub>g</sub></h1>
       </div>
       <div class="img_cal">
         <img class="img_cal_1" src="img/plus-circle.png" alt="">
@@ -138,9 +138,9 @@ require_once 'includes/homepage_view.inc.php';
         <h2>Fats</h2>
       </div>
       <div class="h1_cal">
-        <h1>0</h1>
+        <h1><?php output_fat() ?></h1>
         <h1>/</h1>
-        <h1> 0 </h1>
+        <h1><?php output_max_fat() ?><sub>g</sub> </h1>
       </div>
       <div class="img_cal">
         <img class="img_cal_1" src="img/plus-circle.png" alt="">

@@ -50,9 +50,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // Store user information in the session
         $_SESSION["user_id"] = $result["id"];
         $_SESSION["user_username"] = htmlspecialchars($result["username"]); // Escape username to prevent XSS
+        $_SESSION["user_calorie"] = htmlspecialchars($result["calorie"]);
         $_SESSION["user_max_calorie"] = htmlspecialchars($result["max_calorie"]);
-        $_SESSION["user_max_carbs"] = htmlspecialchars($result["max_carbs"]);
+        $_SESSION["user_protein"] = htmlspecialchars($result["protein"]);
         $_SESSION["user_max_protein"] = htmlspecialchars($result["max_protein"]);
+        $_SESSION["user_carbs"] = htmlspecialchars($result["carbs"]);
+        $_SESSION["user_max_carbs"] = htmlspecialchars($result["max_carbs"]);
+        $_SESSION["user_max_fat"] = htmlspecialchars($result["max_fat"]);
+        $_SESSION["user_fat"] = htmlspecialchars($result["fat"]);
         $_SESSION["last_regeneation"] = time(); // Set the time of the last session regeneration
 
 
