@@ -154,17 +154,23 @@ require_once 'includes/homepage_view.inc.php';
 <canvas id="myChart"></canvas>
 
 <script>
-  // Retrieve the Sunday, Monday, Tuesday, and Wednesday nutrition data from the session and parse it as JSON
+  // Retrieve the nutrition data for the entire week from the session and parse it as JSON
   const sun = <?php echo json_encode($_SESSION["user_sunday_nutrition"]) ?>;
   const mon = <?php echo json_encode($_SESSION["user_monday_nutrition"]) ?>;
   const tue = <?php echo json_encode($_SESSION["user_tuesday_nutrition"]) ?>;
   const wed = <?php echo json_encode($_SESSION["user_wednesday_nutrition"]) ?>;
+  const thu = <?php echo json_encode($_SESSION["user_thursday_nutrition"]) ?>;
+  const fri = <?php echo json_encode($_SESSION["user_friday_nutrition"]) ?>;
+  const sat = <?php echo json_encode($_SESSION["user_saturday_nutrition"]) ?>;
 
   // Split the comma-separated strings into arrays of numbers
   const [sunCalories, sunProtein, sunCarbs, sunFat] = sun.split(',').map(Number);
   const [monCalories, monProtein, monCarbs, monFat] = mon.split(',').map(Number);
   const [tueCalories, tueProtein, tueCarbs, tueFat] = tue.split(',').map(Number);
   const [wedCalories, wedProtein, wedCarbs, wedFat] = wed.split(',').map(Number);
+  const [thuCalories, thuProtein, thuCarbs, thuFat] = thu.split(',').map(Number);
+  const [friCalories, friProtein, friCarbs, friFat] = fri.split(',').map(Number);
+  const [satCalories, satProtein, satCarbs, satFat] = sat.split(',').map(Number);
 
   // Get the context of the canvas element we want to select
   var ctx = document.getElementById('myChart').getContext('2d');
@@ -194,6 +200,21 @@ require_once 'includes/homepage_view.inc.php';
           label: 'Wednesday Nutrition', // Label for the Wednesday dataset
           data: [wedCalories, wedProtein, wedCarbs, wedFat], // Data for the Wednesday dataset
           backgroundColor: ['#FFD700', '#FFA500', '#FF8C00', '#FF4500'], // Background colors for the Wednesday bars
+        },
+        {
+          label: 'Thursday Nutrition', // Label for the Thursday dataset
+          data: [thuCalories, thuProtein, thuCarbs, thuFat], // Data for the Thursday dataset
+          backgroundColor: ['#8A2BE2', '#7B68EE', '#6A5ACD', '#483D8B'], // Background colors for the Thursday bars
+        },
+        {
+          label: 'Friday Nutrition', // Label for the Friday dataset
+          data: [friCalories, friProtein, friCarbs, friFat], // Data for the Friday dataset
+          backgroundColor: ['#00FA9A', '#00FF7F', '#3CB371', '#2E8B57'], // Background colors for the Friday bars
+        },
+        {
+          label: 'Saturday Nutrition', // Label for the Saturday dataset
+          data: [satCalories, satProtein, satCarbs, satFat], // Data for the Saturday dataset
+          backgroundColor: ['#FF6347', '#FF4500', '#FF0000', '#DC143C'], // Background colors for the Saturday bars
         }
       ]
     },
@@ -206,6 +227,7 @@ require_once 'includes/homepage_view.inc.php';
       }
     }
   });
+</script>
 </script>
 </section>
 <section class="chat_bot">

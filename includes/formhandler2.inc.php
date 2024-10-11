@@ -62,6 +62,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $_SESSION["user_monday_nutrition"] = htmlspecialchars($result["monday_nutrition"]);
         $_SESSION["user_tuesday_nutrition"] = htmlspecialchars($result["tuesday_nutrition"]);
         $_SESSION["user_wednesday_nutrition"] = htmlspecialchars($result["wednesday_nutrition"]);
+        $_SESSION["user_thursday_nutrition"] = htmlspecialchars($result["thursday_nutrition"]);
+        $_SESSION["user_friday_nutrition"] = htmlspecialchars($result["friday_nutrition"]);
+        $_SESSION["user_saturday_nutrition"] = htmlspecialchars($result["saturday_nutrition"]);
         $_SESSION["last_regeneation"] = time(); // Set the time of the last session regeneration
 
 
