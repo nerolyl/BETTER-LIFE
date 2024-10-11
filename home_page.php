@@ -29,6 +29,7 @@ require_once 'includes/homepage_view.inc.php';
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
+  <p> test<?php output_monday_nutrition() ?></p>
   <header>
     <div class="better_life_header">
       <a href=""><b>BETTER LIFE</b></a>
@@ -151,8 +152,61 @@ require_once 'includes/homepage_view.inc.php';
 </section>
 <section class="chart">
 <canvas id="myChart"></canvas>
-    <script src="js/chart.js">
-    </script>
+
+<script>
+  // Retrieve the Sunday, Monday, Tuesday, and Wednesday nutrition data from the session and parse it as JSON
+  const sun = <?php echo json_encode($_SESSION["user_sunday_nutrition"]) ?>;
+  const mon = <?php echo json_encode($_SESSION["user_monday_nutrition"]) ?>;
+  const tue = <?php echo json_encode($_SESSION["user_tuesday_nutrition"]) ?>;
+  const wed = <?php echo json_encode($_SESSION["user_wednesday_nutrition"]) ?>;
+
+  // Split the comma-separated strings into arrays of numbers
+  const [sunCalories, sunProtein, sunCarbs, sunFat] = sun.split(',').map(Number);
+  const [monCalories, monProtein, monCarbs, monFat] = mon.split(',').map(Number);
+  const [tueCalories, tueProtein, tueCarbs, tueFat] = tue.split(',').map(Number);
+  const [wedCalories, wedProtein, wedCarbs, wedFat] = wed.split(',').map(Number);
+
+  // Get the context of the canvas element we want to select
+  var ctx = document.getElementById('myChart').getContext('2d');
+
+  // Create a new Chart instance
+  var myChart = new Chart(ctx, {
+    type: 'bar', // Specify the chart type
+    data: {
+      labels: ['Calories', 'Protein', 'Carbs', 'Fat'], // Labels for the x-axis
+      datasets: [
+        {
+          label: 'Sunday Nutrition', // Label for the Sunday dataset
+          data: [sunCalories, sunProtein, sunCarbs, sunFat], // Data for the Sunday dataset
+          backgroundColor: ['#5B246B', '#392141', '#E2C5EB', '#F3CAFF'], // Background colors for the Sunday bars
+        },
+        {
+          label: 'Monday Nutrition', // Label for the Monday dataset
+          data: [monCalories, monProtein, monCarbs, monFat], // Data for the Monday dataset
+          backgroundColor: ['#C9C5EB', '#8880BF', '#2D246B', '#242141'], // Background colors for the Monday bars
+        },
+        {
+          label: 'Tuesday Nutrition', // Label for the Tuesday dataset
+          data: [tueCalories, tueProtein, tueCarbs, tueFat], // Data for the Tuesday dataset
+          backgroundColor: ['#FFB6C1', '#FF69B4', '#FF1493', '#DB7093'], // Background colors for the Tuesday bars
+        },
+        {
+          label: 'Wednesday Nutrition', // Label for the Wednesday dataset
+          data: [wedCalories, wedProtein, wedCarbs, wedFat], // Data for the Wednesday dataset
+          backgroundColor: ['#FFD700', '#FFA500', '#FF8C00', '#FF4500'], // Background colors for the Wednesday bars
+        }
+      ]
+    },
+    options: {
+      scales: {
+        y: {
+          beginAtZero: true, // Start the y-axis at zero
+          suggestedMax: 3000 // Suggest a maximum value for the y-axis
+        }
+      }
+    }
+  });
+</script>
 </section>
 <section class="chat_bot">
         <script type="text/javascript">

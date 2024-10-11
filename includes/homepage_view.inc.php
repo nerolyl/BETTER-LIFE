@@ -47,3 +47,9 @@ function output_fat(){
         echo htmlspecialchars($_SESSION["user_fat"]);
     }
 }
+
+function output_monday_nutrition(){
+    if (isset($_SESSION["user_id"])){
+        echo htmlspecialchars($_SESSION["user_monday_nutrition"]);
+    }
+}

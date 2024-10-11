@@ -58,6 +58,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $_SESSION["user_max_carbs"] = htmlspecialchars($result["max_carbs"]);
         $_SESSION["user_max_fat"] = htmlspecialchars($result["max_fat"]);
         $_SESSION["user_fat"] = htmlspecialchars($result["fat"]);
+        $_SESSION["user_sunday_nutrition"] = htmlspecialchars($result["sunday_nutrition"]);
+        $_SESSION["user_monday_nutrition"] = htmlspecialchars($result["monday_nutrition"]);
+        $_SESSION["user_tuesday_nutrition"] = htmlspecialchars($result["tuesday_nutrition"]);
+        $_SESSION["user_wednesday_nutrition"] = htmlspecialchars($result["wednesday_nutrition"]);
         $_SESSION["last_regeneation"] = time(); // Set the time of the last session regeneration
 
 

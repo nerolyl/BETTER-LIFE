@@ -152,22 +152,22 @@
             return $result;
         }
 
-        // Function to get the user's fat from the database and append it to the session
-        function set_user_fat_to_session(object $pdo, string $username) {
-            // Get the fat value for the given username
-            $fat = get_fat($pdo, $username);
+        // Function to get the user's sunday_nutrition from the database and append it to the session
+        function set_user_sunday_nutrition_to_session(object $pdo, string $username) {
+            // Get the sunday_nutrition value for the given username
+            $sunday_nutrition = get_sunday_nutrition($pdo, $username);
             
-            // Check if fat is not null
-            if ($fat !== null) {
-                // Append the fat value to the session
-                $_SESSION['fat'] = $fat['fat'];
+            // Check if sunday_nutrition is not null
+            if ($sunday_nutrition !== null) {
+            // Append the sunday_nutrition value to the session
+            $_SESSION['sunday_nutrition'] = $sunday_nutrition['sunday_nutrition'];
             }
         }
 
-        // Function to get the fat value from the database based on the username
-        function get_fat(object $pdo, string $username) {
-            // SQL query to select the fat column from the 'users' table where the username matches the given value
-            $query = "SELECT fat FROM users WHERE username = :username;";
+        // Function to get the sunday_nutrition value from the database based on the username
+        function get_sunday_nutrition(object $pdo, string $username) {
+            // SQL query to select the sunday_nutrition column from the 'users' table where the username matches the given value
+            $query = "SELECT sunday_nutrition FROM users WHERE username = :username;";
             
             // Prepare the SQL statement to prevent SQL injection
             $stmt = $pdo->prepare($query);
@@ -183,4 +183,96 @@
             return $result;
         }
 
-    }
+        }
+        // Function to get the user's monday_nutrition from the database and append it to the session
+        function set_user_monday_nutrition_to_session(object $pdo, string $username) {
+            // Get the monday_nutrition value for the given username
+            $monday_nutrition = get_monday_nutrition($pdo, $username);
+            
+            // Check if monday_nutrition is not null
+            if ($monday_nutrition !== null) {
+                // Append the monday_nutrition value to the session
+                $_SESSION['monday_nutrition'] = $monday_nutrition['monday_nutrition'];
+            }
+        }
+        
+        // Function to get the monday_nutrition value from the database based on the username
+        function get_monday_nutrition(object $pdo, string $username) {
+            // SQL query to select the monday_nutrition column from the 'users' table where the username matches the given value
+            $query = "SELECT monday_nutrition FROM users WHERE username = :username;";
+            
+            // Prepare the SQL statement to prevent SQL injection
+            $stmt = $pdo->prepare($query);
+            
+            // Bind the provided username to the SQL statement
+            $stmt->bindParam(":username", $username);
+            
+            // Execute the prepared statement
+            $stmt->execute();
+            
+            // Fetch the resulting row as an associative array and return it
+            $result = $stmt->fetch(PDO::FETCH_ASSOC);
+            return $result;
+        }
+        
+        // Function to get the user's tuesday_nutrition from the database and append it to the session
+        function set_user_tuesday_nutrition_to_session(object $pdo, string $username) {
+            // Get the tuesday_nutrition value for the given username
+            $tuesday_nutrition = get_tuesday_nutrition($pdo, $username);
+            
+            // Check if tuesday_nutrition is not null
+            if ($tuesday_nutrition !== null) {
+                // Append the tuesday_nutrition value to the session
+                $_SESSION['tuesday_nutrition'] = $tuesday_nutrition['tuesday_nutrition'];
+            }
+        }
+        
+        // Function to get the tuesday_nutrition value from the database based on the username
+        function get_tuesday_nutrition(object $pdo, string $username) {
+            // SQL query to select the tuesday_nutrition column from the 'users' table where the username matches the given value
+            $query = "SELECT tuesday_nutrition FROM users WHERE username = :username;";
+            
+            // Prepare the SQL statement to prevent SQL injection
+            $stmt = $pdo->prepare($query);
+            
+            // Bind the provided username to the SQL statement
+            $stmt->bindParam(":username", $username);
+            
+            // Execute the prepared statement
+            $stmt->execute();
+            
+            // Fetch the resulting row as an associative array and return it
+            $result = $stmt->fetch(PDO::FETCH_ASSOC);
+            return $result;
+        }
+        // Function to get the user's wednesday_nutrition from the database and append it to the session
+        function set_user_wednesday_nutrition_to_session(object $pdo, string $username) {
+            // Get the wednesday_nutrition value for the given username
+            $wednesday_nutrition = get_wednesday_nutrition($pdo, $username);
+            
+            // Check if wednesday_nutrition is not null
+            if ($wednesday_nutrition !== null) {
+                // Append the wednesday_nutrition value to the session
+                $_SESSION['wednesday_nutrition'] = $wednesday_nutrition['wednesday_nutrition'];
+            }
+        }
+
+        // Function to get the wednesday_nutrition value from the database based on the username
+        function get_wednesday_nutrition(object $pdo, string $username) {
+            // SQL query to select the wednesday_nutrition column from the 'users' table where the username matches the given value
+            $query = "SELECT wednesday_nutrition FROM users WHERE username = :username;";
+            
+            // Prepare the SQL statement to prevent SQL injection
+            $stmt = $pdo->prepare($query);
+            
+            // Bind the provided username to the SQL statement
+            $stmt->bindParam(":username", $username);
+            
+            // Execute the prepared statement
+            $stmt->execute();
+            
+            // Fetch the resulting row as an associative array and return it
+            $result = $stmt->fetch(PDO::FETCH_ASSOC);
+            return $result;
+        }
+        
