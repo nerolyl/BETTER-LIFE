@@ -1,0 +1,9 @@
+DELIMITER //
+
+CREATE EVENT reset_user_nutrients
+ON SCHEDULE EVERY 1 DAY
+STARTS CURRENT_TIMESTAMP
+DO
+BEGIN
+    UPDATE users SET calories = 0, protein = 0, carbs = 0, fat = 0;
+END //

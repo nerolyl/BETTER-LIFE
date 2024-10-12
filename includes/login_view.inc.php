@@ -1,4 +1,6 @@
 <?php
+require_once 'includes/config_session.inc.php';
+require_once 'includes/dbh.inc.php';
 
 // Function to check and display login error messages
 function check_login_error() {
@@ -13,7 +15,7 @@ function check_login_error() {
         // Loop through each error and display it
         foreach ($errors as $error) {
             // Output each error as a paragraph with a class for styling
-            echo '<p class="form-error">' . $error . '</p>';
+            echo '<p class="form_error">' . $error . '</p>';
         }
 
         // Remove the error data from the session after displaying it
