@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 11, 2024 at 11:22 PM
+-- Generation Time: Oct 12, 2024 at 06:45 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -50,19 +50,22 @@ CREATE TABLE `users` (
   `wednesday_nutrition` varchar(255) DEFAULT '0,0,0,0',
   `thursday_nutrition` varchar(255) DEFAULT '0,0,0,0',
   `friday_nutrition` varchar(255) DEFAULT '0,0,0,0',
-  `saturday_nutrition` varchar(255) DEFAULT '0,0,0,0'
+  `saturday_nutrition` varchar(255) DEFAULT '0,0,0,0',
+  `last_login` timestamp(6) NOT NULL DEFAULT current_timestamp(6) ON UPDATE current_timestamp(6),
+  `points` int(11) NOT NULL DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`id`, `username`, `pwd`, `email`, `weight`, `age`, `height`, `gender`, `calorie`, `max_calorie`, `protein`, `max_protein`, `carbs`, `max_carbs`, `fat`, `max_fat`, `sunday_nutrition`, `monday_nutrition`, `tuesday_nutrition`, `wednesday_nutrition`, `thursday_nutrition`, `friday_nutrition`, `saturday_nutrition`) VALUES
-(1, 'John', 'J123', 'john@gmail.com', 0, 0, 0, -5, 0, 5, 0, 0, 0, 1, 0, 0, '0, 0, 0, 0', '', '0,0,0,0', '0,0,0,0', '0,0,0,0', '0,0,0,0', '0,0,0,0'),
-(2, 'JaneDoe', 'Jane123', 'Jane@gmail.com', 65, 20, 180, 161, 0, 1514, 0, 81, 0, 246, 0, 135, '0, 0, 0, 0', '', '0,0,0,0', '0,0,0,0', '0,0,0,0', '0,0,0,0', '0,0,0,0'),
-(6, 'Jonathan Doe', 'J123', 'Jonathan@gmail.com', 75, 30, 180, -5, 0, 1730, 0, 94, 0, 281, 0, 154, '0, 0, 0, 0', '', '0,0,0,0', '0,0,0,0', '0,0,0,0', '0,0,0,0', '0,0,0,0'),
-(9, 'JohnDoe', '$2y$12$ZQmOkO/YIk2JPLyd7djTruld0RnIMGtgO.juh0CaM7q93bDHWl7FO', 'johndoe@gmail.com', 75, 30, 180, -5, 0, 1730, 0, 94, 0, 281, 0, 154, '0, 0, 0, 0', '', '0,0,0,0', '0,0,0,0', '0,0,0,0', '0,0,0,0', '0,0,0,0'),
-(10, 'Jane Doe', '$2y$12$sefkgQs6NGYt8cy1Z9kCj.f0Y.WEjVxUqdLylhN4.4eWng7dCcl4q', 'JaneDoe@gmail.com', 60, 20, 180, 161, 0, 1464, 0, 75, 0, 238, 0, 130, '1464, 75, 238, 130', '1400, 70, 200, 100', '0,0,0,0', '0,0,0,0', '0,0,0,0', '0,0,0,0', '0,0,0,0');
+INSERT INTO `users` (`id`, `username`, `pwd`, `email`, `weight`, `age`, `height`, `gender`, `calorie`, `max_calorie`, `protein`, `max_protein`, `carbs`, `max_carbs`, `fat`, `max_fat`, `sunday_nutrition`, `monday_nutrition`, `tuesday_nutrition`, `wednesday_nutrition`, `thursday_nutrition`, `friday_nutrition`, `saturday_nutrition`, `last_login`, `points`) VALUES
+(1, 'John', 'J123', 'john@gmail.com', 0, 0, 0, -5, 0, 5, 0, 0, 0, 1, 0, 0, '0, 0, 0, 0', '', '0,0,0,0', '0,0,0,0', '0,0,0,0', '0,0,0,0', '0,0,0,0', '2024-10-12 14:32:11.874068', 0),
+(2, 'JaneDoe', 'Jane123', 'Jane@gmail.com', 65, 20, 180, 161, 0, 1514, 0, 81, 0, 246, 0, 135, '0, 0, 0, 0', '', '0,0,0,0', '0,0,0,0', '0,0,0,0', '0,0,0,0', '0,0,0,0', '2024-10-12 14:32:11.874068', 0),
+(6, 'Jonathan Doe', 'J123', 'Jonathan@gmail.com', 75, 30, 180, -5, 0, 1730, 0, 94, 0, 281, 0, 154, '0, 0, 0, 0', '', '0,0,0,0', '0,0,0,0', '0,0,0,0', '0,0,0,0', '0,0,0,0', '2024-10-12 14:32:11.874068', 0),
+(9, 'JohnDoe', '$2y$12$ZQmOkO/YIk2JPLyd7djTruld0RnIMGtgO.juh0CaM7q93bDHWl7FO', 'johndoe@gmail.com', 75, 30, 180, -5, 0, 1730, 0, 94, 0, 281, 0, 154, '0, 0, 0, 0', '', '0,0,0,0', '0,0,0,0', '0,0,0,0', '0,0,0,0', '0,0,0,0', '2024-10-12 14:32:11.874068', 0),
+(10, 'Jane Doe', '$2y$12$sefkgQs6NGYt8cy1Z9kCj.f0Y.WEjVxUqdLylhN4.4eWng7dCcl4q', 'JaneDoe@gmail.com', 60, 20, 180, 161, 0, 1464, 0, 75, 0, 238, 0, 130, '1464, 75, 238, 130', '1400, 70, 200, 100', '0,0,0,0', '0,0,0,0', '0,0,0,0', '0,0,0,0', '0,0,0,0', '2024-10-12 15:19:54.000000', 2),
+(12, 'Test', '$2y$12$KzEEOZye1Bl3JTzprkqqGeFh7Zg7qtmO1x8bQP9uZGOyCwt57Xo0W', 'Test@gmail.com', 75, 30, 180, -5, 0, 1730, 0, 94, 0, 281, 0, 154, '0, 0, 0, 0', '0, 0, 0, 0', '0,0,0,0', '0,0,0,0', '0,0,0,0', '0,0,0,0', '0,0,0,0', '2024-10-12 14:32:11.874068', 0);
 
 --
 -- Triggers `users`
@@ -118,7 +121,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 DELIMITER $$
 --
@@ -173,6 +176,11 @@ CREATE DEFINER=`root`@`localhost` EVENT `reset_weekly_nutrition` ON SCHEDULE EVE
         thursday_nutrition = '0,0,0,0',
         friday_nutrition = '0,0,0,0',
         saturday_nutrition = '0,0,0,0';
+END$$
+
+CREATE DEFINER=`root`@`localhost` EVENT `reset_points` ON SCHEDULE EVERY 1 WEEK STARTS '2024-10-13 00:00:00' ON COMPLETION NOT PRESERVE ENABLE DO BEGIN
+    UPDATE users
+    SET points = 0;
 END$$
 
 DELIMITER ;
