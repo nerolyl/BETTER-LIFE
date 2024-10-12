@@ -1,20 +1,43 @@
 <?php
+session_start();
+require_once 'dbh.inc.php'; // Database handler for connecting to the database
+require_once 'login_model.inc.php'; // Contains helper functions for login
+require_once 'login_contr.inc.php'; // Contains validation and login control logic
+
+// Function to update the user's points and last login time
+function update_user_points_and_login(object $pdo, string $username) {
+    try {
+        $query = "UPDATE users SET points = points + 1, last_login = NOW() WHERE username = :username;";
+        $stmt = $pdo->prepare($query);
+        $stmt->bindParam(":username", $username);
+        $stmt->execute();
+
+        // Check if the update was successful
+        if ($stmt->rowCount() > 0) {
+            error_log("Successfully updated points and last login for user: " . $username);
+            return true;
+        } else {
+            error_log("No rows affected when updating points and last login for user: " . $username);
+            return false;
+        }
+    } catch (PDOException $e) {
+        // Log the error message
+        error_log("Error updating user points and last login: " . $e->getMessage());
+        return false;
+    }
+}
+
 // Check if the request method is POST (i.e., the form has been submitted)
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $username = $_POST["username"]; // Retrieve 'username' from POST request
     $pwd = $_POST["pwd"]; // Retrieve 'pwd' (password) from POST request
 
     try {
-        // Include necessary files for database connection and login functionality
-        require_once 'dbh.inc.php'; // Database handler for connecting to the database
-        require_once 'login_model.inc.php'; // Contains helper functions for login
-        require_once 'login_contr.inc.php'; // Contains validation and login control logic
-
         // ERROR HANDLER
         $error = [];
 
         // Check if either username or password is empty
-        if (is_input_empty($username, empty($pwd))) {
+        if (empty($username) || empty($pwd)) {
             $error["empty_input"] = "Fill in all fields";
         }
 
@@ -22,13 +45,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $result = get_user($pdo, $username);
 
         // Check if the username provided does not match any in the database
-        if (is_username_wrong($result)) {
+        if (!$result) {
             $error["login_incorrect"] = "Incorrect login info";
         }
 
         // If the username is correct but the password is incorrect
-        if (!is_username_wrong($result) && is_password_wrong($pwd, $result["pwd"])) {
-            $error["login_incorrect"] = "Incorrect login info 2";
+        if ($result && !password_verify($pwd, $result["pwd"])) {
+            $error["login_incorrect"] = "Incorrect login info";
         }
 
         // Include session configuration for setting session parameters
@@ -37,7 +60,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // If there are errors, store them in the session and redirect back to the login page
         if ($error) {
             $_SESSION["error_login"] = $error;
-
             header("Location: ../Login.php");
             die();
         }
@@ -65,15 +87,29 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $_SESSION["user_thursday_nutrition"] = htmlspecialchars($result["thursday_nutrition"]);
         $_SESSION["user_friday_nutrition"] = htmlspecialchars($result["friday_nutrition"]);
         $_SESSION["user_saturday_nutrition"] = htmlspecialchars($result["saturday_nutrition"]);
-        $_SESSION["last_regeneation"] = time(); // Set the time of the last session regeneration
+        $_SESSION["last_regeneration"] = time(); // Set the time of the last session regeneration
 
+        // Check if the user logged in today
+        $lastLogin = new DateTime($result['last_login']);
+        $currentDate = new DateTime();
+        if ($lastLogin->format('Y-m-d') !== $currentDate->format('Y-m-d')) {
+            // Update points and last login time
+            if (update_user_points_and_login($pdo, $username)) {
+                // Refresh user data to update session with new points and last login time
+                $result = get_user($pdo, $username);
+                $_SESSION["user_data"] = $result;
+            } else {
+                // Log an error message if the update failed
+                error_log("Failed to update user points and last login for user: " . $username);
+            }
+        }
 
         // Redirect to the Home Page after successful login
-        header("Location: ../home_page.php");   
+        header("Location: ../home_page.php");
 
         // Close the database connection
         $pdo = null;
-        $statment = null;
+        $stmt = null;
 
         die();
     } catch (PDOException $e) {
@@ -85,3 +121,4 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     header("Location: ../Login.php");
     die();
 }
+?>
