@@ -368,7 +368,35 @@ function get_user(object $pdo, string $username) {
             // Fetch the resulting row as an associative array and return it
             $result = $stmt->fetch(PDO::FETCH_ASSOC);
             return $result;
+            
+        // Function to get the user's points from the database and append it to the session
+        function set_user_points_to_session(object $pdo, string $username) {
+            // Get the points value for the given username
+            $points = get_points($pdo, $username);
+            
+            // Check if points is not null
+            if ($points !== null) {
+            // Append the points value to the session
+            $_SESSION['points'] = $points['points'];
+            }
         }
 
-
-
+        // Function to get the points value from the database based on the username
+        function get_points(object $pdo, string $username) {
+            // SQL query to select the points column from the 'users' table where the username matches the given value
+            $query = "SELECT points FROM users WHERE username = :username;";
+            
+            // Prepare the SQL statement to prevent SQL injection
+            $stmt = $pdo->prepare($query);
+            
+            // Bind the provided username to the SQL statement
+            $stmt->bindParam(":username", $username);
+            
+            // Execute the prepared statement
+            $stmt->execute();
+            
+            // Fetch the resulting row as an associative array and return it
+            $result = $stmt->fetch(PDO::FETCH_ASSOC);
+            return $result;
+        }
+    }

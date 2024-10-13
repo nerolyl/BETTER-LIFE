@@ -87,6 +87,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $_SESSION["user_thursday_nutrition"] = htmlspecialchars($result["thursday_nutrition"]);
         $_SESSION["user_friday_nutrition"] = htmlspecialchars($result["friday_nutrition"]);
         $_SESSION["user_saturday_nutrition"] = htmlspecialchars($result["saturday_nutrition"]);
+        $_SESSION["user_points"] = htmlspecialchars($result["points"]);
         $_SESSION["last_regeneration"] = time(); // Set the time of the last session regeneration
 
         // Check if the user logged in today
