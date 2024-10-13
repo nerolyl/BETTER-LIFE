@@ -17,21 +17,21 @@
 }
 @media (min-width :1440px ){
     .chart {
-        height: 32rem;
+        height: 25rem;
         
     }
     #myChart {
-        max-width: 58rem;
+        max-width: 40rem;
     }
 }
 
 @media (min-width :1701px ){
     .chart {
-        height: 32rem;
+        height: 25rem;
         
     }
     #myChart {
-        max-width: 70rem;
+        max-width: 65rem;
     }
 
 }
