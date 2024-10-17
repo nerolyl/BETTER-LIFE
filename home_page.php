@@ -29,7 +29,7 @@ require_once 'includes/homepage_view.inc.php';
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
-  <p> test<?php output_monday_nutrition() ?></p>
+  <p> test<?php output_points(); ?></p>
   <header>
     <div class="better_life_header">
       <a href=""><b>BETTER LIFE</b></a>
@@ -43,47 +43,47 @@ require_once 'includes/homepage_view.inc.php';
       </ul>
     </div>
   </header>
-<section class="check_in">
+  <section class="check_in">
   <div class="check_in_con">
     <div class="back_line">
       <div class="items_con">
         <div class="line_con">
           <div class="line_1">
-            <div class="circle">
+          <?php output_check_in(); ?>
               <img class="rectangle" src="img/Rectangle 783.png" alt="">
             </div>
           </div>
           <div class="line">
-            <div class="circle">
+            <?php output_check_in2(); ?>
               <img class="rectangle" src="img/Rectangle 783.png" alt="">
             </div>
           </div>
           <div class="line">
-            <div class="circle">
+          <?php output_check_in3(); ?>
               <img class="rectangle" src="img/Rectangle 783.png" alt="">
             </div>
           </div>
           <div class="line">
-            <div class="circle">
+          <?php output_check_in4(); ?>
               <img class="rectangle" src="img/Rectangle 783.png" alt="">
             </div>
           </div>
           <div class="line">
-            <div class="circle">
+          <?php output_check_in5(); ?>
               <img class="rectangle" src="img/Rectangle 783.png" alt="">
             </div>
           </div>
           <div class="line">
-            <div class="circle">
+          <?php output_check_in6(); ?>
               <img class="rectangle" src="img/Rectangle 783.png" alt="">
             </div>
           </div>
           <div class="line">
-            <div class="circle">
+          <?php output_check_in7(); ?>
               <img class="rectangle" src="img/Rectangle 783.png" alt="">
             </div>
           </div>
-          <div class="line">
+          <div class="line_1">
           </div>
         </div>
       </div>
