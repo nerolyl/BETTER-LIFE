@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Upload</title>
+</head>
+<body>
+    <h1>Upload an Image</h1>
+    <input type="file" id="imageInput">
+    <button onclick="uploadImage()">Upload</button>
+    <h1><pre id="results"></pre></H1>
+
+    <script>
+        function uploadImage() {
+            const imageInput = document.getElementById('imageInput');
+            const file = imageInput.files[0];
+
+            if (!file) {
+                alert("Please select an image.");
+                return;
+            }
+
+            const formData = new FormData();
+            formData.append('image', file);
+
+            fetch('http://127.0.0.1:5000/analyze_food', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.error) {
+                    document.getElementById('results').textContent = data.error;
+                } else {
+                    document.getElementById('results').textContent = JSON.stringify(data, null, 2);
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
+        }
+    </script>
+
+
+
+     <div class="drag-area">
+    <div class="icon"><i class="fas fa-cloud-upload-alt"></i></div>
+    <header>Drag & Drop to Upload File</header>
+    <span>OR</span>
+  
+    <div class="upload-area">
+    <input type="file" id="imageInput">
+    <button class="import_btn" onclick="uploadImage()">import file</button>
+    </div>
+    <input type="file" hidden>
+    <script src="js/fod_analysis.js"></script>
+  </div>
+</body>
+</html>

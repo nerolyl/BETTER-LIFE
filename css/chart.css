@@ -13,7 +13,7 @@
     padding-right: 3rem;
     padding-left: 3rem;
     background-color: #FFFFFF;
-    max-width: 42rem;
+    max-width: 36rem;
 }
 @media (min-width :1440px ){
     .chart {
@@ -42,7 +42,8 @@
         
     }
     #myChart {
-        max-width: 100rem;
+        
+        max-width: 81rem;
     }
 
 

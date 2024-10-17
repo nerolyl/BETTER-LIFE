@@ -24,10 +24,12 @@
     margin-left: 12rem;
 }
 .img_cal_1{
+    font-size: 1.2rem;
+    width: 6rem;
     position: absolute;
     margin-bottom: 4rem;
     margin-top: -4rem;
-    margin-left: 0.2rem;
+    margin-left: -2rem;
 }
 sub{
     font-size: 0.5em;
@@ -38,10 +40,10 @@ sub{
         margin-left: 15rem;
     }
     .img_cal_1{
-        position: absolute;
+        width: 7rem;
         margin-bottom: 4rem;
         margin-top: -4rem;
-        margin-left: 0.2rem;
+        margin-left: -4rem;
     }
     
 }
