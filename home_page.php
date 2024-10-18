@@ -23,14 +23,13 @@ require_once 'includes/homepage_view.inc.php';
     <link rel="stylesheet" href="css/check_in.css">
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/master.css">
-    <link rel="stylesheet" href="css/Food_analysis.css">
-    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Homepage</title>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
+  <p> test<?php output_points(); ?></p>
   <header>
     <div class="better_life_header">
       <a href=""><b>BETTER LIFE</b></a>
@@ -103,7 +102,7 @@ require_once 'includes/homepage_view.inc.php';
         <h1><?php  output_max_calorie(); ?><sub>kcal</sub></h1>
       </div>
       <div class="img_cal">
-      <input type="text" class="img_cal_1" placeholder="Add">
+        <img class="img_cal_1" src="img/plus-circle.png" alt="">
         <img class="img_cal_2" src="img/Fire_fill.png" alt="">
       </div>
     </div>
@@ -117,7 +116,7 @@ require_once 'includes/homepage_view.inc.php';
         <h1> <?php output_max_protein() ?><sub>g</sub></h1>
       </div>
       <div class="img_cal">
-      <input type="text" class="img_cal_1" placeholder="Add">
+        <img class="img_cal_1" src="img/plus-circle.png" alt="">
         <img class="img_cal_2" src="img/Protein.png" alt="">
       </div>
     </div>
@@ -131,7 +130,7 @@ require_once 'includes/homepage_view.inc.php';
         <h1><?php output_max_carbs() ?><sub>g</sub></h1>
       </div>
       <div class="img_cal">
-      <input type="text" class="img_cal_1" placeholder="Add">
+        <img class="img_cal_1" src="img/plus-circle.png" alt="">
         <img class="img_cal_2" src="img/Carbs.png" alt="">
       </div>
     </div>
@@ -145,13 +144,12 @@ require_once 'includes/homepage_view.inc.php';
         <h1><?php output_max_fat() ?><sub>g</sub> </h1>
       </div>
       <div class="img_cal">
-      <input type="text" class="img_cal_1" placeholder="Add">
+        <img class="img_cal_1" src="img/plus-circle.png" alt="">
         <img class="img_cal_2" src="img/Fat.png" alt="">
       </div>
     </div>
   </div>
 </section>
-<div class="conn">
 <section class="chart">
 <canvas id="myChart"></canvas>
 
@@ -174,102 +172,64 @@ require_once 'includes/homepage_view.inc.php';
   const [friCalories, friProtein, friCarbs, friFat] = fri.split(',').map(Number);
   const [satCalories, satProtein, satCarbs, satFat] = sat.split(',').map(Number);
 
- 
+  // Get the context of the canvas element we want to select
   var ctx = document.getElementById('myChart').getContext('2d');
 
-
+  // Create a new Chart instance
   var myChart = new Chart(ctx, {
-    type: 'bar', 
+    type: 'bar', // Specify the chart type
     data: {
-      labels: ['Calories', 'Protein', 'Carbs', 'Fat'], 
+      labels: ['Calories', 'Protein', 'Carbs', 'Fat'], // Labels for the x-axis
       datasets: [
         {
-          label: 'Sunday Nutrition',
-          data: [sunCalories, sunProtein, sunCarbs, sunFat], 
-          backgroundColor: ['#5B246B', '#392141', '#E2C5EB', '#F3CAFF'], 
+          label: 'Sunday Nutrition', // Label for the Sunday dataset
+          data: [sunCalories, sunProtein, sunCarbs, sunFat], // Data for the Sunday dataset
+          backgroundColor: ['#5B246B', '#392141', '#E2C5EB', '#F3CAFF'], // Background colors for the Sunday bars
         },
         {
-          label: 'Monday Nutrition',
-          data: [monCalories, monProtein, monCarbs, monFat], 
-          backgroundColor: ['#C9C5EB', '#8880BF', '#2D246B', '#242141'], 
+          label: 'Monday Nutrition', // Label for the Monday dataset
+          data: [monCalories, monProtein, monCarbs, monFat], // Data for the Monday dataset
+          backgroundColor: ['#C9C5EB', '#8880BF', '#2D246B', '#242141'], // Background colors for the Monday bars
         },
         {
-          label: 'Tuesday Nutrition', 
-          data: [tueCalories, tueProtein, tueCarbs, tueFat], 
-          backgroundColor: ['#FFB6C1', '#FF69B4', '#FF1493', '#DB7093'], 
+          label: 'Tuesday Nutrition', // Label for the Tuesday dataset
+          data: [tueCalories, tueProtein, tueCarbs, tueFat], // Data for the Tuesday dataset
+          backgroundColor: ['#FFB6C1', '#FF69B4', '#FF1493', '#DB7093'], // Background colors for the Tuesday bars
         },
         {
-          label: 'Wednesday Nutrition', 
-          data: [wedCalories, wedProtein, wedCarbs, wedFat], 
-          backgroundColor: ['#FFD700', '#FFA500', '#FF8C00', '#FF4500'], 
+          label: 'Wednesday Nutrition', // Label for the Wednesday dataset
+          data: [wedCalories, wedProtein, wedCarbs, wedFat], // Data for the Wednesday dataset
+          backgroundColor: ['#FFD700', '#FFA500', '#FF8C00', '#FF4500'], // Background colors for the Wednesday bars
         },
         {
-          label: 'Thursday Nutrition', 
-          data: [thuCalories, thuProtein, thuCarbs, thuFat], 
-          backgroundColor: ['#8A2BE2', '#7B68EE', '#6A5ACD', '#483D8B'], 
+          label: 'Thursday Nutrition', // Label for the Thursday dataset
+          data: [thuCalories, thuProtein, thuCarbs, thuFat], // Data for the Thursday dataset
+          backgroundColor: ['#8A2BE2', '#7B68EE', '#6A5ACD', '#483D8B'], // Background colors for the Thursday bars
         },
         {
-          label: 'Friday Nutrition',
-          data: [friCalories, friProtein, friCarbs, friFat], 
-          backgroundColor: ['#00FA9A', '#00FF7F', '#3CB371', '#2E8B57'], 
+          label: 'Friday Nutrition', // Label for the Friday dataset
+          data: [friCalories, friProtein, friCarbs, friFat], // Data for the Friday dataset
+          backgroundColor: ['#00FA9A', '#00FF7F', '#3CB371', '#2E8B57'], // Background colors for the Friday bars
         },
         {
-          label: 'Saturday Nutrition', 
-          data: [satCalories, satProtein, satCarbs, satFat], 
-          backgroundColor: ['#FF6347', '#FF4500', '#FF0000', '#DC143C'], 
+          label: 'Saturday Nutrition', // Label for the Saturday dataset
+          data: [satCalories, satProtein, satCarbs, satFat], // Data for the Saturday dataset
+          backgroundColor: ['#FF6347', '#FF4500', '#FF0000', '#DC143C'], // Background colors for the Saturday bars
         }
       ]
     },
-
-    }
-  );
-</script>
-
-</section>
-<section class="food_analysis">
-  <div class="drag-area">
-    <h1>Check out the calories in</h1>
-    <h2>your meal!</h2>
-      <div class="input">
-        <input type="file" class="file1" id="imageInput">
-      <button class="submit_btn" onclick="uploadImage()">Upload</button>
-    </div>
-  </div>
-  <h1 class="result1"><pre id="results"></pre></H1>
-
-  
-  <script>
-        function uploadImage() {
-            const imageInput = document.getElementById('imageInput');
-            const file = imageInput.files[0];
-
-            if (!file) {
-                alert("Please select an image.");
-                return;
-            }
-
-            const formData = new FormData();
-            formData.append('image', file);
-
-            fetch('http://127.0.0.1:5000/analyze_food', {
-                method: 'POST',
-                body: formData
-            })
-            .then(response => response.json())
-            .then(data => {
-                if (data.error) {
-                    document.getElementById('results').textContent = data.error;
-                } else {
-                    document.getElementById('results').textContent = JSON.stringify(data, null, 2);
-                }
-            })
-            .catch(error => {
-                console.error('Error:', error);
-            });
+    options: {
+      scales: {
+        y: {
+          beginAtZero: true, // Start the y-axis at zero
+         suggestedMax: 3000 // Suggest a maximum value for the y-axis
         }
-    </script>
- </section>
-</div>
+      }
+    }
+  });
+</script>
+</script>
+</section>
 <section class="chat_bot">
         <script type="text/javascript">
             (function(d, t) {

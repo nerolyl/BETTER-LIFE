@@ -19,7 +19,6 @@ require_once 'includes/login_view.inc.php';
     </style>
 </head>
 <body>
-    
     <section class="login">
 <div class="login_container">
     <div class="Login_img_1">
@@ -38,14 +37,11 @@ require_once 'includes/login_view.inc.php';
             </div>
         </form>
         
-        
         <?php
         check_login_error();
 
         ?>
-        <div class="forgot_password">
-            <a href="forgot pwd.php">Forgot Password?</a>
-        </div>
+
     </div>
 </div>
     </section>
