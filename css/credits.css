@@ -24,13 +24,12 @@ body{
     animation-name: left_2;
 }
 .turki h1{
-    font-size: 5rem;
-    margin-left: 6rem;
+font-size: 5rem;
+margin-left: 6rem;
 }
 .turki h2{
-    width: 100%;
     font-size: 4rem;
-    margin-left: 40rem;
+    margin-left: 45rem;
     margin-top: 2rem;
 }
 .rakan{
@@ -54,9 +53,8 @@ body{
     margin-bottom: 2rem;
 }
 .coders h2{
-    width: 100%;
     font-size: 4rem;
-    margin-left: 25rem;
+    margin-left: 30rem;
 }
 .Supervisor{
     margin-top: 13rem;
@@ -69,7 +67,7 @@ body{
 }
 .Supervisor h2{
     font-size: 4rem;
-    margin-left: 25rem;
+    margin-left: 30rem;
 }
 /* left to right*/
 @keyframes left_1 {
@@ -88,13 +86,13 @@ body{
         }
 }
 
-/* left to right 2*/
+/* right to left*/
 @keyframes right_1 {
-    0% { left: -2000px ;}
-    25%{ left: -500px;}
-    50%{ left: -100px;}
-    75%{ left: 0px;}
-    100%{ right: 0px;}
+        0% { right: -2000px ;}
+        25%{ right: -500px;}
+        50%{ right: -100px;}
+        75%{ right: 0px;}
+        100%{ right: 0px;}
         
          
 }
@@ -107,8 +105,8 @@ body{
 
 /* right to left 1*/
 @keyframes right_2 {
-    0% { left: -500px ;}
-    25%{ left: -0px;}
+            0% { right: -500px ;}
+            25%{ right: 0px;}
             
              
 }
@@ -131,119 +129,39 @@ body{
           ;
         }
       }
-
-      @media (min-width :1440px ){
-        .turki h1{
-            font-size: 6rem;
-            margin-left: 6rem;
-        }
-        .turki h2{
-            width: 100%;
-            font-size: 5rem;
-            margin-left: 48rem;
-        }
-
-    
-    .rakan h1{
-        font-size: 6rem;
-        margin-left: 6rem;
-    }
-    .rakan h2{
-            font-size: 5rem;
-            margin-left: 40rem;
-    }
-
-    .coders h1{
-        font-size: 6rem;
-        margin-left: 6rem;
-    }
-    .coders h2{
-        width: 100%;
-        font-size: 5rem;
-        margin-left: 30rem;
-    }
-    .Supervisor h1{
-        font-size: 6rem;
-        margin-left: 6rem;
-    }
-    .Supervisor h2{
-        font-size: 5rem;
-        margin-left: 30rem;
-    }
-      }
-      
 @media (min-width :1701px ){
     .turki h1{
         font-size: 7rem;
-        margin-left: 7rem;
-    }
-    .turki h2{
-        font-size: 6rem;
-        margin-left: 50rem;
-    }
-
-
-.rakan h1{
-    font-size: 7rem;
-    margin-left: 7rem;
-}
-.rakan h2{
-        font-size: 6rem;
-        margin-left: 45rem;
-}
-
-.coders h1{
-    font-size: 7rem;
-    margin-left: 7rem;
-}
-.coders h2{
-    font-size: 6rem;
-    margin-left: 35rem;
-}
-.Supervisor h1{
-    font-size: 7rem;
-    margin-left: 7rem;
-}
-.Supervisor h2{
-    font-size: 6rem;
-    margin-left: 35rem;
-}
-      }
-@media(min-width: 2500px){
-    .turki h1{
-        font-size: 8rem;
-        margin-left: 8rem;
-    }
-    .turki h2{
-        font-size: 7rem;
-        margin-left: 70rem;
-    }
-
-
-.rakan h1{
-    font-size: 8rem;
-    margin-left: 8rem;
-}
-.rakan h2{
-        font-size: 7rem;
-        margin-left: 55rem;
-}
-
-.coders h1{
-    font-size: 8rem;
-    margin-left: 8rem;
-}
-.coders h2{
-    font-size: 7rem;
-    margin-left: 50rem;
-}
-.Supervisor h1{
-    font-size: 8rem;
-    margin-left: 8rem;
-}
-.Supervisor h2{
-    font-size: 7rem;
-    margin-left: 50rem;
-}
-
+        margin-left: 6rem;
         }
+        .turki h2{
+            font-size: 6rem;
+            margin-left: 65rem;
+            margin-top: 4rem;
+        }
+        .rakan h1{
+            font-size: 7rem;
+            margin-left: 6rem;
+        }
+        .rakan h2{
+                font-size: 6rem;
+                margin-left: 35rem;
+                margin-top: 4rem;
+        }
+        .coders h1{
+            font-size: 7rem;
+            margin-left: 6rem;
+        }
+        .coders h2{
+            font-size: 6rem;
+            margin-left: 43rem;
+        }
+        .Supervisor h1{
+            font-size: 7rem;
+            margin-left: 6rem;
+        }
+        .Supervisor h2{
+            font-size: 6rem;
+            margin-left: 43rem;
+        }
+      }
