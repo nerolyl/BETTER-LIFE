@@ -222,7 +222,7 @@ require_once 'includes/homepage_view.inc.php';
       scales: {
         y: {
           beginAtZero: true, // Start the y-axis at zero
-          suggestedMax: 3000 // Suggest a maximum value for the y-axis
+         suggestedMax: 3000 // Suggest a maximum value for the y-axis
         }
       }
     }
