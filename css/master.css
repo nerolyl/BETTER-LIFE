@@ -10,5 +10,7 @@
 body{
     background-color: #EBEAE1;
 }
-
+button:hover{
+    cursor: pointer;
+}
 

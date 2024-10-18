@@ -19,13 +19,14 @@ header{
     list-style-type:none
 }
 
-button{
+button {
     border: none;
     background-color: #FFFFFF;
     font-family: "Lexend Deca";
     font-size: 1.5rem;
     color: #5A246B;
 }
+
 .items{
       padding-top: 1rem;
     font-family: "Lexend Deca";
