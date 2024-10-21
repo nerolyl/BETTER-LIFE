@@ -7,7 +7,7 @@ function check_register_error(){
         echo "<br>";
 
         foreach ($errors as $error) {
-          echo '<p class="form-error">'.$error.'</p>';
+          echo '<p class="form_error">'.$error.'</p>';
         }
 
         unset($_SESSION ['error_register']);

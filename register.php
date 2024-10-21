@@ -46,7 +46,6 @@ require_once 'includes/register_view.inc.php';
                         <button >Register</button>
                     </div>
                 </form>
-                <h1 class="form-error">test</h1>
                 <?php
                 check_register_error () ;
                 ?>

@@ -1,0 +1,177 @@
+
+.food_analysis{
+  margin-left: 1.5rem;
+  margin-top: 1rem;
+  display: flex;
+}
+
+.conn{
+    display: flex;
+}
+.Food_analysis{
+  display: flex;
+  background: #5A246B;
+}
+.drag-area{
+  font-family: Abril Fatface;
+  border: 2px dashed #5A246B;
+  height: 24rem;
+  width: 19rem;
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.drag-area h1{
+  background-color: #EBEAE1;
+  font-size: 1.4rem;
+  font-weight: 1.2rem;
+  color: #5A246B;
+}
+
+.drag-area h2{
+  font-size: 2rem;
+  font-weight: 1.2rem;
+  color: #5A246B;
+}
+
+.input{
+display: flex;
+padding-top: 6rem;
+margin-bottom: -7rem;
+}
+
+.file1{
+  
+  font-family: Abril Fatface;
+  border-radius: 0.4rem;
+  margin-right: 1rem;
+  max-width: 12rem;
+  padding: 0.4rem 0.4rem 0.4rem 0.4rem;
+  background-color: rgb(253, 253, 253);
+  color: #5A246B;
+}
+.submit_btn{
+  font-family: Abril Fatface;
+  background-color: white;
+  color: #5A246B;
+  border-radius: 0.4rem;
+  padding: 0.4rem 0.4rem 0.4rem 0.4rem;
+  margin-left: 1rem;
+  font-size: 1rem;
+}
+
+.result1{
+  font-size: 0.85rem;
+  font-family: Abril Fatface;
+  color: #5A246B;
+
+  margin-left: 1rem;
+  margin-right: 1rem;
+  display: flex;
+  background-color: white;
+  border-radius: 1rem;
+}
+
+@media (min-width :1440px ){
+  .drag-area{
+    height: 25rem;
+    width: 20rem;
+  }
+  .drag-area h1{
+    font-size: 1.5;
+    font-weight: 1.4rem;
+  }
+  .drag-area h2{
+    font-size: 2rem;
+    font-weight: 1.4rem;
+  }
+  .input{
+    padding-top: 7rem;
+    margin-bottom: -9rem;
+    }
+
+    .file1{
+      max-width: 12rem;
+    }
+    .submit_btn{
+      margin-left: 1rem;
+      font-size: 1rem;
+    }
+
+    .result1{
+      width: 23.5rem;
+      font-size: 1.1rem;
+      padding-top: 1rem;
+    }
+}
+@media (min-width :1701px ){
+  .drag-area{
+    height: 32rem;
+    width: 25rem;
+  }
+  .drag-area h1{
+    font-size: 2rem;
+    font-weight: 1.4rem;
+  }
+  .drag-area h2{
+    font-size: 3rem;
+    font-weight: 1.4rem;
+  }
+  .input{
+    padding-top: 11rem;
+    margin-bottom: -10rem;
+    }
+
+    .file1{
+      max-width: 15rem;
+    }
+    .submit_btn{
+      margin-left: 1rem;
+      font-size: 1.4rem;
+    }
+
+    .result1{
+      width: 32.5rem;
+      font-size: 1.2rem;
+      padding-left: 2rem;
+      padding-top: 1rem;
+    }
+
+}
+
+@media(min-width: 2500px){
+  .drag-area{
+    height: 51rem;
+    width: 40rem;
+  }
+  .drag-area h1{
+    font-size: 2.5rem;
+    font-weight: 1.4rem;
+  }
+  .drag-area h2{
+    font-size: 4rem;
+    font-weight: 1.4rem;
+  }
+  .input{
+    padding-top: 20rem;
+    margin-bottom: -15rem;
+    }
+
+    .file1{
+      max-width: 18rem;
+    }
+    .submit_btn{
+      margin-left: 9rem;
+      font-size: 2.5rem;
+    }
+
+    .result1{
+      width: 32.5rem;
+      font-size: 1.5rem;
+      padding-left: 1rem;
+      padding-top: 1rem;
+    }
+}

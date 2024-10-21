@@ -1,22 +1,50 @@
-.chart_fram{
-    border-radius: 1rem;
-    margin: 1rem 25rem 0px 2rem;
-    color: #5A246B80;
-    font-family: Inter;
-    background-color: #FFFFFF;
-}
-
-.num{
-    margin-bottom: 3rem;
-}
-.chart_num{
+.chart {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin-top: 1rem;
     margin-left: 2rem;
+    padding: 0;
+    display: flex;
+    height: 24rem;
+    
+}
+#myChart {
+    border-radius: 1rem;
+    padding-right: 3rem;
+    padding-left: 3rem;
+    background-color: #FFFFFF;
+    max-width: 36rem;
+}
+@media (min-width :1440px ){
+    .chart {
+        height: 25rem;
+        
+    }
+    #myChart {
+        max-width: 40rem;
+    }
 }
 
-.chart_day{
-    display: flex;
-    margin-left: 7rem;
+@media (min-width :1701px ){
+    .chart {
+        height: 25rem;
+        
+    }
+    #myChart {
+        max-width: 65rem;
+    }
+
 }
-.day{
-    margin-right: 3rem;
+
+@media(min-width: 2500px){
+    .chart {
+        height: 51rem;
+        
+    }
+    #myChart {
+        
+        max-width: 81rem;
+    }
+
+
 }
