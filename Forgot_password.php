@@ -5,7 +5,7 @@
     <link rel="stylesheet" href="css/forgot_password.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Forgot_password</title>
     <style>
         body{      
             background-image:  url("img/Firefly\ Vintage\ bg.png");      
@@ -22,13 +22,13 @@
                 <img src="img/Form Poster.png" alt="">
             </div>
             <div class="inputs">
-                <form action="">
+                <form action="includes/formhandler3.inc.php" method="POST"">
                     
-                     <input type="password" name="" id="" placeholder="Enter New Password"><br>
+                    <input type="email" name="email" id="email" placeholder="Enter your Email" required> <br>
                     
                     <div class="register_btn">
                         
-                        <button >Upadte</button>
+                        <button >Reset Password</button>
                     </div>
                 </form>
                <!--   <div class="form_error"> 

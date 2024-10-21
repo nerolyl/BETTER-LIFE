@@ -1,3 +1,4 @@
+
 <?php
 
 $email = $_POST["email"];
@@ -14,7 +15,7 @@ $mysqli = require __DIR__ . "/dbh.inc.php";
 
 // Check if $mysqli is a valid MySQLi object
 if (!($mysqli instanceof mysqli)) {
-    die('Database connection failed');
+    die('Database connection failed code fh3');
 }
 
 // Prepare the SQL statement to update the reset token and expiry time
@@ -57,4 +58,3 @@ if ($stmt->affected_rows > 0) {
 // Close the statement and connection
 $stmt->close();
 $mysqli->close();
-?>

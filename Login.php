@@ -9,7 +9,7 @@ require_once 'includes/login_view.inc.php';
     <link rel="stylesheet" href="css/lohin.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Login</title>
     <style>
         body{      
             background-image:  url("img/Firefly\ Vintage\ bg.png");      
@@ -44,7 +44,7 @@ require_once 'includes/login_view.inc.php';
 
         ?>
         <div class="forgot_password">
-            <a href="forgot pwd.php">Forgot Password?</a>
+            <a href="Forgot_password.php">Forgot Password?</a>
         </div>
     </div>
 </div>
