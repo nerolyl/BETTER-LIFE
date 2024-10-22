@@ -22,3 +22,33 @@ function output_gender(){
         echo htmlspecialchars($_SESSION["user_gender"]);
     }
 }
+
+function output_email(){
+    if (isset($_SESSION["user_id"])){
+        echo htmlspecialchars($_SESSION["user_email"]);
+    }
+}
+
+function output_weight_goal_maintain(){
+    if (isset($_SESSION["user_id"]) && $_SESSION["user_weight_goal"] == 1){
+        echo 'checked';
+    } else {
+        echo 'unchecked';
+    }
+}
+
+function output_weight_goal_lose(){
+    if (isset($_SESSION["user_id"]) && $_SESSION["user_weight_goal"] == 0.7){
+        echo 'checked';
+    } else {
+        echo 'unchecked';
+    }
+}
+
+function output_weight_goal_gain(){
+    if (isset($_SESSION["user_id"]) && $_SESSION["user_weight_goal"] == 1.3){
+        echo 'checked';
+    } else {
+        echo 'unchecked';
+    }
+}

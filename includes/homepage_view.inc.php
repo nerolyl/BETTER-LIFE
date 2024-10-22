@@ -7,6 +7,7 @@ function output_username(){
     }
 
 }
+
 function output_calorie(){
     if (isset($_SESSION["user_id"])){
         echo htmlspecialchars($_SESSION["user_calorie"]);

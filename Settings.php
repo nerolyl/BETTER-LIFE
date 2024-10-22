@@ -1,3 +1,11 @@
+<?php
+require_once 'includes/config_session.inc.php';
+require_once 'includes/dbh.inc.php';
+require_once 'includes/login_view.inc.php';
+require_once 'includes/login_model.inc.php';
+require_once 'includes/homepage_view.inc.php';
+require_once 'includes/settings_view.inc.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,12 +22,12 @@
 
 
 <!--css style -->
-    <link rel="stylesheet" href="../css/other_settings.css">
-    <link rel="stylesheet" href="../css/edit_goals.css">
-    <link rel="stylesheet" href="../css/user_settings.css">
-    <link rel="stylesheet" href="../css/left.nav.css">
-    <link rel="stylesheet" href="../css/master.css">
-    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="css/other_settings.css">
+    <link rel="stylesheet" href="css/edit_goals.css">
+    <link rel="stylesheet" href="css/user_settings.css">
+    <link rel="stylesheet" href="css/left.nav.css">
+    <link rel="stylesheet" href="css/master.css">
+    <link rel="stylesheet" href="css/header.css">
 <!-- meta -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -32,9 +40,10 @@
     </div>
     <div class="items">
       <ul class="ul_header">
-        <li class="i_header"><button>Home</button></li>
-        <li class="i_header"> <button>Profile </button></li>
-        <li class="i_header"><button>Settings </button></li>
+      <li class="i_header"><a href="home_page.php">Home </a></li>
+        <li class="i_header"> <button onClick="document.getElementById('user_set').scrollIntoView();">Profile </button></li>
+        <li class="i_header"><button onClick="document.getElementById('other_set').scrollIntoView();">Settings </button></li>
+        <li class="i_header"><form action="includes/logout.inc.php" method="post"><button> log out</button></form></li>
       </ul>
     </div>
     </header>
@@ -42,8 +51,8 @@
         <div class="l_n_con">
             <div class="l_n_items">
                 <div class="l_n_i">
-                    <img src="../img/Avatar.png" alt="">
-                        <h1>Username</h1>
+                    <img src="img/Avatar.png" alt="">
+                        <h1><?php output_username() ?></h1>
                             </div>
                                 <ul class="l_n_ul">
                                     <li class="l_n_i"><button onClick="document.getElementById('user_set').scrollIntoView();">User Settings</button></li><hr>
@@ -59,10 +68,10 @@
                 <h1>User Settings:</h1>
                 </div>     
                     <div class="usen_in">
-                        <input type="text"placeholder="Username"></input>
+                        <input type="text"placeholder= "<?php output_username() ?>"></input>
                         </div>
                             <div class="user_img">
-                                <img src="../img/Avatar.png" alt="">
+                                <img src=" img/Avatar.png" alt="">
                                 <input type="file" name="" value="">
                                 <button>save changes</button>
                                 </div>
@@ -75,19 +84,21 @@
             <h1>Edit Goals:</h1>
             </div>
                 <div class="edit_g_img">
+                    <form action="includes/Update_weight_goal.php" method="post">
                     <label>
-                        <input type="radio" name="weight" value="lose">
-                        <img src="../img\Lose weight Not active.png" alt="Lose Weight">
+                        <input type="radio" name="weight" value="0.7" <?php output_weight_goal_lose() ?>>
+                        <img src=" img\Lose weight Not active.png" alt="Lose Weight" >
                     </label>
                     <label>
-                        <input type="radio" name="weight" value="maintain">
-                        <img src="../img\Maintain Weight not Active.png">
+                        <input type="radio" name="weight" value="1" <?php output_weight_goal_maintain()?>>
+                        <img src=" img\Maintain Weight not Active.png">
                     </label>
                     <label>
-                        <input type="radio" name="weight" value="gain">
-                        <img src="../img\Gain weight not active.png">
+                        <input type="radio" name="weight" value="1.3" <?php output_weight_goal_gain() ?>>
+                        <img src=" img\Gain weight not active.png">
                     </label>
                     <button>save changes</button>
+                    </form>
                 </div>
                 <hr>
             </div>
@@ -101,16 +112,16 @@
             <div class="body_con">
                 <div class="body_info">
                     <label for="age">Age:</label><br>
-                    <input type="text" id="age" name="age" placeholder="">
+                    <input type="number" id="age" name="age" placeholder="<?php output_age() ?>">
                 </div>
                 <div class="body_info">
-                    <label for="weight">Weight (KG):</label><br>
-                    <input type="text" id="weight" name="weight" placeholder="">
+                    <label for="weight">Weight (kg):</label><br>
+                    <input type="number" id="weight" name="weight" placeholder="<?php output_weight() ?>">
                 </div>
             </div>
             <div class="body_info">
-                <label for="height">Height(CM):</label><br>
-                <input type="text" id="height" name="height" placeholder="">
+                <label for="height">Height(cm):</label><br>
+                <input type="number" id="height" name="height" placeholder="<?php output_height() ?>">
             </div>
         <div class="account_info">
             <div class="account_i_title">
@@ -118,11 +129,11 @@
             </div>
             <div class="account_info">
                     <label for="email">Email:</label><br>
-                    <input type="text" id="email" name="email" placeholder="Emile">
+                    <input type="email" id="email" name="email" placeholder="<?php output_email() ?>">
                 </div>
                 <div class="account_info">
                     <label for="password">Password:</label><br>
-                    <input type="text" id="password" name="password" placeholder="Passworde">
+                    <input type="password" id="password" name="password" placeholder="Password">
                 </div>
             <button>save changes</button>
             <hr>

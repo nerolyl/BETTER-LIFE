@@ -123,6 +123,7 @@ function get_user(object $pdo, string $username) {
             // Fetch the resulting row as an associative array and return it
             $result = $stmt->fetch(PDO::FETCH_ASSOC);
             return $result;
+        }
         // Function to get the user's carbs from the database and append it to the session
         function set_user_carbs_to_session(object $pdo, string $username) {
             // Get the carbs value for the given username
@@ -185,7 +186,7 @@ function get_user(object $pdo, string $username) {
             return $result;
         }
 
-        }
+        
         // Function to get the user's monday_nutrition from the database and append it to the session
         function set_user_monday_nutrition_to_session(object $pdo, string $username) {
             // Get the monday_nutrition value for the given username
@@ -454,6 +455,40 @@ function get_user(object $pdo, string $username) {
         function get_gender(object $pdo, string $username) {
 
             $query = "SELECT gender FROM users WHERE username = :username;";
+            
+          
+            $stmt = $pdo->prepare($query);
+            
+           
+            $stmt->bindParam(":username", $username);
+            
+           
+            $stmt->execute();
+            
+          
+            $result = $stmt->fetch(PDO::FETCH_ASSOC);
+            return $result;
+        }
+        function get_email(object $pdo, string $username) {
+
+            $query = "SELECT email FROM users WHERE username = :username;";
+            
+          
+            $stmt = $pdo->prepare($query);
+            
+           
+            $stmt->bindParam(":username", $username);
+            
+           
+            $stmt->execute();
+            
+          
+            $result = $stmt->fetch(PDO::FETCH_ASSOC);
+            return $result;
+        }
+        function get_weight_goal(object $pdo, string $username) {
+
+            $query = "SELECT weight_goal FROM users WHERE username = :username;";
             
           
             $stmt = $pdo->prepare($query);
