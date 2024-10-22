@@ -1,3 +1,4 @@
+
 .check_in{
     border-radius: 0.5rem;
     margin: 2rem 2rem 0 ;
@@ -16,7 +17,7 @@
     margin-top: 2rem;
     background-color: #5A246B;
     width: 5rem;
-    height: 0.8rem;
+    height: 0.4rem;
     align-items: center;
     display: flex;
     margin-left: 0.5rem;
@@ -56,7 +57,7 @@
     .line_1{
         margin-top: 2.5rem;
         width: 7rem;
-        height: 0.8rem;
+        height: 0.4rem;
         margin-left: 1.5rem;
     }
     .line{
@@ -81,7 +82,7 @@
     .line_1{
         margin-top: 2.5rem;
         width: 9rem;
-        height: 0.8rem;
+        height: 0.4rem;
         margin-left: 2rem;
     }
     .line{
@@ -111,7 +112,7 @@
     .line_1{
         margin-top: 3rem;
         width: 15rem;
-        height: 1.5rem;
+        height: 0.8rem;
         margin-left: 2rem;
     }
     .line{

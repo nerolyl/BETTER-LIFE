@@ -1,0 +1,125 @@
+.edie_con{
+    font-family: IBM Plex Sans;
+    margin-left: 28rem;
+    padding-top: 1rem;
+}
+.edit_title{
+    font-size: 2rem;
+    font-weight: 400;
+    color: #5A246B;
+}
+.edit_g_img{
+    padding-top: 2rem;
+    width: 100%;
+    height: 100%;
+    margin-top: 1rem;
+}
+.edit_g_img img{
+    padding: 1rem;
+    margin: 15px;
+    width: 15rem;
+    height: 100%;
+    border: 3px solid transparent;
+    border-radius: 1.5rem;
+}
+input[type="radio"] {
+    display: none;
+}
+input[type="radio"]:checked + img {
+    border-color: #5A246B;
+}
+.edit_g_img button{
+    margin-bottom: 2rem;
+    margin-left: 38rem;
+    border-radius: 0.5rem;
+    width: 10rem;
+    height: 2.5rem;
+    background-color: #5A246B; 
+    color: white;
+    border: none;
+    font-size: large;
+    
+}
+
+
+@media (min-width :1440px ){
+    .edie_con{
+        margin-left: 27rem;
+        padding-top: 1rem;
+    }
+    .edit_title{
+        font-size: 2rem;
+    }
+    .edit_g_img{
+        padding-top: 2rem;
+        width: 100%;
+        height: 100%;
+        margin-top: 1rem;
+    }
+    .edit_g_img img{
+        margin: 15px;
+        width: 18rem;
+        border: 4px solid transparent;
+    }
+    .edit_g_img button{ 
+        margin-left: 44rem;
+        
+    }
+
+}
+@media (min-width :1701px ){
+    .edie_con{
+        margin-left: 38rem;
+    }
+    .edit_title{
+        font-size: 2.5rem;
+    }
+    .edit_g_img{
+        padding-top: 2rem;
+        width: 100%;
+        height: 100%;
+        margin-top: 1rem;
+    }
+    .edit_g_img img{
+        margin: 15px;
+        width: 23rem;
+        border: 4px solid transparent;
+    }
+    .edit_g_img button{ 
+
+        margin-bottom: 1rem;
+        width: 13rem;
+        height: 3rem;
+        font-size: x-large;
+        margin-left: 48rem;
+    }
+
+}
+@media (min-width :2500px){
+    .edie_con{
+        margin-left: 48rem;
+    }
+    .edit_title{
+        font-size: 3rem;
+    }
+    .edit_g_img{
+        padding-bottom: 4rem;
+        margin-left: 7rem;
+        padding-top: 3rem;
+        width: 100%;
+        height: 100%;
+        margin-top: 1rem;
+    }
+    .edit_g_img img{
+        margin: 18px;
+        width: 28rem;
+        border: 4px solid transparent;
+    }
+    .edit_g_img button{ 
+            width: 15rem;
+            height: 3.5rem;
+            font-size: xx-large;
+            margin-left: 56rem;
+            
+        }
+}

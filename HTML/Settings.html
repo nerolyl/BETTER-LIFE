@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Lexend+Deca:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+
+
+<!--css style -->
+    <link rel="stylesheet" href="../css/other_settings.css">
+    <link rel="stylesheet" href="../css/edit_goals.css">
+    <link rel="stylesheet" href="../css/user_settings.css">
+    <link rel="stylesheet" href="../css/left.nav.css">
+    <link rel="stylesheet" href="../css/master.css">
+    <link rel="stylesheet" href="../css/header.css">
+<!-- meta -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings</title>
+</head>
+<body>
+<header class="sett">
+    <div class="better_life_header">
+      <a href=""><b>BETTER LIFE</b></a>
+    </div>
+    <div class="items">
+      <ul class="ul_header">
+        <li class="i_header"><button>Home</button></li>
+        <li class="i_header"> <button>Profile </button></li>
+        <li class="i_header"><button>Settings </button></li>
+      </ul>
+    </div>
+    </header>
+<section class="left_nav">
+        <div class="l_n_con">
+            <div class="l_n_items">
+                <div class="l_n_i">
+                    <img src="../img/Avatar.png" alt="">
+                        <h1>Username</h1>
+                            </div>
+                                <ul class="l_n_ul">
+                                    <li class="l_n_i"><button onClick="document.getElementById('user_set').scrollIntoView();">User Settings</button></li><hr>
+                                    <li class="l_n_i"><button onClick="document.getElementById('edit_goals').scrollIntoView();">Edit Goals</button></li><hr>
+                                    <li class="l_n_i"><button onClick="document.getElementById('other_set').scrollIntoView();">Other settings</button></li><hr>
+                                </ul>
+            </div>
+    </section>
+
+<section class="user_set" id="user_set">
+        <div class="user_set_con">
+            <div class="user_title">
+                <h1>User Settings:</h1>
+                </div>     
+                    <div class="usen_in">
+                        <input type="text"placeholder="Username"></input>
+                        </div>
+                            <div class="user_img">
+                                <img src="../img/Avatar.png" alt="">
+                                <input type="file" name="" value="">
+                                <button>save changes</button>
+                                </div>
+                                <hr>       
+            </div>
+    </section>
+<section class="edit_goals" id="edit_goals">
+    <div class="edie_con">
+        <div class="edit_title">
+            <h1>Edit Goals:</h1>
+            </div>
+                <div class="edit_g_img">
+                    <label>
+                        <input type="radio" name="weight" value="lose">
+                        <img src="../img\Lose weight Not active.png" alt="Lose Weight">
+                    </label>
+                    <label>
+                        <input type="radio" name="weight" value="maintain">
+                        <img src="../img\Maintain Weight not Active.png">
+                    </label>
+                    <label>
+                        <input type="radio" name="weight" value="gain">
+                        <img src="../img\Gain weight not active.png">
+                    </label>
+                    <button>save changes</button>
+                </div>
+                <hr>
+            </div>
+    </section>
+<section class="other_set" id="other_set">
+    <div class="other_con">
+        <div class="other_title">
+            <h1>Other Settings:</h1>
+            <h2>Edit Body Information:</h2>
+        </div>
+            <div class="body_con">
+                <div class="body_info">
+                    <label for="age">Age:</label><br>
+                    <input type="text" id="age" name="age" placeholder="">
+                </div>
+                <div class="body_info">
+                    <label for="weight">Weight (KG):</label><br>
+                    <input type="text" id="weight" name="weight" placeholder="">
+                </div>
+            </div>
+            <div class="body_info">
+                <label for="height">Height(CM):</label><br>
+                <input type="text" id="height" name="height" placeholder="">
+            </div>
+        <div class="account_info">
+            <div class="account_i_title">
+                <h2>Account:</h2>
+            </div>
+            <div class="account_info">
+                    <label for="email">Email:</label><br>
+                    <input type="text" id="email" name="email" placeholder="Emile">
+                </div>
+                <div class="account_info">
+                    <label for="password">Password:</label><br>
+                    <input type="text" id="password" name="password" placeholder="Passworde">
+                </div>
+            <button>save changes</button>
+            <hr>
+            
+        </div>
+        <div class="delete_account">
+            <h2>Delete Account:</h2>
+            <button>Delete Account</button>
+    </div>
+</section>
+</body>
+</html>

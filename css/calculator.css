@@ -1,3 +1,21 @@
+.flex_con{
+    display: flex;
+    margin-left: -1rem;
+}
+.btn_send{
+    background-color: #5A246B;
+    color: white;
+    border: none;
+    border-radius: 0.1rem;
+    padding: 0.2rem 1rem;
+    margin-left: 4rem;
+    margin-top: -4.05rem;
+    margin-bottom: 3rem;
+    font-family: Lexend Deca;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
 .cal_cal_con{
     display: flex;
 }
@@ -21,21 +39,36 @@
 }
 
 .img_cal{
-    margin-left: 12rem;
+    margin-left: 9rem;
 }
 .img_cal_1{
     font-size: 1.2rem;
-    width: 6rem;
+    width: 4rem;
     position: absolute;
     margin-bottom: 4rem;
     margin-top: -4rem;
-    margin-left: -2rem;
+    margin-left: 0rem;
+}
+.img_cal_2{
+    margin-left: 3rem;
 }
 sub{
     font-size: 0.5em;
 }
 
 @media (min-width :1440px ){
+    .img_cal_2{
+        margin-left: 0rem;
+    }
+    .btn_send{
+        margin-left: 3rem;
+
+    }
+    
+    .flex_con{
+
+        margin-left: -3rem;
+    }
     .img_cal{
         margin-left: 15rem;
     }
@@ -58,8 +91,31 @@ sub{
 
 
 @media(min-width: 2500px){
+    .img_cal_1{
+        height: 2.5rem;
+        width: 10rem;
+        margin-bottom: 4rem;
+        margin-top: -4rem;
+        margin-left: -7rem;
+    }
+    .btn_send{
 
+
+        padding: 0.6rem 2rem;
+        margin-left: 3rem;
+        margin-top: -4rem;
+        margin-bottom: 3rem;
+        font-family: Lexend Deca;
+        font-size: 1rem;
+        cursor: pointer;
+    }
+    .flex_con{
+
+        margin-left: -5rem;
+    }
+    
     .img_cal{
+    
         margin-left: 32rem;
     }
 }

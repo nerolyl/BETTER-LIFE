@@ -1,27 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- fonts -->
+<!-- fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Lexend+Deca:wght@100..900&display=swap" rel="stylesheet">
-   <!--css style -->
-    <link rel="stylesheet" href="css/Food_analysis.css">
-    <link rel="stylesheet" href="css/chart.css">
-    <link rel="stylesheet" href="css/calculator.css">
-    <link rel="stylesheet" href="css/check_in.css">
-    <link rel="stylesheet" href="css/header.css">
-    <link rel="stylesheet" href="css/master.css">
+<!--css style -->
+    <link rel="stylesheet" href="../css/Food_analysis.css">
+    <link rel="stylesheet" href="../css/chart.css">
+    <link rel="stylesheet" href="../css/calculator.css">
+    <link rel="stylesheet" href="../css/check_in.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/master.css">
+<!-- meta -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
 <body>
-
-  <header>
+<header class="hom_p">
     <div class="better_life_header">
       <a href=""><b>BETTER LIFE</b></a>
     </div>
@@ -33,7 +33,7 @@
         <li class="i_header"><button>log out</button></li>
       </ul>
     </div>
-  </header>
+    </header>
 <section class="check_in">
   <div class="check_in_con">
     <div class="back_line">
@@ -41,37 +41,37 @@
         <div class="line_con">
           <div class="line_1">
             <div class="circle">
-              <img class="rectangle" src="img/Rectangle 783.png" alt="">
+              <img class="rectangle" src="../img/Rectangle 783.png" alt="">
             </div>
           </div>
           <div class="line">
             <div class="circle">
-              <img class="rectangle" src="img/Rectangle 783.png" alt="">
+              <img class="rectangle" src="../img/Rectangle 783.png" alt="">
             </div>
           </div>
           <div class="line">
             <div class="circle">
-              <img class="rectangle" src="img/Rectangle 783.png" alt="">
+              <img class="rectangle" src="../img/Rectangle 783.png" alt="">
             </div>
           </div>
           <div class="line">
             <div class="circle">
-              <img class="rectangle" src="img/Rectangle 783.png" alt="">
+              <img class="rectangle" src="../img/Rectangle 783.png" alt="">
             </div>
           </div>
           <div class="line">
             <div class="circle">
-              <img class="rectangle" src="img/Rectangle 783.png" alt="">
+              <img class="rectangle" src="../img/Rectangle 783.png" alt="">
             </div>
           </div>
           <div class="line">
             <div class="circle">
-              <img class="rectangle" src="img/Rectangle 783.png" alt="">
+              <img class="rectangle" src="../img/Rectangle 783.png" alt="">
             </div>
           </div>
           <div class="line">
             <div class="circle">
-              <img class="rectangle" src="img/Rectangle 783.png" alt="">
+              <img class="rectangle" src="../img/Rectangle 783.png" alt="">
             </div>
           </div>
           <div class="line">
@@ -93,8 +93,11 @@
         <h1>0</h1>
       </div>
       <div class="img_cal">
-        <input type="text" class="img_cal_1" placeholder="your calorie">
-        <img class="img_cal_2" src="img/Fire_fill.png" alt="">
+      <div class="flex_con">
+        <button class="btn_send">ok</button>
+        <input type="text" class="img_cal_1" placeholder="+">
+      </div>
+        <img class="img_cal_2" src="../img/Fire_fill.png" alt="">
       </div>
     </div>
     <div class="cal_fram">
@@ -107,8 +110,11 @@
         <h1>0</h1>
       </div>
       <div class="img_cal">
-        <input type="text" class="img_cal_1" placeholder="your Protein">
-        <img class="img_cal_2" src="img/Protein.png" alt="">
+      <div class="flex_con">
+        <button class="btn_send">ok</button>
+        <input type="text" class="img_cal_1" placeholder="+">
+      </div>
+        <img class="img_cal_2" src="../img/Protein.png" alt="">
       </div>
     </div>
     <div class="cal_fram">
@@ -121,8 +127,11 @@
         <h1>0</h1>
       </div>
       <div class="img_cal">
-        <input type="text" class="img_cal_1" placeholder="your Carbs">
-        <img class="img_cal_2" src="img/Carbs.png" alt="">
+      <div class="flex_con">
+        <button class="btn_send">ok</button>
+        <input type="text" class="img_cal_1" placeholder="+">
+      </div>
+        <img class="img_cal_2" src="../img/Carbs.png" alt="">
       </div>
     </div>
     <div class="cal_fram">
@@ -135,8 +144,11 @@
         <h1>0</h1>
       </div>
       <div class="img_cal">
-        <input type="text" class="img_cal_1" placeholder="your Fat">
-        <img class="img_cal_2" src="img/Fat.png" alt="">
+      <div class="flex_con">
+        <button class="btn_send">ok</button>
+        <input type="text" class="img_cal_1" placeholder="+">
+      </div>
+        <img class="img_cal_2" src="../img/Fat.png" alt="">
       </div>
     </div>
   </div>
@@ -191,7 +203,14 @@
           }
         ]
       },
-
+      options: {
+        scales: {
+          y: {
+            beginAtZero: true, // Start the y-axis at zero
+            suggestedMax: 3000 // Suggest a maximum value for the y-axis
+          }
+        }
+      }
     });
   </script>
  </section> 
@@ -205,8 +224,6 @@
     </div>
   </div>
   <h1 class="result1"><pre id="results"></pre></H1>
-  </section>
- </div>
  
   
   <script>
@@ -255,7 +272,7 @@
               })(document, 'script');
             </script>
             
-</section>
+  </section>
               
 </body>
 </html>

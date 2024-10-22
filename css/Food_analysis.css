@@ -67,7 +67,7 @@ margin-bottom: -7rem;
   font-size: 0.85rem;
   font-family: Abril Fatface;
   color: #5A246B;
-
+  width: 18.5rem;
   margin-left: 1rem;
   margin-right: 1rem;
   display: flex;
@@ -134,7 +134,7 @@ margin-bottom: -7rem;
     }
 
     .result1{
-      width: 32.5rem;
+      width: 23.5rem;
       font-size: 1.2rem;
       padding-left: 2rem;
       padding-top: 1rem;
