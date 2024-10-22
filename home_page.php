@@ -40,7 +40,7 @@ require_once 'includes/settings_view.inc.php';
       <ul class="ul_header">
         <li class="i_header"><a href=""><?php output_username(); ?></a></li>
         <li class="i_header"><a href="home_page.php">Home </a></li>
-        <li class="i_header"><a href="">Settings </a></li>
+        <li class="i_header"><a href="Update_profile_testpage.php">Settings </a></li>
         <li class="i_header"><form action="includes/logout.inc.php" method="post"><button> log out</button></form></li>
       </ul>
     </div>
