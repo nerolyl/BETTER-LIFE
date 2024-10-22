@@ -1,0 +1,127 @@
+.img_form{
+    
+    margin-left: 24rem;
+    width: 100%;
+    height: 100%;
+}
+.img_form img{
+    padding-top: 2.5rem;
+    width: 40%;
+}
+.inform{
+    margin-left: 27.5rem;
+    margin-top: -30rem;
+}
+.email_btn{
+    margin-left: 7.5rem;
+    margin-top: 2rem;
+}
+.email_btn button{
+    font-family: Abril Fatface;
+    font-size: 1.5rem;
+    width: 10rem;
+    height: 2rem;
+    border-radius: 1.5rem;
+    border: 0px ;
+    background-color: #5A246B;
+    color: #fff;
+}
+input[type=Email]{
+    padding-left: 0.5rem;
+    margin: 0.5rem 0rem;
+    border-radius: 1.5rem;
+    font-weight: bold;
+    font-family: Abril Fatface;
+    font-size: 2rem;
+    color: #5A246B;
+    border: 0px ;
+}
+@media (min-width :1440px ){
+    .img_form{    
+        margin-left: 27rem;
+        width: 100%;
+        height: 100%;
+    }
+    .img_form img{
+        padding-top: 5rem;
+        width: 40%;
+    }
+    .inform{
+        margin-left: 31rem;
+        margin-top: -32rem;
+    }
+    .email_btn{
+        margin-left: 8rem;
+        margin-top: 2rem;
+    }
+    .email_btn button{
+        font-size: 2rem;
+        width: 12rem;
+        height: 2.5rem;
+    }
+    input[type=Email]{
+        font-size: 2.3rem;
+        color: #5A246B;
+        border: 0px ;
+    }
+}
+
+@media (min-width :1701px ){
+    .img_form{    
+        margin-left: 37rem;
+        width: 100%;
+        height: 100%;
+    }
+    .img_form img{
+        padding-top: 2rem;
+        width: 35%;
+    }
+    .inform{
+        margin-left: 42rem;
+        margin-top: -38rem;
+    }
+    .email_btn{
+        margin-left: 8rem;
+        margin-top: 2rem;
+    }
+    .email_btn button{
+        font-size: 2.5rem;
+        width: 14rem;
+        height: 3rem;
+    }
+    input[type=Email]{
+        font-size: 2.6rem;
+        color: #5A246B;
+        border: 0px ;
+    }
+}
+@media(min-width: 2500px){
+    .img_form{    
+        margin-left: 50rem;
+        width: 100%;
+        height: 100%;
+    }
+    .img_form img{
+        padding-top: 4rem;
+        width: 35%;
+    }
+    .inform{
+        margin-left: 55.2rem;
+        margin-top: -50rem;
+    }
+    .email_btn{
+        margin-left: 15rem;
+        margin-top: 2rem;
+    }
+    .email_btn button{
+        border-radius: 3rem;
+        font-size: 3rem;
+        width: 17rem;
+        height: 3.8rem;
+    }
+    input[type=Email]{
+        font-size: 3.7rem;
+        color: #5A246B;
+        border: 0px ;
+    }
+}

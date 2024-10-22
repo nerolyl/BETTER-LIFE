@@ -22,7 +22,7 @@
 .body_info{
     width: 100%;
 }
-.body_info input[type=text]{
+.body_info input[type=number]{
     width: 25rem;
     height: 3.5rem;
     padding-left: 0.5rem;
@@ -53,7 +53,19 @@
 .account_info{
     margin-left: 1rem;
 }
-.account_info input[type=text]{
+.account_info input[type=email]{
+    margin: 0.5rem;
+    width: 47rem;
+    height: 3.5rem;
+    padding-left: rem;
+    border-radius: 0.5rem;
+    font-weight: bold;
+    font-family: IBM Plex Sans;
+    font-size: 1.5rem;
+    color: #5A246B;
+    border: 2px solid #000000;
+}
+.account_info input[type=password]{
     margin: 0.5rem;
     width: 47rem;
     height: 3.5rem;
@@ -111,7 +123,7 @@
     .other_title h2{
         font-size: 3rem;
     }
-    .body_info input[type=text]{
+    .body_info input[type=number]{
         width: 30rem;
         height: 4rem;
         font-size: 2rem;
@@ -122,7 +134,12 @@
     .account_i_title{
         font-size: 2rem;
     }
-    .account_info input[type=text]{
+    .account_info input[type=email]{
+        width: 50rem;
+        height: 4rem;
+        font-size: 2rem;
+    }
+    .account_info input[type=password]{
         width: 50rem;
         height: 4rem;
         font-size: 2rem;
@@ -154,7 +171,7 @@
     .other_title h2{
         font-size: 3.5rem;
     }
-    .body_info input[type=text]{
+    .body_info input[type=number]{
         width: 35rem;
         height: 4.5rem;
         font-size: 2.5rem;
@@ -165,7 +182,12 @@
     .account_i_title{
         font-size: 2.5rem;
     }
-    .account_info input[type=text]{
+    .account_info input[type=email]{
+        width: 55rem;
+        height: 4.5rem;
+        font-size: 2.5rem;
+    }
+    .account_info input[type=password]{
         width: 55rem;
         height: 4.5rem;
         font-size: 2.5rem;
@@ -197,7 +219,7 @@
     .other_title h2{
         font-size: 4rem;
     }
-    .body_info input[type=text]{
+    .body_info input[type=number]{
         width: 40rem;
         height: 5rem;
         font-size: 3rem;
@@ -208,7 +230,12 @@
     .account_i_title{
         font-size: 3rem;
     }
-    .account_info input[type=text]{
+    .account_info input[type=email]{
+        width: 60rem;
+        height: 5rem;
+        font-size: 3rem;
+    }
+    .account_info input[type=password]{
         width: 60rem;
         height: 5rem;
         font-size: 3rem;
