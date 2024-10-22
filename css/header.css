@@ -1,8 +1,23 @@
-header{
+header.sett{
     display: flex;
     background-color: #FFFFFF;
     padding-bottom: 1rem;
-    padding-top: 1rem;
+    position: fixed;
+    width: 100%;
+    z-index: 2;
+}
+
+header.hom_p{
+    display: flex;
+    background-color: #FFFFFF;
+    padding-bottom: 1rem;
+    width: 100%;
+}
+header.index{
+    display: flex;
+    background-color: #FFFFFF;
+    padding-bottom: 1rem;
+    width: 100%;
 }
 
 .better_life_header{
@@ -19,13 +34,14 @@ header{
     list-style-type:none
 }
 
-button{
+button {
     border: none;
     background-color: #FFFFFF;
     font-family: "Lexend Deca";
     font-size: 1.5rem;
     color: #5A246B;
 }
+
 .items{
       padding-top: 1rem;
     font-family: "Lexend Deca";
