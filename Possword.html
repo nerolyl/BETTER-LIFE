@@ -5,38 +5,37 @@
     <link rel="stylesheet" href="css/forgot_password.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Reset Password</title>
     <style>
-        body{      
-            background-image:  url("img/Firefly\ Vintage\ bg.png");      
+        body {
+            background-image: url("img/Firefly\ Vintage\ bg.png");
             background-repeat: no-repeat;
             background-size: 100%;
         }
     </style>
 </head>
 <body>
-    <section class="register_contianer">
+    <section class="register_container">
         <div class="register_imgs">
-            
-            <div class="register_img_2" >
-                <img src="img/Form Poster.png" alt="">
-            </div>
-            <div class="inputs">
-                <form action="">
-                    
-                     <input type="password" name="" id="" placeholder="Enter New Password"><br>
-                    
-                    <div class="register_btn">
-                        
-                        <button >Upadte</button>
-                    </div>
-                </form>
-               <!--   <div class="form_error"> 
-                    <p>Fill in all fields</p>
-                </div> -->
+            <div class="register_img_2">
+                <img src="img/Form Poster.png" alt="Form Poster">
             </div>
         </div>
-
-        </section>
+        <div class="inputs">
+            <form action="includes/update-password.php" method="post">
+                <div>
+                    <label for="password">New Password:</label>
+                    <input type="password" id="password" name="password" placeholder="Enter New Password" required>
+                </div>
+                <div>
+                    <label for="confirm_password">Confirm New Password:</label>
+                    <input type="password" id="confirm_password" name="confirm_password" placeholder="Confirm New Password" required>
+                </div>
+                <div class="register_btn">
+                    <button type="submit">Reset</button>
+                </div>
+            </form>
+        </div>
+    </section>
 </body>
 </html>

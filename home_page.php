@@ -4,6 +4,7 @@ require_once 'includes/dbh.inc.php';
 require_once 'includes/login_view.inc.php';
 require_once 'includes/login_model.inc.php';
 require_once 'includes/homepage_view.inc.php';
+require_once 'includes/settings_view.inc.php';
 ?>
 
 
