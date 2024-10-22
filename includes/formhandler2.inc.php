@@ -88,6 +88,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $_SESSION["user_friday_nutrition"] = htmlspecialchars($result["friday_nutrition"]);
         $_SESSION["user_saturday_nutrition"] = htmlspecialchars($result["saturday_nutrition"]);
         $_SESSION["user_points"] = htmlspecialchars($result["points"]);
+        $_SESSION["user_gender"] = htmlspecialchars($result["gender"]);
+        $_SESSION["user_weight"] = htmlspecialchars($result["weight"]);
+        $_SESSION["user_height"] = htmlspecialchars($result["height"]);
+        $_SESSION["user_age"] = htmlspecialchars($result["age"]);
         $_SESSION["last_regeneration"] = time(); // Set the time of the last session regeneration
 
         // Check if the user logged in today

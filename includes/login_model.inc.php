@@ -399,4 +399,73 @@ function get_user(object $pdo, string $username) {
             $result = $stmt->fetch(PDO::FETCH_ASSOC);
             return $result;
         }
+        
+        function get_age(object $pdo, string $username) {
+
+            $query = "SELECT age FROM users WHERE username = :username;";
+            
+          
+            $stmt = $pdo->prepare($query);
+            
+           
+            $stmt->bindParam(":username", $username);
+            
+           
+            $stmt->execute();
+            
+          
+            $result = $stmt->fetch(PDO::FETCH_ASSOC);
+            return $result;
+        }
+        function get_weight(object $pdo, string $username) {
+
+            $query = "SELECT weight FROM users WHERE username = :username;";
+            
+          
+            $stmt = $pdo->prepare($query);
+            
+           
+            $stmt->bindParam(":username", $username);
+            
+           
+            $stmt->execute();
+            
+          
+            $result = $stmt->fetch(PDO::FETCH_ASSOC);
+            return $result;
+        }
+        function get_hight(object $pdo, string $username) {
+
+            $query = "SELECT hight FROM users WHERE username = :username;";
+            
+          
+            $stmt = $pdo->prepare($query);
+            
+           
+            $stmt->bindParam(":username", $username);
+            
+           
+            $stmt->execute();
+            
+          
+            $result = $stmt->fetch(PDO::FETCH_ASSOC);
+            return $result;
+        }
+        function get_gender(object $pdo, string $username) {
+
+            $query = "SELECT gender FROM users WHERE username = :username;";
+            
+          
+            $stmt = $pdo->prepare($query);
+            
+           
+            $stmt->bindParam(":username", $username);
+            
+           
+            $stmt->execute();
+            
+          
+            $result = $stmt->fetch(PDO::FETCH_ASSOC);
+            return $result;
+        }
     }

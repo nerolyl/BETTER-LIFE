@@ -14,3 +14,16 @@ try {
     // If a connection error occurs, output an error message
     echo "Connection failed: " . $e->getMessage();
 }
+
+$host = 'localhost';
+$db = 'better_life';
+$user = 'root';
+$pass = '';
+
+$mysqli = new mysqli($host, $user, $pass, $db);
+
+if ($mysqli->connect_error) {
+    die('Database connection failed: (' . $mysqli->connect_errno . ') ' . $mysqli->connect_error);
+}
+
+return $mysqli;

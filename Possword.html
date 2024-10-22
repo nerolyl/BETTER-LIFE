@@ -1,27 +1,4 @@
-<?php
-$token = $_GET["token"];
-
-$token_hash = hash("sha256", $token);
-
-$mysqli = require __DIR__ . "/includes/dbh.inc.php";
-
-$sql = "SELECT * FROM users WHERE reset_token_hash = ?";
-$stmt = $mysqli->prepare($sql);
-
-$stmt->bind_param("s", $token_hash);
-$stmt->execute();
-
-$result = $stmt->get_result();
-$user = $result->fetch_assoc();
-
-if ($user === null) {
-    die("Invalid token");
-}
-
-if (strtotime($user["reset_token_expires_at"]) <= time()) {
-    die("Token expired");
-}
-?><!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <link rel="stylesheet" href="css/master.css">
@@ -46,7 +23,6 @@ if (strtotime($user["reset_token_expires_at"]) <= time()) {
         </div>
         <div class="inputs">
             <form action="includes/update-password.php" method="post">
-                <input type="hidden" name="token" value="<?php echo htmlspecialchars($_GET['token']); ?>">
                 <div>
                     <label for="password">New Password:</label>
                     <input type="password" id="password" name="password" placeholder="Enter New Password" required>
