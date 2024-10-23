@@ -32,7 +32,7 @@ require_once 'includes/settings_view.inc.php';
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
-  <header>
+<header class="hom_p">
     <div class="better_life_header">
       <a href=""><b>BETTER LIFE</b></a>
     </div>
@@ -42,9 +42,9 @@ require_once 'includes/settings_view.inc.php';
         <li class="i_header"><a href="home_page.php">Home </a></li>
         <li class="i_header"><a href="Settings.php">Settings</a></li>
         <li class="i_header"><form action="includes/logout.inc.php" method="post"><button> log out</button></form></li>
-      </ul>
+        </ul>
     </div>
-  </header>
+    </header>
   <section class="check_in">
   <div class="check_in_con">
     <div class="back_line">
@@ -85,7 +85,7 @@ require_once 'includes/settings_view.inc.php';
               <img class="rectangle" src="img/Rectangle 783.png" alt="">
             </div>
           </div>
-          <div class="line_1">
+          <div class="line  ">
           </div>
         </div>
       </div>
@@ -104,7 +104,10 @@ require_once 'includes/settings_view.inc.php';
         <h1><?php  output_max_calorie(); ?><sub>kcal</sub></h1>
       </div>
       <div class="img_cal">
-      <input type="text" class="img_cal_1" placeholder="Add">
+      <div class="flex_con">
+        <button class="btn_send">Add</button>
+        <input type="text" class="img_cal_1" placeholder="+">
+      </div>
         <img class="img_cal_2" src="img/Fire_fill.png" alt="">
       </div>
     </div>
@@ -118,7 +121,10 @@ require_once 'includes/settings_view.inc.php';
         <h1> <?php output_max_protein() ?><sub>g</sub></h1>
       </div>
       <div class="img_cal">
-      <input type="text" class="img_cal_1" placeholder="Add">
+      <div class="flex_con">
+        <button class="btn_send">Add</button>
+        <input type="text" class="img_cal_1" placeholder="+">
+      </div>
         <img class="img_cal_2" src="img/Protein.png" alt="">
       </div>
     </div>
@@ -132,7 +138,10 @@ require_once 'includes/settings_view.inc.php';
         <h1><?php output_max_carbs() ?><sub>g</sub></h1>
       </div>
       <div class="img_cal">
-      <input type="text" class="img_cal_1" placeholder="Add">
+      <div class="flex_con">
+        <button class="btn_send">Add</button>
+        <input type="text" class="img_cal_1" placeholder="+">
+      </div>
         <img class="img_cal_2" src="img/Carbs.png" alt="">
       </div>
     </div>
@@ -146,7 +155,10 @@ require_once 'includes/settings_view.inc.php';
         <h1><?php output_max_fat() ?><sub>g</sub> </h1>
       </div>
       <div class="img_cal">
-      <input type="text" class="img_cal_1" placeholder="Add">
+      <div class="flex_con">
+        <button class="btn_send">Add</button>
+        <input type="text" class="img_cal_1" placeholder="+">
+      </div>
         <img class="img_cal_2" src="img/Fat.png" alt="">
       </div>
     </div>

@@ -109,6 +109,7 @@ require_once 'includes/settings_view.inc.php';
             <h1>Other Settings:</h1>
             <h2>Edit Body Information:</h2>
         </div>
+        <form action="includes/Body_formhandler.php" method="post">
             <div class="body_con">
                 <div class="body_info">
                     <label for="age">Age:</label><br>
@@ -122,20 +123,25 @@ require_once 'includes/settings_view.inc.php';
             <div class="body_info">
                 <label for="height">Height(cm):</label><br>
                 <input type="number" id="height" name="height" placeholder="<?php output_height() ?>">
+                <button>save changes</button>
             </div>
+        </form>
+            <hr>
         <div class="account_info">
             <div class="account_i_title">
                 <h2>Account:</h2>
             </div>
+            <form action="includes/account_formhandler.php" method="post">
             <div class="account_info">
                     <label for="email">Email:</label><br>
                     <input type="email" id="email" name="email" placeholder="<?php output_email() ?>">
                 </div>
                 <div class="account_info">
                     <label for="password">Password:</label><br>
-                    <input type="password" id="password" name="password" placeholder="Password">
+                    <input type="password" id="pwd" name="pwd" placeholder="Password">
                 </div>
             <button>save changes</button>
+            </form>
             <hr>
             
         </div>
