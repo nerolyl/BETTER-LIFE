@@ -52,3 +52,11 @@ function output_weight_goal_gain(){
         echo 'unchecked';
     }
 }
+function output_profile_image(){
+    if (isset($_SESSION["user_id"]) && isset($_SESSION["user_profile_image"])){
+        $randomNumber = rand(); // Generate a random number
+        echo '<img src="' . htmlspecialchars($_SESSION["user_profile_image"]) . '?v=' . $randomNumber . '" alt="Profile Image">';
+    } else {
+        echo '<img src="/Avatar.png" alt="Default Profile Image">';
+    }
+}

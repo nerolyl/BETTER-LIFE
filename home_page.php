@@ -103,14 +103,16 @@ require_once 'includes/settings_view.inc.php';
         <h1>/</h1>
         <h1><?php  output_max_calorie(); ?><sub>kcal</sub></h1>
       </div>
+      <form action="includes/calorie_formhandler.php" method="post">
       <div class="img_cal">
       <div class="flex_con">
         <button class="btn_send">Add</button>
-        <input type="text" class="img_cal_1" placeholder="+">
+        <input type="text" class="img_cal_1" placeholder="+" id=calorie name=calorie>
       </div>
-        <img class="img_cal_2" src="img/Fire_fill.png" alt="">
-      </div>
+      <img class="img_cal_2" src="img/Fire_fill.png" alt="">
     </div>
+  </div>
+</form>
     <div class="cal_fram">
       <div class="titel_cal">
         <h2>Protein</h2>
@@ -120,14 +122,16 @@ require_once 'includes/settings_view.inc.php';
         <h1>/</h1>
         <h1> <?php output_max_protein() ?><sub>g</sub></h1>
       </div>
+      <form action="includes/protein_formhandler.php" method="post">
       <div class="img_cal">
       <div class="flex_con">
         <button class="btn_send">Add</button>
-        <input type="text" class="img_cal_1" placeholder="+">
+        <input type="text" class="img_cal_1" placeholder="+" id="protein" name="protein">
       </div>
         <img class="img_cal_2" src="img/Protein.png" alt="">
       </div>
     </div>
+  </form>
     <div class="cal_fram">
       <div class="titel_cal">
         <h2>Carbs</h2>
@@ -137,14 +141,16 @@ require_once 'includes/settings_view.inc.php';
         <h1>/</h1>
         <h1><?php output_max_carbs() ?><sub>g</sub></h1>
       </div>
+      <form action="includes/carbs_formhandler.php" method="post">
       <div class="img_cal">
       <div class="flex_con">
         <button class="btn_send">Add</button>
-        <input type="text" class="img_cal_1" placeholder="+">
+        <input type="text" class="img_cal_1" placeholder="+" id="carbs" name="carbs">
       </div>
         <img class="img_cal_2" src="img/Carbs.png" alt="">
       </div>
     </div>
+  </form>
     <div class="cal_fram">
       <div class="titel_cal">
         <h2>Fats</h2>
@@ -154,15 +160,17 @@ require_once 'includes/settings_view.inc.php';
         <h1>/</h1>
         <h1><?php output_max_fat() ?><sub>g</sub> </h1>
       </div>
+      <form action="includes/fats_formhandler.php" method="post">
       <div class="img_cal">
       <div class="flex_con">
         <button class="btn_send">Add</button>
-        <input type="text" class="img_cal_1" placeholder="+">
+        <input type="text" class="img_cal_1" placeholder="+" id="fat" name="fat">
       </div>
-        <img class="img_cal_2" src="img/Fat.png" alt="">
+      <img class="img_cal_2" src="img/Fat.png" alt="">
+    </form>
       </div>
     </div>
-  </div>
+    </div>
 </section>
 <div class="conn">
 <section class="chart">

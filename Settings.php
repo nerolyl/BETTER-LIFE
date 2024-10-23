@@ -51,7 +51,7 @@ require_once 'includes/settings_view.inc.php';
         <div class="l_n_con">
             <div class="l_n_items">
                 <div class="l_n_i">
-                    <img src="img/Avatar.png" alt="">
+                    <?php output_profile_image() ?>
                         <h1><?php output_username() ?></h1>
                             </div>
                                 <ul class="l_n_ul">
@@ -61,22 +61,25 @@ require_once 'includes/settings_view.inc.php';
                                 </ul>
             </div>
     </section>
-
-<section class="user_set" id="user_set">
+<form action="includes/update_profile_formhandler.inc.php" method="post">
+    <section class="user_set" id="user_set">
         <div class="user_set_con">
             <div class="user_title">
                 <h1>User Settings:</h1>
                 </div>     
                     <div class="usen_in">
-                        <input type="text"placeholder= "<?php output_username() ?>"></input>
+                        <input type="text" id="username" name="username" placeholder= "<?php output_username() ?>"></input>
                         </div>
                             <div class="user_img">
-                                <img src=" img/Avatar.png" alt="">
-                                <input type="file" name="" value="">
+                            <?php output_profile_image() ?>
+                                <input type="file" name="profile_image" id="profile_image" >
                                 <button>save changes</button>
                                 </div>
-                                <hr>       
+                </div>
             </div>
+            </form>
+            <hr>       
+        </div>
     </section>
 <section class="edit_goals" id="edit_goals">
     <div class="edie_con">

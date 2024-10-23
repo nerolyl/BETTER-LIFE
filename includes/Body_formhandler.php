@@ -3,10 +3,7 @@ require_once 'dbh.inc.php';
 require_once 'config_session.inc.php';
 
 try {
-    // Ensure $pdo is a valid PDO object
-    if (!($pdo instanceof PDO)) {
-        throw new Exception("Database connection failed code: #BFP");
-    }
+   
 
     // Retrieve form data
     $userId = $_SESSION["user_id"];
