@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 22, 2024 at 10:21 PM
+-- Generation Time: Oct 24, 2024 at 05:56 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -55,7 +55,6 @@ CREATE TABLE `users` (
   `points` int(11) NOT NULL DEFAULT 0,
   `reset_token_hash` varchar(64) DEFAULT NULL,
   `reset_token_expires_at` datetime DEFAULT NULL,
-  `profile_image` varchar(255) DEFAULT 'upload/Avatar.png',
   `weight_goal` decimal(3,1) NOT NULL DEFAULT 1.0
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
@@ -63,13 +62,10 @@ CREATE TABLE `users` (
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`id`, `username`, `pwd`, `email`, `weight`, `age`, `height`, `gender`, `calorie`, `max_calorie`, `protein`, `max_protein`, `carbs`, `max_carbs`, `fat`, `max_fat`, `sunday_nutrition`, `monday_nutrition`, `tuesday_nutrition`, `wednesday_nutrition`, `thursday_nutrition`, `friday_nutrition`, `saturday_nutrition`, `last_login`, `points`, `reset_token_hash`, `reset_token_expires_at`, `profile_image`, `weight_goal`) VALUES
-(1, 'John', 'J123', 'john@gmail.com', 0, 0, 0, -5, 0, 5, 0, 0, 0, 1, 0, 0, '0, 0, 0, 0', '', '0,0,0,0', '0,0,0,0', '0,0,0,0', '0,0,0,0', '0,0,0,0', '2024-10-12 14:32:11.874068', 0, NULL, NULL, NULL, 1.0),
-(2, 'JaneDoe', 'Jane123', 'Jane@gmail.com', 65, 20, 180, 161, 0, 1514, 0, 81, 0, 246, 0, 135, '0, 0, 0, 0', '', '0,0,0,0', '0,0,0,0', '0,0,0,0', '0,0,0,0', '0,0,0,0', '2024-10-18 13:35:08.704848', 0, '3c96631b4832dcc30fe3952628d7d15b3a64eca87709e42b61133aa6c4c41a0a', '2024-10-18 16:05:08', NULL, 1.0),
-(6, 'Jonathan Doe', 'J123', 'Jonathan@gmail.com', 75, 30, 180, -5, 0, 1730, 0, 94, 0, 281, 0, 154, '0, 0, 0, 0', '', '0,0,0,0', '0,0,0,0', '0,0,0,0', '0,0,0,0', '0,0,0,0', '2024-10-12 14:32:11.874068', 0, NULL, NULL, NULL, 1.0),
-(9, 'JohnDoe', '$2y$12$ZQmOkO/YIk2JPLyd7djTruld0RnIMGtgO.juh0CaM7q93bDHWl7FO', 'johndoe@gmail.com', 75, 30, 180, -5, 0, 1730, 0, 94, 0, 281, 0, 154, '0, 0, 0, 0', '', '0,0,0,0', '0,0,0,0', '0,0,0,0', '0,0,0,0', '0,0,0,0', '2024-10-12 14:32:11.874068', 0, NULL, NULL, NULL, 1.0),
-(10, 'Jane Doe', '$2y$10$T/h/m.9Ei8Wz5qg1sZNRa.OgL3W6ZoltpMqKTWYsbm7XPWcdpe8/m', 'racanalmuqbil@gmail.com', 60, 20, 180, 161, 0, 1464, 0, 75, 0, 309, 0, 169, '1464, 75, 238, 130', '1400, 70, 200, 100', '0,0,0,0', '0,0,0,0', '0,0,0,0', '0,0,0,0', '0,0,0,0', '2024-10-22 20:16:10.476787', 2, NULL, NULL, NULL, 1.0),
-(12, 'Test', '$2y$12$KzEEOZye1Bl3JTzprkqqGeFh7Zg7qtmO1x8bQP9uZGOyCwt57Xo0W', 'Test@gmail.com', 75, 30, 180, -5, 0, 1730, 0, 94, 0, 281, 0, 154, '0, 0, 0, 0', '0, 0, 0, 0', '0,0,0,0', '0,0,0,0', '0,0,0,0', '0,0,0,0', '0,0,0,0', '2024-10-12 14:32:11.874068', 0, NULL, NULL, NULL, 1.0);
+INSERT INTO `users` (`id`, `username`, `pwd`, `email`, `weight`, `age`, `height`, `gender`, `calorie`, `max_calorie`, `protein`, `max_protein`, `carbs`, `max_carbs`, `fat`, `max_fat`, `sunday_nutrition`, `monday_nutrition`, `tuesday_nutrition`, `wednesday_nutrition`, `thursday_nutrition`, `friday_nutrition`, `saturday_nutrition`, `last_login`, `points`, `reset_token_hash`, `reset_token_expires_at`, `weight_goal`) VALUES
+(9, 'JohnDoe', '$2y$12$ZQmOkO/YIk2JPLyd7djTruld0RnIMGtgO.juh0CaM7q93bDHWl7FO', 'johndoe@gmail.com', 75, 30, 180, -5, 0, 1730, 0, 94, 0, 281, 0, 154, '0, 0, 0, 0', '', '0,0,0,0', '0,0,0,0', '0,0,0,0', '0,0,0,0', '0,0,0,0', '2024-10-12 14:32:11.874068', 0, NULL, NULL, 1.0),
+(10, 'Jane Doe', '$2y$10$z5MIitB2Csv6Ujz2J2GOoeuC1J6Mna7C7PzIWFHkKpS2EIUKncFQO', 'JaneDoe@gmail.com', 63, 24, 172, 161, 200, 1424, 4, 79, 42, 232, 33, 127, '1464, 75, 238, 130', '1400, 70, 200, 100', '0,0,0,0', '0,0,0,0', '0,0,0,0', '0,0,0,0', '0,0,0,0', '2024-10-24 15:28:47.243177', 4, NULL, NULL, 1.0),
+(12, 'Test', '$2y$12$KzEEOZye1Bl3JTzprkqqGeFh7Zg7qtmO1x8bQP9uZGOyCwt57Xo0W', 'Test@gmail.com', 75, 30, 180, -5, 0, 1730, 0, 94, 0, 281, 0, 154, '0, 0, 0, 0', '0, 0, 0, 0', '0,0,0,0', '0,0,0,0', '0,0,0,0', '0,0,0,0', '0,0,0,0', '2024-10-12 14:32:11.874068', 0, NULL, NULL, 1.0);
 
 --
 -- Triggers `users`
@@ -126,7 +122,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 DELIMITER $$
 --
