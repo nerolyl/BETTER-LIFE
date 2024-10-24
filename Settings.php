@@ -32,6 +32,18 @@ require_once 'includes/settings_view.inc.php';
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Settings</title>
+    <script>
+        let deletePressCount = 0;
+
+        function confirmDeletion() {
+            deletePressCount++;
+            if (deletePressCount < 3) {
+                alert(`Press the button ${3 - deletePressCount} more time(s) to confirm account deletion.`);
+                return false; // Prevent form submission
+            }
+            return confirm("Are you sure you want to delete your account? This action cannot be undone.");
+        }
+    </script>
 </head>
 <body>
 <header class="sett">
@@ -148,10 +160,12 @@ require_once 'includes/settings_view.inc.php';
             <hr>
             
         </div>
+        <form  action="includes/delete_account_formhandler.php" method="post" onsubmit="return confirmDeletion();">
         <div class="delete_account">
             <h2>Delete Account:</h2>
-            <button>Delete Account</button>
+            <button  type="submit" name="delete_account">Delete Account</button>
     </div>
+    </form>
 </section>
 </body>
 </html>
