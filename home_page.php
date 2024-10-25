@@ -222,7 +222,7 @@ require_once 'includes/settings_view.inc.php';
         {
           label: 'Wednesday Nutrition', 
           data: [wedCalories, wedProtein, wedCarbs, wedFat], 
-          backgroundColor: ['#FFD700', '#FFA500', '#FF8C00', '#FF4500'], 
+          backgroundColor: ['#2C246B', '#24336B', '#44246B', '#24496B'], 
         },
         {
           label: 'Thursday Nutrition', 
