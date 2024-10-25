@@ -34,12 +34,12 @@ require_once 'includes/register_view.inc.php';
                     <input type="email" name="email" id="email" placeholder="Email" required> <br>
                     <input type="password" name="pwd" id="pwd" placeholder="Password" required><br>
                     <!--<input type="password" name="" id="" placeholder="Retype Password"><br>-->
-                    <input type="Weight" name="weight" placeholder="Weight (kg)" required>
-                    <input type="Hight" name="height" placeholder="Height (cm)" required>
-                    <input type="Age"  name="age" placeholder="Age" required>
-                    <input type="radio" id="male" name="gender" value=-5>
+                    <input type="number" name="weight" placeholder="Weight (kg)" required>
+                    <input type="number" name="height" placeholder="Height (cm)" required>
+                    <input type="number"  name="age" placeholder="Age" required>
+                    <input type="radio" id="male" name="gender" value=-5 required>
                     <label class="label_stayle" for="male" id="">MALE</label>
-                    <input type="radio" id="FEMALE" name="gender" value=161>
+                    <input type="radio" id="FEMALE" name="gender" value=161 required>
                     <label class="label_stayle" for="FEMALE" id="">FEMALE</label><br>
                     <div class="register_btn">
                         <a href="Login.php">Login</a>

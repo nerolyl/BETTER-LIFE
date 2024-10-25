@@ -53,7 +53,6 @@ require_once 'includes/settings_view.inc.php';
     <div class="items">
       <ul class="ul_header">
       <li class="i_header"><a href="home_page.php">Home </a></li>
-        <li class="i_header"> <button onClick="document.getElementById('user_set').scrollIntoView();">Profile </button></li>
         <li class="i_header"><button onClick="document.getElementById('other_set').scrollIntoView();">Settings </button></li>
         <li class="i_header"><form action="includes/logout.inc.php" method="post"><button> log out</button></form></li>
       </ul>
@@ -63,7 +62,7 @@ require_once 'includes/settings_view.inc.php';
         <div class="l_n_con">
             <div class="l_n_items">
                 <div class="l_n_i">
-                    <?php output_profile_image() ?>
+                    
                         <h1><?php output_username() ?></h1>
                             </div>
                                 <ul class="l_n_ul">
@@ -83,8 +82,8 @@ require_once 'includes/settings_view.inc.php';
                         <input type="text" id="username" name="username" placeholder= "<?php output_username() ?>"></input>
                         </div>
                             <div class="user_img">
-                            <?php output_profile_image() ?>
-                                <input type="file" name="profile_image" id="profile_image" >
+                            
+
                                 <button>save changes</button>
                                 </div>
                 </div>
