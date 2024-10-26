@@ -1,6 +1,7 @@
 <?php
-session_start();
 require_once 'dbh.inc.php'; // Ensure this file contains the PDO connection setup
+require_once 'config_session.inc.php';
+session_start();
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (isset($_POST["weight"])) {
@@ -22,11 +23,24 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $stmt->bindParam(':id', $userId);
             $stmt->execute();
 
-            // Update the session variable
-            $_SESSION["user_weight_goal"] = $weightGoal;
+            // Fetch the updated max_calorie, max_protein, max_carbs, and max_fat values
+            $sql = "SELECT max_calorie, max_protein, max_carbs, max_fat FROM users WHERE id = :id";
+            $stmt = $pdo->prepare($sql);
+            $stmt->bindParam(':id', $userId);
+            $stmt->execute();
+            $result = $stmt->fetch(PDO::FETCH_ASSOC);
 
-            // Refresh the page
-            header("Location: ../Settings.php");
+            if ($result) {
+                // Update the session variables
+                $_SESSION["user_weight_goal"] = $weightGoal;
+                $_SESSION["user_max_calorie"] = $result["max_calorie"];
+                $_SESSION["user_max_protein"] = $result["max_protein"];
+                $_SESSION["user_max_carbs"] = $result["max_carbs"];
+                $_SESSION["user_max_fat"] = $result["max_fat"];
+            }
+
+            // Redirect to the home page
+            header("Location: ../settings.php");
             exit();
         } catch (Exception $e) {
             // Log the error message
