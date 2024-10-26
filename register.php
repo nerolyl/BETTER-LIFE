@@ -3,6 +3,8 @@ require_once 'includes/config_session.inc.php';
 require_once 'includes/register_view.inc.php';
 ?>
 
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,7 +12,7 @@ require_once 'includes/register_view.inc.php';
     <link rel="stylesheet" href="css/register.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Register</title>
     <style>
         body{      
             background-image:  url("img/Firefly\ Vintage\ bg.png");      
@@ -29,30 +31,34 @@ require_once 'includes/register_view.inc.php';
                 <img src="img/Form Poster.png" alt="">
             </div>
             <div class="inputs">
-                <form action="includes/formhandler.inc.php" method="post">
-                    <input type="text"placeholder="Username" name="username" required> <br>
-                    <input type="email" name="email" id="email" placeholder="Email" required> <br>
-                    <input type="password" name="pwd" id="pwd" placeholder="Password" required><br>
-                    <!--<input type="password" name="" id="" placeholder="Retype Password"><br>-->
-                    <input type="number" name="weight" placeholder="Weight (kg)" required>
-                    <input type="number" name="height" placeholder="Height (cm)" required>
-                    <input type="number"  name="age" placeholder="Age" required>
-                    <input type="radio" id="male" name="gender" value=-5 required>
+            <form action="includes/formhandler.inc.php" method="post">
+                    <input type="text"placeholder="Username"> <br>
+                    <input type="email" name="" id="" placeholder="Email"> <br>
+                    <input type="password" name="" id="" placeholder="Password"><br>
+                    
+                    <input type="number" placeholder="Weight (kg)">
+                    <input type="number" placeholder="Hight (cm)">
+                    <input type="number" placeholder="Age">
+                    <input type="radio" id="male" name="gender">
                     <label class="label_stayle" for="male" id="">MALE</label>
-                    <input type="radio" id="FEMALE" name="gender" value=161 required>
+                    <input type="radio" id="FEMALE" name="gender">
                     <label class="label_stayle" for="FEMALE" id="">FEMALE</label><br>
                     <div class="register_btn">
                         <a href="Login.php">Login</a>
                         <button >Register</button>
                     </div>
                 </form>
+                <div class="form_error">
                 <?php
                 check_register_error () ;
                 ?>
-                
+                </div>
             </div>
         </div>
 
         </section>
 </body>
 </html>
+                   
+
+    

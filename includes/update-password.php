@@ -42,7 +42,7 @@ $stmt->execute();
 
 echo "Password updated";
 
-#header("refresh:2;url=../Login.php");
+header("refresh:2;url=../Login.php");
 exit();}
 catch (Exception $e) {
     // Log the error message
