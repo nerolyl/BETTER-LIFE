@@ -54,7 +54,7 @@ input[type=Password]{
     color: #5A246B;
     border: 0px ;
 }
-input[type=Weight]{
+input[type=number]{
     border-radius: 1.5rem;
     color: #5A246B;
     border: 0px ;
@@ -65,7 +65,7 @@ input[type=Weight]{
     margin-bottom: 0.5rem;
     margin-top: 0.5rem;
 }
-input[type=Hight]{
+input[type=number]{
     border-radius: 1.5rem;
     color: #5A246B;
     border: 0px ;
@@ -74,7 +74,7 @@ input[type=Hight]{
     padding: 0.5rem;
     margin-top: 0.5rem;
 }
-input[type=Age]{
+input[type=number]{
     padding: 0.5rem;
     border-radius: 1.5rem;
     color: #5A246B;
@@ -141,15 +141,15 @@ input[type=radio]{
     input[type=Password]{
         font-size: 2.7rem;
     }
-    input[type=Weight]{
+    input[type=number]{
         
         font-size: 1.2rem;
        
     }
-    input[type=Hight]{
+    input[type=number]{
         font-size: 1.2rem;
     }
-    input[type=Age]{
+    input[type=number]{
 
         font-size: 1.2rem;
         
@@ -193,15 +193,15 @@ input[type=radio]{
     input[type=Password]{
         font-size: 3.4rem;
     }
-    input[type=Weight]{
+    input[type=number]{
         
         font-size: 1.6rem;
        
     }
-    input[type=Hight]{
+    input[type=number]{
         font-size: 1.6rem;
     }
-    input[type=Age]{
+    input[type=number]{
 
         font-size: 1.6rem;
         
