@@ -57,7 +57,6 @@
     margin: 0.5rem;
     width: 47rem;
     height: 3.5rem;
-    padding-left: rem;
     border-radius: 0.5rem;
     font-weight: bold;
     font-family: IBM Plex Sans;
@@ -84,7 +83,7 @@
     color: #000000;
 }
 .body_info button{
-    margin-bottom: 2rem;
+margin-bottom: 2rem;
 margin-left: 38rem;
 margin-top: 1rem;
 border-radius: 0.5rem;
@@ -108,8 +107,8 @@ font-size: large;
     border: none;
     font-size: large;
 }
-.account_info button:hover{
-    background-color: #000000;
+.body_info hr{
+    margin-top: 2rem;
 }
 .delete_account h2{
     color: #5A246B;
