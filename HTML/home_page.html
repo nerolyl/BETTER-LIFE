@@ -225,38 +225,37 @@
   </div>
   <h1 class="result1"><pre id="results"></pre></H1>
  
-  
   <script>
-        function uploadImage() {
-            const imageInput = document.getElementById('imageInput');
-            const file = imageInput.files[0];
+    function uploadImage() {
+        const imageInput = document.getElementById('imageInput');
+        const file = imageInput.files[0];
 
-            if (!file) {
-                alert("Please select an image.");
-                return;
-            }
-
-            const formData = new FormData();
-            formData.append('image', file);
-
-            fetch('http://127.0.0.1:5000/analyze_food', {
-                method: 'POST',
-                body: formData
-            })
-            .then(response => response.json())
-            .then(data => {
-                if (data.error) {
-                    document.getElementById('results').textContent = data.error;
-                } else {
-                    document.getElementById('results').textContent = JSON.stringify(data, null, 2);
-                }
-            })
-            .catch(error => {
-                console.error('Error:', error);
-            });
+        if (!file) {
+            alert("Please select an image.");
+            return;
         }
-    </script>
- </section>
+
+        const formData = new FormData();
+        formData.append('image', file);
+
+        fetch('http://127.0.0.1:5000/analyze_food', {
+            method: 'POST',
+            body: formData
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.error) {
+                document.getElementById('results').textContent = data.error;
+            } else {
+                document.getElementById('results').textContent = data.output;
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
+    }
+  </script>
+</section>
 <section class="chat_bot">
         <script type="text/javascript">
             (function(d, t) {

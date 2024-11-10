@@ -30,25 +30,52 @@ def analyze_food():
     # إذا كان هناك عناصر مستخرجة من الصورة
     if data['items']:
         food_items = []
+        total_calories = 0  # متغير لحساب السعرات الحرارية الكلية
+        total_carbs = 0  # متغير لحساب الكربوهيدرات الكلية
+        total_fat = 0  # متغير لحساب الدهون الكلية
+        total_proteins = 0  # متغير لحساب البروتينات الكلية
         for item in data['items']:
             food_info = item['food'][0]['food_info']
             nutrition = food_info['nutrition']
 
             # استخراج المعلومات الغذائية
+            calories_100g = nutrition.get('calories_100g', 0)
+            carbs_100g = nutrition.get('carbs_100g', 0)
+            fat_100g = nutrition.get('fat_100g', 0)
+            proteins_100g = nutrition.get('proteins_100g', 0)
+            
             result = {
                 "display_name": food_info.get('display_name'),
-                "calories_100g": nutrition.get('calories_100g'),
-                "carbs_100g": nutrition.get('carbs_100g'),
-                "fat_100g": nutrition.get('fat_100g'),
-                "proteins_100g": nutrition.get('proteins_100g')
+                "calories_100g": calories_100g,
+                "carbs_100g": carbs_100g,
+                "fat_100g": fat_100g,
+                "proteins_100g": proteins_100g
             }
-            food_items.append(result)
+            
+            food_items.append(result)  # إضافة النتيجة إلى قائمة العناصر الغذائية
+            total_carbs += carbs_100g or 0  # إضافة الكربوهيدرات إلى المجموع
+            total_fat += fat_100g or 0  # إضافة الدهون إلى المجموع
+            total_proteins += proteins_100g or 0  # إضافة البروتين إلى المجموع
+            total_calories += calories_100g or 0  # إضافة السعرات الحرارية إلى المجموع
 
-        return jsonify(food_items), 200
+        # صياغة المخرجات بشكل سهل على المستخدم
+        output = ""
+        for item in food_items:
+            output += f"Food name: {item['display_name']}\n"
+            output += f"calories: {item['calories_100g']}\n"
+            output += f"protein: {item['proteins_100g']}\n"
+            output += f"carb: {item['carbs_100g']}\n"
+            output += f"fat: {item['fat_100g']}\n\n"
+
+        output += f"Total calories: {total_calories}\n"
+        output += f"Total carbs: {total_carbs}\n"
+        output += f"Total fat: {total_fat}\n"
+        output += f"Total proteins: {total_proteins}\n"
+
+        return jsonify({"output": output}), 200
     else:
-        return jsonify({"error": "No food items found"}), 404
+        return jsonify({"output": "No food items found. Please try again with a different image."}), 404
 
 if __name__ == '__main__':
     app.run(debug=True)
 
-    
