@@ -1,155 +1,65 @@
-.OFFER_contianer{
-    width: 100%;
-    height: 100%;
+.OFFER{
     background-color: #EBEAE1;
-    padding-top: 5rem;
-    padding-bottom: 40rem;
-    }
-    .sub_titel_bg{
-        background-color:#ffffff;
-        margin-right: 5rem;
-        margin-left: 5rem;
-        margin-top: 3rem; 
-        border-radius: 1.5625rem;
-        height: 7rem;
-    }
-    .sub_titel {
-        font-size: 3.2rem;
-        padding-left: 5rem;
-        padding-top: 1rem;
-        color:#5A246B;
-    
-    }
-    .imgs_OFFER_contianer{
+    height: 50rem;
+}
+.con_titlel{
+    padding: 1rem;
+}
+.sub_titel_bg{
+    padding-top: -2rem;
+    border-radius: 0.5rem;
+    background-color: #fff;
+    width: 90%;
+    padding:0.5rem;
+    margin: auto;
+}
 
+.sub_titel{
+    font-size: 1.8rem;
+    color: #5A246B;
+    text-align: center;
+}
+.con_i_t{
+    justify-content: center;
     display: flex;
-    padding-top: 2rem;
-    float:left;
-    margin-bottom: 2rem;
-    animation-name:nero ;
-    position: relative;
-    animation-duration: 5s;
-    
-    }
-    .img_OFFER img{
-        
-        max-width: 100%;
-        
-    }
-    .img_txt_OFFER_1{
-        padding-left: 3rem;
-        padding-right: 5rem;
-      
-    }
-    .img_txt_OFFER_2{
-        padding-left: 2rem;
-        padding-right: 5rem;
-    
-    }
-    .img_txt_OFFER_3{
-    
-        padding-right: 3rem;
-    }
-    .text_OFFER{
-        font-family: Abril Fatface;
-        color: #5A246B;
-        font-size: 1.3rem;
-        max-width: fit-content;
-        margin-left: auto;
-        margin-right: auto;
-    }
-    
-    @keyframes nero {
-            0% {transform: translateX(5000px); }
-            25%{ transform: translateX(-200px);}
-            50%{ transform: translateX(0px);}
-            75%{ transform: translateX(0px);}
-            100%{ transform: translateX(-20px);}
-    
-     
-    }
+    margin: auto;
+    width: 100%;
+    align-items: center;
+}
+.con_img{
+    display: flex;
+}
+.img_1{
+    padding: 2rem;
+}
+.img_1 img {
+    width: 100%;
+}
+.img_1 h1{
+    font-family: Abril Fatface;
+    color: #5A246B;
+    text-align: center;
+    font-size: 1rem;
+}
 @media (min-width :1440px ){
-    .OFFER_contianer{
-        width: 100%;
-        height: 100%;
-        background-color: #EBEAE1;
-        padding-top: 5rem;
-        padding-bottom: 50rem;
-        }
-
-        .sub_titel {
-            font-size:4rem;
-            padding-left: 10rem;
-            padding-top: 0rem;
-            color:#5A246B;
-        
-        }
-        @keyframes nero {
-            0% {transform: translateX(5000px);}
-            25%{ transform: translateX(-100px);}
-            50%{transform: translateX( 0px);}
-            75%{  transform: translateX(0px);}
-            100%{  transform: translateX(0px);}
-
-        }
+    .OFFER{
+        height: 60rem;
+    }
+    .sub_titel{
+        font-size: 2rem;
+    }
+    .img_1 h1{
+        font-size: 1.5rem;
+    }
 }
-
-@media (min-width :1701px ){
-    .OFFER_contianer{
-        padding-bottom: 55rem;
-        }
-
-        .sub_titel {
-            font-size:4rem;
-            padding-left: 15rem;
-            margin-top: 0rem;
-            color:#5A246B;
-        
-        }
-        @keyframes nero {
-            0% { transform: translateX(5000px);}
-            25%{transform: translateX(-500px);}
-            50%{ transform: translateX(0px);}
-            75%{ transform: translateX(0px);;}
-            100%{ transform: translateX(20px);}
-
-        }
-        .text_OFFER{
-            font-size: 2rem;
-            padding-bottom: rem;
-        }
-
-}
-
 @media(min-width: 2500px){
-    .OFFER_contianer{
-
-        padding-bottom: 65rem;
-        }
-
-        .sub_titel {
-
-            font-size:4rem;
-            padding-left: 35rem;
-            margin-top: 0rem;
-            color:#5A246B;
-        
-        }
-
-        @keyframes nero {
-            0% {transform: translateX(5000px);}
-            25%{transform: translateX(-1000px);}
-            50%{ transform: translateX(0px);}
-            75%{ right: 0px;}
-            100%{ left: 150px;}
-
-        }
-        .text_OFFER{
-            font-size: 2.5rem;
-        }
-
-        .img_OFFER img{
-            width: 40rem;
-        }
-
+    .OFFER{
+        height: 70rem;
+    }
+    .sub_titel{
+        font-size: 2.5rem;
+    }
+    .img_1 h1{
+        font-size: 2rem;
+    }
 }

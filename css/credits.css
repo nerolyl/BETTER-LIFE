@@ -1,225 +1,38 @@
-body{
+.credits{
     background-color : #331031;
     font-family: Abril Fatface;
     color: #D85C36;
 }
-.credits_img{
-    margin-top: -2rem;
-    margin-bottom: 2rem;
+.con_text{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    display: flex;
 }
-.credits_img img{
-    width: 100%;
-    height: 100vh;
+.con_h12 h1{
+    font-weight: 400;
+    font-size: 1.2rem;
+    margin: auto;
+    padding: 0 5rem 0 0;
 }
-.anmi{
-    overflow: hidden;
-    animation-name: left_1 ;
+.con_h12 h2{
+    font-size: 1rem;
+    margin: auto;
+    padding: 0 5rem 0 0rem;
 }
-.anmi2{
-    overflow: hidden;
-    animation-name: right_1;
-}
-.anmi3{
-    overflow: hidden;
-    animation-name: right_2;
-}
-.anmi4{
-    overflow: hidden;
-    animation-name: left_2;
-}
-.turki{
-    display: inline-block;
-
-}
-.turki h1{
-
-    font-size: 5rem;
-}
-.turki h2{
-
-    font-size: 4rem;
-    margin-top: 2rem;
-}
-.rakan{
-    display: inline-block;
-    margin-top: 13rem;
-}
-.rakan h1{
-    font-size: 5rem;
-}
-.rakan h2{
-        font-size: 4rem;
-        margin-top: 2rem;
-}
-.coders{
-    display: inline-block;
-    margin-top: 13rem;
-}
-.coders h1{
-    font-size: 5rem;
-    margin-bottom: 2rem;
-}
-.coders h2{
-    font-size: 4rem;
-}
-.Supervisor{
-    display: inline-block;
-    padding-right: -500rem;
-    margin-top: 13rem;
-    margin-bottom: 4rem;
-}
-.Supervisor h1{
-    font-size: 5rem;
-    margin-bottom: 2rem;
-}
-.Supervisor h2{
-    font-size: 4rem;
-}
-/* left to right*/
-@keyframes left_1 {
-    0% { transform: translateX(-100%); }
-    100% { transform: translateX(10%); }   
-}
-@media (prefers-reduced-motion: no-preference) {
-        div {
-          animation-timeline: view();
-          ;
-        }
-}
-
-/* left to right 2*/
-@keyframes right_1 {
-    0% { transform: translateX(-100%); }
-    100% { transform: translateX(40%); }
-}
-@media (prefers-reduced-motion: no-preference) {
-            div {
-              animation-timeline: view();
-              ;
-            }
-}
-
-/* right to left 1*/
-@keyframes right_2 {
-    0% { transform: translateX(-100%); }
-    25% { transform: translateX(80%); }
-
-}
-
-
-/* left to right 1*/
-@keyframes left_2 {
-    0% { transform: translateX(-100%); }
-    25% { transform: translateX(10%); }
-
+@media (min-width :1440px ){
+    .con_h12 h1{
+        font-size: 1.8rem;
     }
-
-
-      @media (min-width :1440px ){
-        .turki h1{
-            font-size: 6rem;
-        }
-        .turki h2{
-            font-size: 5rem;
-        }
-
-    .rakan h1{
-        font-size: 6rem;
+    .con_h12 h2{
+        font-size: 1.5rem;
     }
-    .rakan h2{
-            font-size: 5rem;
-    }
-
-    .coders h1{
-        font-size: 6rem;
-    }
-    .coders h2{
-        width: 100%;
-        font-size: 5rem;
-    }
-    .Supervisor h1{
-        font-size: 6rem;
-    }
-    .Supervisor h2{
-        font-size: 5rem;
-    }
-/* left to right 2*/
-@keyframes right_1 {
-    0% { transform: translateX(-100%); }
-    100% { transform: translateX(30%); }
 }
-@keyframes right_2 {
-    0% { transform: translateX(-100%); }
-    25% { transform: translateX(50%); }
-
-}
-      }
-      
-@media (min-width :1701px ){
-    .turki h1{
-        font-size: 7rem;
-    }
-    .turki h2{
-        font-size: 6rem;
-    }
-
-
-.rakan h1{
-    font-size: 7rem;
-}
-.rakan h2{
-        font-size: 6rem;
-}
-
-.coders h1{
-    font-size: 7rem;
-}
-.coders h2{
-    font-size: 6rem;
-}
-.Supervisor h1{
-    font-size: 7rem;
-}
-.Supervisor h2{
-    font-size: 6rem;
-}
-      }
 @media(min-width: 2500px){
-    .turki h1{
-        font-size: 8rem;
+    .con_h12 h1{
+        font-size: 2.5rem;
     }
-    .turki h2{
-        font-size: 7rem;
+    .con_h12 h2{
+        font-size: 2rem;
     }
-
-
-.rakan h1{
-    font-size: 8rem;
 }
-.rakan h2{
-        font-size: 7rem;
-}
-
-.coders h1{
-    font-size: 8rem;
-}
-.coders h2{
-    font-size: 7rem;
-}
-.Supervisor h1{
-    font-size: 8rem;
-}
-.Supervisor h2{
-    font-size: 7rem;
-}
-/* left to right 2*/
-@keyframes right_1 {
-    0% { transform: translateX(-100%); }
-    100% { transform: translateX(50%); }
-}
-@keyframes right_2 {
-    0% { transform: translateX(-100%); }
-    25% { transform: translateX(90%); }
-
-}
-        }

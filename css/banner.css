@@ -1,191 +1,110 @@
-.banner_contianer{
-
-    font-family: Arial, sans-serif;
-    background-color:#804792;
-    color: #FFFFFF;
+.banner{
+    background-color: #804792;
+}
+.continaner{
+    justify-content: center;
     display: flex;
-}
-
-
-.container {
-    display: flex;
-    justify-content: space-between;
-}
-
-.robot-image img {
-    max-width: 120%;
-    height: 100%;
-    display: block;
-
-}
-
-.text {
-    padding-top: 5rem;
-    padding-left:20rem ;
-    
-    
-}
-
-.bb {
-    font-family: "Abril Fatface";
-    font-size: 4rem;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-}
-
-.text p {
-    font-family: "Lexend Deca";
-    font-size: 3rem;
-    font-style: normal;
-    font-weight: 250;
-    line-height: normal;
-  
-}
-
-.robot-image {
-    
-    width: 130%;
-    display: flex;
-    padding-left: 3rem;
-}
-
-
-.button_start{
-margin-top: 5rem;
-
-
-}
-
-.button {
-    
-    padding-left: 1rem;
+    margin: auto;
+    width: 100%;
+    padding: 0 5rem 0 0rem ;
     align-items: center;
-    width: 35.375rem;
-    height: 2.875rem;
-    flex-shrink: 0;
-    border-radius: 1.5625rem;
+}
+.continar_2{
+    justify-content: center;
+    padding: 5px;
+    align-items: center;
+}
+.robot img{
+    width: 30rem;
+}
+.text{
+    padding: 0 0 5rem 2rem ;
+    font-size: 1.5rem;
+    color: #FFFFFF;
+    text-align: left;
+}
+.text b {
+    font-size: 2.5rem;
+}
+.but{
+    padding-left: 5rem;
+    justify-content: center;
+}
+.continar_2 button {
+    align-items: center;
+    width: 29rem;
+    height: 2.8rem;
+    border-radius: 1.5rem;
     border: 1px solid #000;
     background: #FFF;
     color: #000;
-    display: flex;
     font-family: "Abril Fatface";
     font-size: 1rem;
     font-style: normal;
     font-weight: 400;
-    line-height: normal;
     box-shadow: 0px 4px 4px  rgba(255, 255, 255, 1);
-    
-}
-.btn_BETTER_LIFE{
-    color: #804792;
-    
-}
-.button:hover {
-    background-color: #ddd;
-}
-@media (max-width : 1920px) {
-    .robot-image img {
-        max-width: 100%;
-        height: 100%;
-        display: block;
-    
-    }
-    .text {
-        padding-top: 3rem;
-        padding-left:5rem ;
-    }
 
-    .bb {
-        font-family: "Abril Fatface";
-        font-size: 4rem;
+}
+@media (min-width :1440px ){
+    .robot img{
+        width: 32rem;
+    }
+    .text{
+        font-size: 1.7rem;
+    }
+    .text b {
+        font-size: 2.5rem;
+    }
+    .but{
+        padding-left: 9rem;
+    }
+    .continar_2 button {
+        width: 29rem;
+        height: 2.8rem;
+        font-size: 1rem;
         font-style: normal;
         font-weight: 400;
-        line-height: normal;
     }
-    .text p {
-        font-family: "Lexend Deca";
-        font-size: 2rem;
-        font-style: normal;
-        font-weight: 250;
-        line-height: normal;
-      
-    }
-    .button_start{
-        margin-top: 8rem;
-        margin-bottom: 3rem;
-        }
-        .button {
-            padding-left: 1rem;
-            align-items: center;
-            width: 40.375rem;
-            height: 4.875rem;
-            flex-shrink: 0;
-            border-radius: 1.5625rem;
-            border: 1px solid #000;
-            background: #FFF;
-            color: #000;
-            display: flex;
-            font-family: "Abril Fatface";
-            font-size: 1.4rem;
-            font-style: normal;
-            font-weight: 400;
-            line-height: normal;
-            box-shadow: 0px px 4px  rgba(255, 255, 255, 1);
-            
-        }
-
 }
-
-@media (max-width : 1080px) {
-    .robot-image img {
-        max-width: 100%;
-        height: 100%;
-        display: block;
-
+@media (min-width :1701px ){
+    .robot img{
+        width: 35rem;
     }
-    .text {
-        padding-top: 3rem;
-        padding-left:5rem ;
+    .text{
+        font-size: 2rem;
     }
-
-    .bb {
-        font-family: "Abril Fatface";
-        font-size: 4rem;
+    .text b {
+        font-size: 2.8rem;
+    }
+    .but{
+        padding-left: 15rem;
+    }
+    .continar_2 button {
+        width: 35rem;
+        height: 2.9rem;
+        font-size: 1.2rem;
         font-style: normal;
         font-weight: 400;
-        line-height: normal;
     }
-    .text p {
-        font-family: "Lexend Deca";
+}
+@media(min-width: 2500px){
+    .robot img{
+        width: 50rem;
+    }
+    .text{
+        font-size: 3.2rem;
+    }
+    .text b {
+        font-size: 4rem;
+    }
+    .but{
+        padding-left: 22rem;
+    }
+    .continar_2 button {
+        width: 58rem;
+        height: 4rem;
         font-size: 2rem;
         font-style: normal;
-        font-weight: 250;
-        line-height: normal;
-
-    }
-    .button_start{
-        margin-top: 8rem;
-        margin-bottom: 3rem;
-        }
-        .button {
-            padding-left: 1rem;
-            align-items: center;
-            width: 40.375rem;
-            height: 4.875rem;
-            flex-shrink: 0;
-            border-radius: 1.5625rem;
-            border: 1px solid #000;
-            background: #FFF;
-            color: #000;
-            display: flex;
-            font-family: "Abril Fatface";
-            font-size: 1.4rem;
-            font-style: normal;
-            font-weight: 400;
-            line-height: normal;
-            box-shadow: 0px px 4px  rgba(255, 255, 255, 1);
-
-        }
-
+        font-weight: 400;
+    } 
 }
