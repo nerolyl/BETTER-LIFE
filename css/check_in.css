@@ -1,135 +1,103 @@
-
 .check_in{
+    justify-content: center;
+    width: 100%;
+    padding: 1rem;
+}
+.checkin_con{
+    width: 100%;
+}
+.checkin_bkg{
+    padding: 5px;
     border-radius: 0.5rem;
-    margin: 2rem 2rem 0 ;
-}
-.back_line{
-    display: block;
-    margin-top: -0.8rem;
+    width: 100%;
+    height: 5.2rem;
     background-color: #FFFFFF;
-    height: 5rem;
-    border-radius: 1rem;
 }
-.line_con{
-    display: flex;
-}
-.line_1{
-    margin-top: 2rem;
-    background-color: #5A246B;
-    width: 5rem;
-    height: 0.4rem;
+.checckin_itemscon{
     align-items: center;
+    justify-content: center;
     display: flex;
-    margin-left: 0.5rem;
+}
+.circle{
+    width: 4.8rem;
+    border: 0.2rem solid #5A246B;
+    border-radius:100%;
+    text-align: center;
+}
+.items_3{
+    color: #5A246B;
+    font-size: 0.7rem;
+    font-family: Abril Fatface;
+    padding: 10px;
+}
+.items_3 h1{
+    font-size: 1.4rem;
 }
 .line{
-    margin-top: 2rem;
-    background-color: #5A246B;
-    width: 5rem;
+    width: 5.5rem;
     height: 0.4rem;
-    align-items: center;
-    display: flex;
-    margin-left: 5rem;
+    background-color: #5A246B;
 }
-.circle{   
-    height: 5rem;
-    width: 5rem;
-    border-style: solid;
-    border-color: #5A246B;
-    width: 5rem;
-    border-radius: 100%;
-    margin-left: 5rem;
-    margin-right: -5rem;
-}
-
-.rectangle{
-    width: 2.5rem ;
-    max-width: max-content;
-    margin-left: 1.1rem;
-    margin-top: 0.8rem;
-}
-/*others monitor*/
 @media (min-width :1440px ){
-    .back_line{
+    .checkin_bkg{
+        padding: 5px;
         height: 6rem;
-        border-radius: 1rem;
-    }
-    .line_1{
-        margin-top: 2.5rem;
-        width: 7rem;
-        height: 0.4rem;
-        margin-left: 1.5rem;
-    }
-    .line{
-        margin-top: 2.5rem;
-        width: 7rem;
-        height: 0.4rem;
-        margin-left: 5rem;
     }
     .circle{
-        height: 5rem;
-        width: 5rem;
-        margin-left: 6.7rem;
-        margin-right: -5rem;
+        width: 5.5rem;
+        height: 5.5rem;
     }
-    .rectangle{
-        width: 2.5rem ;
-        margin-left: 1.1rem;
-        margin-top: 0.rem;
+    .items_3{
+        font-size: 0.8rem;
+        padding: 1rem;
+    }
+    .items_3 h1{
+        font-size: 1.8rem;
+    }
+    .line{
+        width: 6.5rem;
+        height: 0.4rem;
     }
 }
 @media (min-width :1701px ){
-    .line_1{
-        margin-top: 2.5rem;
-        width: 9rem;
-        height: 0.4rem;
-        margin-left: 2rem;
-    }
-    .line{
-        margin-top: 2.5rem;
-        width: 9rem;
-        height: 0.4rem;
-        margin-left: 5.5rem;
+    .checkin_bkg{
+        padding: 5px;
+        height: 7rem;
     }
     .circle{
-        height: 5.5rem;
-        width: 5.5rem;
-        margin-left: 9rem;
-        margin-right: -9rem;
-    }   
-    .rectangle{
-        width: 3rem ;
-        margin-top: 0.7rem;
+        width: 6rem;
+        height: 6rem;
+    }
+    .items_3{
+        font-size: 1rem;
+        padding: 0.5rem;
+    }
+    .items_3 h1{
+        font-size: 2rem;
+    }
+    .line{
+        width: 7.5rem;
+        height: 0.4rem;
     }
 }
-/*nero monitor*/
-@media(min-width: 2500px){
-    .back_line{
-        margin-top: 2rem;
-        height: 7rem;
-        border-radius: 1rem;
-    }
-    .line_1{
-        margin-top: 3rem;
-        width: 15rem;
-        height: 0.8rem;
-        margin-left: 2rem;
-    }
-    .line{
-        margin-top: 3rem;
-        width: 15rem;
-        height: 0.8rem;
-        margin-left: 5.9rem;
+@media (min-width :2500px ){
+    .checkin_bkg{
+        padding: 5px;
+        height: 10rem;
     }
     .circle{
-        height: 6rem;
-        width: 6rem;
-        margin-left: 14rem;
-        margin-right: -9rem;
+        width:  9rem;
+        height: 9rem;
+        border: 0.4rem solid #5A246B;
     }
-    .rectangle{
-        width: 4rem ;
-        margin-top: 0.7rem;
-        margin-left: 1.2rem;
+    .items_3{
+        font-size: 2rem;
+    }
+    .items_3 h1{
+        font-size: 3rem;
+    }
+    .line{
+        width: 11rem;
+        height: 0.6rem;
     }
 }

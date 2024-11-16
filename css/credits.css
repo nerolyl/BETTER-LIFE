@@ -3,6 +3,9 @@
     font-family: Abril Fatface;
     color: #D85C36;
 }
+.con_i{
+    justify-content: center;
+}
 .con_text{
     justify-content: center;
     align-items: center;
