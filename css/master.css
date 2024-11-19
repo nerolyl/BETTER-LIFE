@@ -14,3 +14,7 @@ button:hover{
     cursor: pointer;
     
 }
+.conn{
+    display: flex;
+    justify-content: center;
+}

@@ -1,16 +1,15 @@
 
 .food_analysis{
-  margin-left: 1.5rem;
-  margin-top: 1rem;
+  padding: 1rem;
   display: flex;
 }
 
-.conn{
-    display: flex;
-}
 .Food_analysis{
   display: flex;
   background: #5A246B;
+}
+.drag-areapa{
+  padding: 0 1rem 1rem 0;
 }
 .drag-area{
   font-family: Abril Fatface;
@@ -44,9 +43,8 @@ margin-bottom: -7rem;
 }
 
 .file1{
-  
   font-family: Abril Fatface;
-  border-radius: 0.4rem;
+  border-radius: 0.5rem;
   margin-right: 1rem;
   max-width: 12rem;
   padding: 0.4rem 0.4rem 0.4rem 0.4rem;
@@ -57,9 +55,7 @@ margin-bottom: -7rem;
   font-family: Abril Fatface;
   background-color: white;
   color: #5A246B;
-  border-radius: 0.4rem;
-  padding: 0.4rem 0.4rem 0.4rem 0.4rem;
-  margin-left: 1rem;
+  border-radius: 0.5rem;
   font-size: 1rem;
 }
 
@@ -68,13 +64,23 @@ margin-bottom: -7rem;
   font-family: Abril Fatface;
   color: #5A246B;
   width: 18.5rem;
-  margin-left: 1rem;
-  margin-right: 1rem;
-  display: flex;
-  background-color: white;
-  border-radius: 1rem;
+  padding: 1rem;
 }
-
+.result_bg{
+  background-color: white;
+  border-radius: 0.5rem;
+  padding: 0 1rem 1rem 0;
+}
+.result_bg form{
+  padding: 0.5rem 0 0 16rem;
+}
+.result_bg button{
+  padding: 0.2rem;
+  border-radius: 0.1rem;
+  font-size: 1rem;
+  color: #fff;
+  background-color: #5A246B;
+}
 @media (min-width :1440px ){
   .drag-area{
     height: 25rem;
@@ -105,6 +111,16 @@ margin-bottom: -7rem;
       width: 23.5rem;
       font-size: 1.1rem;
       padding-top: 1rem;
+    }
+    .result_bg form{
+      padding: 0.5rem 0 0 22rem;
+    }
+    .result_bg button{
+      padding: 0.2rem;
+      border-radius: 0.1rem;
+      font-size: 1rem;
+      color: #fff;
+      background-color: #5A246B;
     }
 }
 @media (min-width :1701px ){
@@ -139,7 +155,16 @@ margin-bottom: -7rem;
       padding-left: 2rem;
       padding-top: 1rem;
     }
-
+    .result_bg form{
+      padding: 0.5rem 0 0 20rem;
+    }
+    .result_bg button{
+      padding: 0.2rem;
+      border-radius: 0.1rem;
+      font-size: 1.8rem;
+      color: #fff;
+      background-color: #5A246B;
+    }
 }
 
 @media(min-width: 2500px){
@@ -173,5 +198,15 @@ margin-bottom: -7rem;
       font-size: 1.5rem;
       padding-left: 1rem;
       padding-top: 1rem;
+    }
+    .result_bg form{
+      padding: 0.5rem 0 0 27rem;
+    }
+    .result_bg button{
+      padding: 0.5rem;
+      border-radius: 0.5rem;
+      font-size: 2rem;
+      color: #fff;
+      background-color: #5A246B;
     }
 }
