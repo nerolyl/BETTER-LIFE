@@ -67,12 +67,22 @@ function output_check_in(){
         echo'<div class="circle">';
     }
 }
+function output_check_in_text(){
+    if ($_SESSION["user_points"] >= 1){
+        echo 'style="color: #FFFFFF;"';
+    }
+}
 function output_check_in2(){
     if ($_SESSION["user_points"] >= 2){
         echo '<div style="background-color: #5A246B;" class="circle">';
     }
     else{
         echo'<div class="circle">';
+    }
+}
+function output_check_in_text2(){
+    if ($_SESSION["user_points"] >= 2){
+        echo 'style="color: #FFFFFF;"';
     }
 }
 function output_check_in3(){
@@ -83,12 +93,22 @@ function output_check_in3(){
         echo'<div class="circle">';
     }
 }
+function output_check_in_text3(){
+    if ($_SESSION["user_points"] >= 3){
+        echo 'style="color: #FFFFFF;"';
+    }
+}
 function output_check_in4(){
     if ($_SESSION["user_points"] >= 4){
         echo '<div style="background-color: #5A246B;" class="circle">';
     }
     else{
         echo'<div class="circle">';
+    }
+}
+function output_check_in_text4(){
+    if ($_SESSION["user_points"] >= 4){
+        echo 'style="color: #FFFFFF;"';
     }
 }
 function output_check_in5(){
@@ -99,6 +119,11 @@ function output_check_in5(){
         echo'<div class="circle">';
     }
 }
+function output_check_in_text5(){
+    if ($_SESSION["user_points"] >= 5){
+        echo 'style="color: #FFFFFF;"';
+    }
+}
 function output_check_in6(){
     if ($_SESSION["user_points"] >= 6){
         echo '<div style="background-color: #5A246B;" class="circle">';
@@ -107,11 +132,21 @@ function output_check_in6(){
         echo'<div class="circle">';
     }
 }
+function output_check_in_text6(){
+    if ($_SESSION["user_points"] >= 6){
+        echo 'style="color: #FFFFFF;"';
+    }
+}
 function output_check_in7(){
     if ($_SESSION["user_points"] >= 7){
         echo '<div style="background-color: #5A246B;" class="circle">';;
     }
     else{
         echo '<div class="circle">';
+    }
+}
+function output_check_in_text7(){
+    if ($_SESSION["user_points"] >= 7){
+        echo 'style="color: #FFFFFF;"';
     }
 }

@@ -30,7 +30,7 @@ require_once 'includes/settings_view.inc.php';
   <!-- meta -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Homepage</title>
 </head>
 
 <body>
@@ -43,7 +43,9 @@ require_once 'includes/settings_view.inc.php';
         <li class="i_header"><a href=""><?php output_username(); ?></a></li>
         <li class="i_header"><a href="home_page.php">Home </a></li>
         <li class="i_header"><a href="Settings.php">Settings </a></li>
-        <li class="i_header"><form action="includes/logout.inc.php" method="post"><button> log out</button></form></li>
+        <li class="i_header">
+          <form action="includes/logout.inc.php" method="post"><button> log out</button></form>
+        </li>
       </ul>
     </div>
   </header>
@@ -54,65 +56,65 @@ require_once 'includes/settings_view.inc.php';
         <div class=" checckin_itemscon">
           <div class="line">
           </div>
-          <div class="circle">
-            <div class="items_3">
-              <h3>Day</h3>
-              <h1>1</h1>
-            </div>
-          </div>
-          <div class="line">
-          </div>
-          <div class="circle">
-            <div class="items_3">
-              <h3>Day</h3>
-              <h1>2</h1>
-            </div>
-          </div>
-          <div class="line">
-          </div>
-          <div class="circle">
-            <div class="items_3">
-              <h3>Day</h3>
-              <h1>3</h1>
-            </div>
-          </div>
-          <div class="line">
-          </div>
-          <div class="circle">
-            <div class="items_3">
-              <h3>Day</h3>
-              <h1>4</h1>
-            </div>
-          </div>
-          <div class="line">
-          </div>
-          <div class="circle">
-            <div class="items_3">
-              <h3>Day</h3>
-              <h1>5</h1>
-            </div>
-          </div>
-          <div class="line">
-          </div>
-          <div class="circle">
-            <div class="items_3">
-              <h3>Day</h3>
-              <h1>6</h1>
-            </div>
-          </div>
-          <div class="line">
-          </div>
-          <div class="circle">
-            <div class="items_3">
-              <h3>Day</h3>
-              <h1>7</h1>
-            </div>
-          </div>
-          <div class=" line">
-
+          <?php output_check_in(); ?>
+          <div class="items_3">
+            <h3 <?php output_check_in_text(); ?>> Day</h3>
+            <h1 <?php output_check_in_text(); ?>>1</h1>
           </div>
         </div>
+        <div class="line">
+        </div>
+        <?php output_check_in2(); ?>
+          <div class="items_3">
+            <h3 <?php output_check_in_text2(); ?>>Day</h3>
+            <h1 <?php output_check_in_text2(); ?>>2</h1>
+          </div>
+        </div>
+        <div class="line">
+        </div>
+        <?php output_check_in3(); ?>
+        <div class="items_3">
+          <h3 <?php output_check_in_text3(); ?>>Day</h3>
+          <h1 <?php output_check_in_text3(); ?>>3</h1>
+        </div>
       </div>
+      <div class="line">
+      </div>
+      <?php output_check_in4(); ?>
+        <div class="items_3">
+          <h3 <?php output_check_in_text4(); ?>>Day</h3>
+          <h1 <?php output_check_in_text4(); ?>>4</h1>
+        </div>
+      </div>
+      <div class="line">
+      </div>
+      <?php output_check_in5(); ?>
+        <div class="items_3">
+          <h3 <?php output_check_in_text5(); ?>>Day</h3>
+          <h1 <?php output_check_in_text5(); ?>>5</h1>
+        </div>
+      </div>
+      <div class="line">
+      </div>
+      <?php output_check_in5(); ?>
+        <div class="items_3">
+          <h3 <?php output_check_in_text6(); ?>>Day</h3>
+          <h1 <?php output_check_in_text6(); ?>>6</h1>
+        </div>
+      </div>
+      <div class="line">
+      </div>
+      <?php output_check_in7(); ?>
+        <div class="items_3">
+          <h3 <?php output_check_in_text7(); ?>>Day</h3>
+          <h1 <?php output_check_in_text7(); ?>>7</h1>
+        </div>
+      </div>
+      <div class=" line">
+
+      </div>
+    </div>
+    </div>
     </div>
   </section>
   <section class="calorie_calculator">
@@ -130,11 +132,11 @@ require_once 'includes/settings_view.inc.php';
           <div class="item2">
             <div class="item2_jst">
               <form action="includes/calorie_formhandler.php" method="post">
-              <div class=" item_ins2">
-              <input type="number" id=calorie name=calorie>
-              <button type="submit">Add</button>
-            </div>
-          </form>
+                <div class=" item_ins2">
+                  <input type="number" id=calorie name=calorie>
+                  <button type="submit">Add</button>
+                </div>
+              </form>
               <div class="img_pad">
                 <img src=" img\Fire_fill.png" alt="">
               </div>
@@ -147,76 +149,76 @@ require_once 'includes/settings_view.inc.php';
           <div class="item1">
             <h3>Protein</h3>
             <div class="item_ins">
-            <h1><?php output_protein() ?></h1>
-        <h1>/</h1>
-        <h1> <?php output_max_protein() ?><sub>g</sub></h1>
+              <h1><?php output_protein() ?></h1>
+              <h1>/</h1>
+              <h1> <?php output_max_protein() ?><sub>g</sub></h1>
             </div>
           </div>
           <div class="item2">
             <div class="item2_jst">
               <form action="includes/protein_formhandler.php" method="post">
-              <div class=" item_ins2">
-              <input type="number"id="protein" name="protein">
-              <button type="submit">Add</button>
-            </form>
-                </div>
-              <div class="img_pad">
-                <img src=" img\Protein.png" alt="">
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="c_t_con">
-        <div class="item_con">
-          <div class="item1">
-            <h3>Carbs</h3>
-            <div class="item_ins">
-            <h1><?php output_carbs() ?></h1>
-        <h1>/</h1>
-        <h1><?php output_max_carbs() ?><sub>g</sub></h1>
-            </div>
-          </div>
-          <div class="item2">
-            <div class="item2_jst">
-              <form action="includes/carbs_formhandler.php" method="post">
-              <div class=" item_ins2">
-              <input type="number" id="carbs" name="carbs">
-              <button type="submit">Add</button>
+                <div class=" item_ins2">
+                  <input type="number" id="protein" name="protein">
+                  <button type="submit">Add</button>
               </form>
-              </div>
-              <div class="img_pad">
-                <img src=" img\Carbs.png" alt="">
-              </div>
+            </div>
+            <div class="img_pad">
+              <img src=" img\Protein.png" alt="">
             </div>
           </div>
         </div>
       </div>
-      <div class="c_t_con">
-        <div class="item_con">
-          <div class="item1">
-            <h3>Fats</h3>
-            <div class="item_ins">
+    </div>
+    <div class="c_t_con">
+      <div class="item_con">
+        <div class="item1">
+          <h3>Carbs</h3>
+          <div class="item_ins">
+            <h1><?php output_carbs() ?></h1>
+            <h1>/</h1>
+            <h1><?php output_max_carbs() ?><sub>g</sub></h1>
+          </div>
+        </div>
+        <div class="item2">
+          <div class="item2_jst">
+            <form action="includes/carbs_formhandler.php" method="post">
+              <div class=" item_ins2">
+                <input type="number" id="carbs" name="carbs">
+                <button type="submit">Add</button>
+            </form>
+          </div>
+          <div class="img_pad">
+            <img src=" img\Carbs.png" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+    <div class="c_t_con">
+      <div class="item_con">
+        <div class="item1">
+          <h3>Fats</h3>
+          <div class="item_ins">
             <h1><?php output_fat() ?></h1>
             <h1>/</h1>
             <h1><?php output_max_fat() ?><sub>g</sub> </h1>
-            </div>
           </div>
-          <div class="item2">
-            <div class="item2_jst">
+        </div>
+        <div class="item2">
+          <div class="item2_jst">
             <form action="includes/fats_formhandler.php" method="post">
               <div class=" item_ins2">
-              <input type="number"id="fat" name="fat">
-              <button type="submit">Add</button>
+                <input type="number" id="fat" name="fat">
+                <button type="submit">Add</button>
             </form>
-              </div>
-              <div class="img_pad">
-                <img src=" img\Fat.png" alt="">
-              </div>
-            </div>
+          </div>
+          <div class="img_pad">
+            <img src=" img\Fat.png" alt="">
           </div>
         </div>
       </div>
+    </div>
+    </div>
     </div>
   </section>
   <div class="conn">
