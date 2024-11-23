@@ -1,4 +1,4 @@
-
+/*Nero was here */
 .register_imgs {
     display: flex;
     max-width: fit-content;
@@ -118,6 +118,13 @@ input[type=radio]{
     color: red;
     margin-top: 2rem;
     margin-left: 14rem;
+}
+
+#Nero{
+    border-radius: 0.5rem;
+    width: 5rem;
+    color: #5A246B;
+    font-size: 1rem;
 }
 /* others monitor */
 @media (min-width :1701px ){
