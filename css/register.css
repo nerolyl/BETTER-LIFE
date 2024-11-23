@@ -125,6 +125,12 @@ input[type=radio]{
     width: 5rem;
     color: #5A246B;
     font-size: 1rem;
+    font-family: Abril Fatface;
+}
+.select_div{
+    font-size: 1rem;
+    padding-left: 1rem;
+    font-family: Abril Fatface;
 }
 /* others monitor */
 @media (min-width :1701px ){
@@ -176,6 +182,14 @@ input[type=radio]{
     }
     .label_stayle{
         font-size: 1.5rem;
+    }
+    #Nero{
+        width: 6rem;
+        font-size: 1.5rem;
+    }
+    .select_div{
+        font-size: 1.5rem;
+        padding-left: 1.5rem;
     }
 }
 /* nero monitor */
@@ -231,6 +245,15 @@ input[type=radio]{
     }
     .label_stayle{
         font-size: 1.8rem;
+    }
+    #Nero{
+        width: 6rem;
+        font-size: 1.5rem;
+    }
+    .select_div{
+        font-size: 1.5rem;
+        padding-left: 1.5rem;
+        font-family: Abril Fatface;
     }
 }
 
