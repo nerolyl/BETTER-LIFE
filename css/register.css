@@ -132,6 +132,15 @@ input[type=radio]{
     padding-left: 1rem;
     font-family: Abril Fatface;
 }
+.info {
+    padding-left: 0.5rem;
+    font-size: 1rem;
+    backdrop-filter: blur(0.5rem);
+    border-left: 0.3rem solid #2196F3;  
+}
+  .info_d{
+    padding-left: 1rem;
+  }
 /* others monitor */
 @media (min-width :1701px ){
     .register_imgs{
@@ -191,6 +200,16 @@ input[type=radio]{
         font-size: 1.5rem;
         padding-left: 1.5rem;
     }
+    .info {
+        font-size: 1.3rem;
+        height: 2rem;
+        width: 30%;
+        backdrop-filter: blur(0.5rem);
+        border-left: 0.5rem solid #2196F3;  
+    }
+      .info_d{
+        padding-left: 1rem;
+      }
 }
 /* nero monitor */
 @media(min-width: 2500px){
@@ -255,5 +274,11 @@ input[type=radio]{
         padding-left: 1.5rem;
         font-family: Abril Fatface;
     }
+    .info {
+        font-size: 1.5rem;
+    }
+      .info_d{
+        padding-left: 1rem;
+      }
 }
 
