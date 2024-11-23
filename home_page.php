@@ -306,66 +306,135 @@ require_once 'includes/settings_view.inc.php';
         </div>
       </div>
       <div class="result_bg">
-        <form>
-          <button type="button">Add</button>
-        </form>
+      <form id="nutritionForm" action="includes/update_nutrition.php" method="POST">
+    <input type="hidden" name="calorie" id="calorie">
+    <input type="hidden" name="carbs" id="carbs">
+    <input type="hidden" name="fat" id="fat">
+    <input type="hidden" name="protein" id="protein">
+    <button type="button" id="addButton">Add</button>
+</form>
         <h1 class="result1">
+        Food name: Bolognese lasagna
+calories: 140.0
+protein: 6.85
+carb: 12.9
+fat: 6.65
+
+Food name: Toast with butter and honey
+calories: 0.0
+protein: 0.0
+carb: 0.0
+fat: 0.0
+
+Food name: Apple
+calories: 53.0
+protein: 0.31
+carb: 11.3
+fat: 0.162
+
+Total calories: 193
+Total proteins: 7
+Total carbs: 24
+Total fat: 6
           <pre id="results"></pre>
         </H1>
       </div>
 
       <script>
-        function uploadImage() {
-          const imageInput = document.getElementById('imageInput');
-          const file = imageInput.files[0];
+    function uploadImage() {
+        const imageInput = document.getElementById('imageInput');
+        const file = imageInput.files[0];
 
-          if (!file) {
+        if (!file) {
             alert("Please select an image.");
             return;
-          }
+        }
 
-          const formData = new FormData();
-          formData.append('image', file);
+        const formData = new FormData();
+        formData.append('image', file);
 
-          fetch('http://127.0.0.1:5000/analyze_food', {
-              method: 'POST',
-              body: formData
-            })
-            .then(response => response.json())
-            .then(data => {
-              if (data.error) {
+        fetch('http://127.0.0.1:5000/analyze_food', {
+            method: 'POST',
+            body: formData
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.error) {
                 document.getElementById('results').textContent = data.error;
-              } else {
+            } else {
                 document.getElementById('results').textContent = data.output;
-              }
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
+    }
+  </script>
+  </section>
+<section class="chat_bot">
+        <script type="text/javascript">
+            (function(d, t) {
+                var v = d.createElement(t), s = d.getElementsByTagName(t)[0];
+                v.onload = function() {
+                  window.voiceflow.chat.load({
+                    verify: { projectID: '66dde9358b24990f9a695982' },
+                    url: 'https://general-runtime.voiceflow.com',
+                    versionID: 'production'
+                  });
+                }
+                v.src = "https://cdn.voiceflow.com/widget/bundle.mjs"; v.type = "text/javascript"; s.parentNode.insertBefore(v, s);
+              })(document, 'script');
+      </script>
+
+    </section>
+    
+    <script>
+document.getElementById('addButton').addEventListener('click', function() {
+    const resultElement = document.querySelector("h1.result1");
+    if (resultElement) {
+        const content = resultElement.textContent;
+        const regex = /Total calories: (\d+(\.\d+)?)[\s\S]*Total proteins: (\d+(\.\d+)?)[\s\S]*Total carbs: (\d+(\.\d+)?)[\s\S]*Total fat: (\d+(\.\d+)?)/;
+        const matches = content.match(regex);
+
+        if (matches) {
+            const calorie = matches[1];
+            const protein = matches[3];
+            const carbs = matches[5];
+            const fat = matches[7];
+
+            // Create a FormData object to hold the form data
+            const formData = new FormData();
+            formData.append('calorie', calorie);
+            formData.append('protein', protein);
+            formData.append('carbs', carbs);
+            formData.append('fat', fat);
+
+            // Send the form data using fetch
+            fetch('includes/update_nutrition.php', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => {
+                // Refresh the page to reflect the updated values
+                window.location.reload();
             })
             .catch(error => {
-              console.error('Error:', error);
+                console.error("Error:", error);
+                // Refresh the page even if there is an error
+                window.location.reload();
             });
+        } else {
+            console.error("Failed to parse nutrition information from content:", content);
+            // Refresh the page even if parsing fails
+            window.location.reload();
         }
-      </script>
-    </section>
-    <section class="chat_bot">
-      <script type="text/javascript">
-        (function(d, t) {
-          var v = d.createElement(t),
-            s = d.getElementsByTagName(t)[0];
-          v.onload = function() {
-            window.voiceflow.chat.load({
-              verify: {
-                projectID: '66dde9358b24990f9a695982'
-              },
-              url: 'https://general-runtime.voiceflow.com',
-              versionID: 'production'
-            });
-          }
-          v.src = "https://cdn.voiceflow.com/widget/bundle.mjs";
-          v.type = "text/javascript";
-          s.parentNode.insertBefore(v, s);
-        })(document, 'script');
-      </script>
-
-    </section>
+    } else {
+        console.error("Element with class 'result1' not found.");
+        // Refresh the page even if the element is not found
+        window.location.reload();
+    }
+});
+</script>
 
 </body>
 

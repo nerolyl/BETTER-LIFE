@@ -67,4 +67,8 @@ function session_regenerate_id_loggedin()
     $_SESSION["last_regeneation"] = time(); // Update the last regeneration time
 }
 
+if (session_status() == PHP_SESSION_NONE) {
+    session_start();
+}
+?>
 
