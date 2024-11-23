@@ -319,20 +319,20 @@ calories: 140.0
 protein: 6.85
 carb: 12.9
 fat: 6.65
-
+<br>
 Food name: Toast with butter and honey
 calories: 0.0
 protein: 0.0
 carb: 0.0
 fat: 0.0
-
+<br>
 Food name: Apple
 calories: 53.0
 protein: 0.31
 carb: 11.3
 fat: 0.162
-
-Total calories: 193
+<br>
+Total calories: 200
 Total proteins: 7
 Total carbs: 24
 Total fat: 6
@@ -389,52 +389,60 @@ Total fat: 6
     </section>
     
     <script>
-document.getElementById('addButton').addEventListener('click', function() {
-    const resultElement = document.querySelector("h1.result1");
-    if (resultElement) {
-        const content = resultElement.textContent;
-        const regex = /Total calories: (\d+(\.\d+)?)[\s\S]*Total proteins: (\d+(\.\d+)?)[\s\S]*Total carbs: (\d+(\.\d+)?)[\s\S]*Total fat: (\d+(\.\d+)?)/;
-        const matches = content.match(regex);
-
-        if (matches) {
-            const calorie = matches[1];
-            const protein = matches[3];
-            const carbs = matches[5];
-            const fat = matches[7];
-
-            // Create a FormData object to hold the form data
-            const formData = new FormData();
-            formData.append('calorie', calorie);
-            formData.append('protein', protein);
-            formData.append('carbs', carbs);
-            formData.append('fat', fat);
-
-            // Send the form data using fetch
-            fetch('includes/update_nutrition.php', {
-                method: 'POST',
-                body: formData
-            })
-            .then(response => {
-                // Refresh the page to reflect the updated values
+    document.getElementById('addButton').addEventListener('click', function() {
+        // Select the element with class 'result1' inside an <h1> tag
+        const resultElement = document.querySelector("h1.result1");
+        
+        if (resultElement) {
+            // Get the text content of the selected element
+            const content = resultElement.textContent;
+            
+            // Define a regular expression to extract nutrition information
+            const regex = /Total calories: (\d+(\.\d+)?)[\s\S]*Total proteins: (\d+(\.\d+)?)[\s\S]*Total carbs: (\d+(\.\d+)?)[\s\S]*Total fat: (\d+(\.\d+)?)/;
+            
+            // Match the content against the regular expression
+            const matches = content.match(regex);
+    
+            if (matches) {
+                // Extract the matched groups for calories, proteins, carbs, and fat
+                const calorie = matches[1];
+                const protein = matches[3];
+                const carbs = matches[5];
+                const fat = matches[7];
+    
+                // Create a FormData object to hold the form data
+                const formData = new FormData();
+                formData.append('calorie', calorie);
+                formData.append('protein', protein);
+                formData.append('carbs', carbs);
+                formData.append('fat', fat);
+    
+                // Send the form data using fetch to the specified PHP script
+                fetch('includes/update_nutrition.php', {
+                    method: 'POST',
+                    body: formData
+                })
+                .then(response => {
+                    // Refresh the page to reflect the updated values
+                    window.location.reload();
+                })
+                .catch(error => {
+                    console.error("Error:", error);
+                    // Refresh the page even if there is an error
+                    window.location.reload();
+                });
+            } else {
+                console.error("Failed to parse nutrition information from content:", content);
+                // Refresh the page even if parsing fails
                 window.location.reload();
-            })
-            .catch(error => {
-                console.error("Error:", error);
-                // Refresh the page even if there is an error
-                window.location.reload();
-            });
+            }
         } else {
-            console.error("Failed to parse nutrition information from content:", content);
-            // Refresh the page even if parsing fails
+            console.error("Element with class 'result1' not found.");
+            // Refresh the page even if the element is not found
             window.location.reload();
         }
-    } else {
-        console.error("Element with class 'result1' not found.");
-        // Refresh the page even if the element is not found
-        window.location.reload();
-    }
-});
-</script>
+    });
+    </script>
 
 </body>
 
