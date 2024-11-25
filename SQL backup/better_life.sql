@@ -2,10 +2,10 @@
 -- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Oct 24, 2024 at 05:56 PM
--- Server version: 10.4.32-MariaDB
--- PHP Version: 8.2.12
+-- Host: localhost
+-- Generation Time: Nov 25, 2024 at 12:22 PM
+-- Server version: 10.4.28-MariaDB
+-- PHP Version: 8.2.4
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -55,23 +55,24 @@ CREATE TABLE `users` (
   `points` int(11) NOT NULL DEFAULT 0,
   `reset_token_hash` varchar(64) DEFAULT NULL,
   `reset_token_expires_at` datetime DEFAULT NULL,
-  `weight_goal` decimal(3,1) NOT NULL DEFAULT 1.0
+  `weight_goal` decimal(3,1) NOT NULL DEFAULT 1.0,
+  `activity_level` decimal(4,3) NOT NULL DEFAULT 1.200
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`id`, `username`, `pwd`, `email`, `weight`, `age`, `height`, `gender`, `calorie`, `max_calorie`, `protein`, `max_protein`, `carbs`, `max_carbs`, `fat`, `max_fat`, `sunday_nutrition`, `monday_nutrition`, `tuesday_nutrition`, `wednesday_nutrition`, `thursday_nutrition`, `friday_nutrition`, `saturday_nutrition`, `last_login`, `points`, `reset_token_hash`, `reset_token_expires_at`, `weight_goal`) VALUES
-(9, 'JohnDoe', '$2y$12$ZQmOkO/YIk2JPLyd7djTruld0RnIMGtgO.juh0CaM7q93bDHWl7FO', 'johndoe@gmail.com', 75, 30, 180, -5, 0, 1730, 0, 94, 0, 281, 0, 154, '0, 0, 0, 0', '', '0,0,0,0', '0,0,0,0', '0,0,0,0', '0,0,0,0', '0,0,0,0', '2024-10-12 14:32:11.874068', 0, NULL, NULL, 1.0),
-(10, 'Jane Doe', '$2y$10$z5MIitB2Csv6Ujz2J2GOoeuC1J6Mna7C7PzIWFHkKpS2EIUKncFQO', 'JaneDoe@gmail.com', 63, 24, 172, 161, 200, 1424, 4, 79, 42, 232, 33, 127, '1464, 75, 238, 130', '1400, 70, 200, 100', '0,0,0,0', '0,0,0,0', '0,0,0,0', '0,0,0,0', '0,0,0,0', '2024-10-24 15:28:47.243177', 4, NULL, NULL, 1.0),
-(12, 'Test', '$2y$12$KzEEOZye1Bl3JTzprkqqGeFh7Zg7qtmO1x8bQP9uZGOyCwt57Xo0W', 'Test@gmail.com', 75, 30, 180, -5, 0, 1730, 0, 94, 0, 281, 0, 154, '0, 0, 0, 0', '0, 0, 0, 0', '0,0,0,0', '0,0,0,0', '0,0,0,0', '0,0,0,0', '0,0,0,0', '2024-10-12 14:32:11.874068', 0, NULL, NULL, 1.0);
+INSERT INTO `users` (`id`, `username`, `pwd`, `email`, `weight`, `age`, `height`, `gender`, `calorie`, `max_calorie`, `protein`, `max_protein`, `carbs`, `max_carbs`, `fat`, `max_fat`, `sunday_nutrition`, `monday_nutrition`, `tuesday_nutrition`, `wednesday_nutrition`, `thursday_nutrition`, `friday_nutrition`, `saturday_nutrition`, `last_login`, `points`, `reset_token_hash`, `reset_token_expires_at`, `weight_goal`, `activity_level`) VALUES
+(9, 'JohnDoe', '$2y$12$ZQmOkO/YIk2JPLyd7djTruld0RnIMGtgO.juh0CaM7q93bDHWl7FO', 'johndoe@gmail.com', 75, 30, 180, -5, 0, 1730, 0, 94, 0, 281, 0, 154, '0, 0, 0, 0', '', '0,0,0,0', '0,0,0,0', '0,0,0,0', '0,0,0,0', '0,0,0,0', '2024-10-12 14:32:11.874068', 0, NULL, NULL, 1.0, 0.000),
+(10, 'Jane Doe', '$2y$10$z5MIitB2Csv6Ujz2J2GOoeuC1J6Mna7C7PzIWFHkKpS2EIUKncFQO', 'racanalmuqbil@gmail.com', 63, 24, 172, 161, 0, 1709, 161, 79, 0, 194, 138, 106, '1464, 75, 238, 130', '1400, 70, 200, 100', '0,0,0,0', '0,0,0,0', '0,0,0,0', '0,0,0,0', '0,0,0,0', '2024-11-25 10:49:59.536578', 17, '9cb7e8f74161e1486d4bacc4c589539c2a25e0e4c72a83983308993f91d1fd2f', '2024-11-13 00:04:40', 1.0, 1.200),
+(12, 'Test', '$2y$12$KzEEOZye1Bl3JTzprkqqGeFh7Zg7qtmO1x8bQP9uZGOyCwt57Xo0W', 'Test@gmail.com', 75, 30, 180, -5, 0, 1730, 0, 94, 0, 281, 0, 154, '0, 0, 0, 0', '0, 0, 0, 0', '0,0,0,0', '0,0,0,0', '0,0,0,0', '0,0,0,0', '0,0,0,0', '2024-10-12 14:32:11.874068', 0, NULL, NULL, 1.0, 0.000);
 
 --
 -- Triggers `users`
 --
 DELIMITER $$
-CREATE TRIGGER `insert_max_cal` BEFORE INSERT ON `users` FOR EACH ROW SET NEW.max_calorie = (NEW.weight * 10) + (NEW.height * 6.25) - (NEW.age * 5) - (NEW.gender)
+CREATE TRIGGER `insert_max_cal` BEFORE INSERT ON `users` FOR EACH ROW SET NEW.max_calorie = (((NEW.weight * 10) + (NEW.height * 6.25) - (NEW.age * 5) - (NEW.gender)) * (NEW.activity_level)) * (NEW.weight_goal)
 $$
 DELIMITER ;
 DELIMITER $$
@@ -87,7 +88,7 @@ CREATE TRIGGER `insert_max_protein` BEFORE INSERT ON `users` FOR EACH ROW SET NE
 $$
 DELIMITER ;
 DELIMITER $$
-CREATE TRIGGER `update_max_cal` BEFORE UPDATE ON `users` FOR EACH ROW SET NEW.max_calorie = ((NEW.weight * 10) + (NEW.height * 6.25) - (NEW.age * 5) - (NEW.gender)) * (NEW.weight_goal)
+CREATE TRIGGER `update_max_cal` BEFORE UPDATE ON `users` FOR EACH ROW SET NEW.max_calorie = (((NEW.weight * 10) + (NEW.height * 6.25) - (NEW.age * 5) - (NEW.gender)) * (NEW.activity_level)) * (NEW.weight_goal)
 $$
 DELIMITER ;
 DELIMITER $$

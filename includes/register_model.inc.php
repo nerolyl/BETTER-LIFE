@@ -24,8 +24,8 @@ function get_email(object $pdo, string $email){
 
 }
 
-function create_user(object $pdo,string $username, string $pwd, string $email, $height, $weight, $age, $gender) {
-    $query = "INSERT INTO users (username, pwd, email, height, weight, age, gender) values;";
+function create_user(object $pdo,string $username, string $pwd, string $email, $height, $weight, $age, $gender, $activity_level) {
+    $query = "INSERT INTO users (username, pwd, email, height, weight, age, gender, activity_level) values;";
     $stmt = $pdo->prepare($query);
     $stmt-> bindParam(":email", $email);
     $stmt->execute();
