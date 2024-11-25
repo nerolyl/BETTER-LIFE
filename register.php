@@ -42,6 +42,14 @@ require_once 'includes/register_view.inc.php';
                     <label class="label_style" for="male">MALE</label>
                     <input type="radio" id="female" name="gender" value="-5">
                     <label class="label_style" for="female">FEMALE</label><br>
+                    <label class="select_div" for="activity_level">activity level:</label>
+                    <select name="activity_level" id="activity_level" required>
+                        <option value="1.2">Sedentary</option>
+                        <option value="1.375">Lightly active </option>
+                        <option value="1.55">Moderately active</option>
+                        <option value="1.725">Active </option>
+                        <option value="1.9">Very active</option>
+                        </select>
                     <div class="register_btn">
                         <a href="Login.php">Login</a>
                         <button >Register</button>

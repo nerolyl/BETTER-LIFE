@@ -22,7 +22,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     
     // Retrieve the value of 'gender' from the POST request and assign it to $gender
     $gender = $_POST["gender"];
-
+    
+    $activity_level = $_POST["activity_level"];
 
 
 
@@ -66,7 +67,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
     
         // Prepare an SQL query to insert user data into the users table
-        $query = "INSERT INTO users (username, pwd, email, height, weight, age, gender) VALUES (:username, :pwd, :email, :height, :weight, :age, :gender);";
+        $query = "INSERT INTO users (username, pwd, email, height, weight, age, gender, activity_level) VALUES (:username, :pwd, :email, :height, :weight, :age, :gender, :activity_level);";
     
         $stmt = $pdo->prepare($query); // Prepare the SQL statement
     
@@ -84,6 +85,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $stmt->bindParam(":weight", $weight);
         $stmt->bindParam(":age", $age);
         $stmt->bindParam(":gender", $gender);
+        $stmt->bindParam(":activity_level", $activity_level);
     
         // Execute the SQL statement to insert user data
         $stmt->execute();
@@ -105,3 +107,4 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // If the request method is not POST, redirect to the registration page
         header("Location: ../register.php");
         die(); }
+?>
