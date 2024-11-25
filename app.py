@@ -67,10 +67,11 @@ def analyze_food():
             output += f"carb: {item['carbs_100g']}\n"
             output += f"fat: {item['fat_100g']}\n\n"
 
-        output += f"Total calories: {total_calories}\n"
-        output += f"Total carbs: {total_carbs}\n"
-        output += f"Total fat: {total_fat}\n"
-        output += f"Total proteins: {total_proteins}\n"
+        output += f"Total calories: {round(total_calories)}\n"
+        output += f"Total proteins: {round(total_proteins)}\n"
+        output += f"Total carbs: {round(total_carbs)}\n"
+        output += f"Total fat: {round(total_fat)}\n"
+
 
         return jsonify({"output": output}), 200
     else:

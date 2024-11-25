@@ -1,5 +1,47 @@
 /*Nero was here */
+/* tooltip */
+.tooltip_c_i svg{
+    z-index: 1;
+    position: absolute;
+    width: 1.5rem;
+    margin-left: 0.5rem;
+}
+.tooltip_c_i{
+    margin-top: -6rem;
+    position: relative;
+    display: inline-block;
+}
+.tooltip_c_i .tooltiptext_ci{
+    width: 44rem;
+    visibility: hidden;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 0.5rem;
+    padding: 0.5rem 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 100%;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+.tooltip_c_i .tooltiptext_ci::after{
+    content: "";
+    position: absolute;
+    top: 100%;
+    right: 96%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+.tooltip_c_i:hover  .tooltiptext_ci{
+  visibility: visible;
+  opacity: 1;
+}
 
+/* end */
 .check_in{
     justify-content: center;
     width: 100%;

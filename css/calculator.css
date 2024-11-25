@@ -1,3 +1,46 @@
+/* tooltip */
+.tooltip_c_c svg{
+    z-index: 1;
+    position: absolute;
+    width: 1.5rem;
+    margin-left: 0.2rem;
+}
+.tooltip_c_c{
+    padding-top: 3.5rem;
+    position: relative;
+    display: inline-block;
+}
+.tooltip_c_c .tooltiptext_c_c{
+    width: 37rem;
+    visibility: hidden;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 0.5rem;
+    padding: 0.5rem 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 40%;
+    left: 100%;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+.tooltip_c_c .tooltiptext_c_c::after{
+    content: "";
+    position: absolute;
+    top: 100%;
+    right: 96%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+.tooltip_c_c:hover  .tooltiptext_c_c{
+  visibility: visible;
+  opacity: 1;
+}
+
+/* end */
 .calorie_calculator{
     padding:  0 1rem;
 }
@@ -22,6 +65,7 @@
     font-family: Lexend Deca;
 }
 .item_ins{
+    width: 1rem;
     padding: 1rem;
     display: flex;
 }
