@@ -54,6 +54,12 @@ require_once 'includes/settings_view.inc.php';
     <div class="checkin_con">
       <div class=" checkin_bkg">
         <div class=" checckin_itemscon">
+                  <!-- tooltip -->
+                  <div class ="tooltip_c_i">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0,0,256,256" width="50px" height="50px" fill-rule="nonzero"><g fill="#5a246b" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(5.12,5.12)"><path d="M25,2c-12.6907,0 -23,10.3093 -23,23c0,12.69071 10.3093,23 23,23c12.69071,0 23,-10.30929 23,-23c0,-12.6907 -10.30929,-23 -23,-23zM25,4c11.60982,0 21,9.39018 21,21c0,11.60982 -9.39018,21 -21,21c-11.60982,0 -21,-9.39018 -21,-21c0,-11.60982 9.39018,-21 21,-21zM25,11c-1.65685,0 -3,1.34315 -3,3c0,1.65685 1.34315,3 3,3c1.65685,0 3,-1.34315 3,-3c0,-1.65685 -1.34315,-3 -3,-3zM21,21v2h1h1v13h-1h-1v2h1h1h4h1h1v-2h-1h-1v-15h-1h-4z"></path></g></g></svg>
+            <span class="tooltiptext_ci">Daily check in: where you'll see your daily check in streak, try to get all 7 before the end of the week. </span>
+          </div>
+            <!-- end -->
           <div class="line">
           </div>
           <?php output_check_in(); ?>
@@ -120,6 +126,12 @@ require_once 'includes/settings_view.inc.php';
   <section class="calorie_calculator">
     <div class="c_c_con">
       <div class="c_t_con">
+                  <!-- tooltip -->
+                  <div class ="tooltip_c_c">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0,0,256,256" width="50px" height="50px" fill-rule="nonzero"><g fill="#5a246b" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(5.12,5.12)"><path d="M25,2c-12.6907,0 -23,10.3093 -23,23c0,12.69071 10.3093,23 23,23c12.69071,0 23,-10.30929 23,-23c0,-12.6907 -10.30929,-23 -23,-23zM25,4c11.60982,0 21,9.39018 21,21c0,11.60982 -9.39018,21 -21,21c-11.60982,0 -21,-9.39018 -21,-21c0,-11.60982 9.39018,-21 21,-21zM25,11c-1.65685,0 -3,1.34315 -3,3c0,1.65685 1.34315,3 3,3c1.65685,0 3,-1.34315 3,-3c0,-1.65685 -1.34315,-3 -3,-3zM21,21v2h1h1v13h-1h-1v2h1h1h4h1h1v-2h-1h-1v-15h-1h-4z"></path></g></g></svg>
+            <span class="tooltiptext_c_c"> Nutrients Dashboard: Here, you'll see you're daily max intake, your current intake, and you can add the nutrients you have consumed. note it will reset in the end of the day </span>
+          </div>
+            <!-- end -->
         <div class="item_con">
           <div class="item1">
             <h3>Calorie</h3>
@@ -223,6 +235,18 @@ require_once 'includes/settings_view.inc.php';
   </section>
   <div class="conn">
     <section class="chart">
+        <!-- tooltip -->
+        <div class="tooltip_c">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0,0,256,256" width="3.125rem" height="1.5rem" fill-rule="nonzero">
+                <g fill="#5a246b" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal">
+                    <g transform="scale(5.12,5.12)">
+                        <path d="M25,2c-12.6907,0 -23,10.3093 -23,23c0,12.69071 10.3093,23 23,23c12.69071,0 23,-10.30929 23,-23c0,-12.6907 -10.30929,-23 -23,-23zM25,4c11.60982,0 21,9.39018 21,21c0,11.60982 -9.39018,21 -21,21c-11.60982,0 -21,-9.39018 -21,-21c0,-11.60982 9.39018,-21 21,-21zM25,11c-1.65685,0 -3,1.34315 -3,3c0,1.65685 1.34315,3 3,3c1.65685,0 3,-1.34315 3,-3c0,-1.65685 -1.34315,-3 -3,-3zM21,21v2h1h1v13h-1h-1v2h1h1h4h1h1v-2h-1h-1v-15h-1h-4z"></path>
+                    </g>
+                </g>
+            </svg>
+            <span class="tooltiptext_c">Weekly nutrition chart: this chart will display your past nutrition it will be recorded at the end of the day, you can click the days on top of the chart to filter the days you want to be displayed.</span>
+        </div>
+        <!-- end -->
       <canvas id="myChart"></canvas>
 
       <script>
@@ -295,6 +319,14 @@ require_once 'includes/settings_view.inc.php';
 
     </section>
     <section class="food_analysis">
+      <!-- tooltip -->
+<div class ="tooltip_f_a">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0,0,256,256" width="50px" height="50px" fill-rule="nonzero"><g fill="#5a246b" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(5.12,5.12)"><path d="M25,2c-12.6907,0 -23,10.3093 -23,23c0,12.69071 10.3093,23 23,23c12.69071,0 23,-10.30929 23,-23c0,-12.6907 -10.30929,-23 -23,-23zM25,4c11.60982,0 21,9.39018 21,21c0,11.60982 -9.39018,21 -21,21c-11.60982,0 -21,-9.39018 -21,-21c0,-11.60982 9.39018,-21 21,-21zM25,11c-1.65685,0 -3,1.34315 -3,3c0,1.65685 1.34315,3 3,3c1.65685,0 3,-1.34315 3,-3c0,-1.65685 -1.34315,-3 -3,-3zM21,21v2h1h1v13h-1h-1v2h1h1h4h1h1v-2h-1h-1v-15h-1h-4z"></path></g></g></svg>
+<span class="tooltiptext_f_a">food analyzer: powered by Foodvisor, it scans your food to give you nutritional info about your food, you can add your food to the dashboard by pressing the ADD button
+
+</span>
+</div>
+<!-- end -->  
       <div class=" drag-areapa">
         <div class="drag-area">
           <h1>Check out the calories in</h1>
@@ -314,28 +346,7 @@ require_once 'includes/settings_view.inc.php';
     <button type="button" id="addButton">Add</button>
 </form>
         <h1 class="result1">
-        Food name: Bolognese lasagna
-calories: 140.0
-protein: 6.85
-carb: 12.9
-fat: 6.65
-<br>
-Food name: Toast with butter and honey
-calories: 0.0
-protein: 0.0
-carb: 0.0
-fat: 0.0
-<br>
-Food name: Apple
-calories: 53.0
-protein: 0.31
-carb: 11.3
-fat: 0.162
-<br>
-Total calories: 200
-Total proteins: 7
-Total carbs: 24
-Total fat: 6
+
           <pre id="results"></pre>
         </H1>
       </div>
