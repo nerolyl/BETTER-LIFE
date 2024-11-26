@@ -1,18 +1,31 @@
-/* tooltip */
-.tooltip_c svg{
-    z-index: 1;
+.chart {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin-top: 1rem;
+    margin-left: 2rem;
+    padding: 0;
+    display: flex;
+    height: 24rem; /* Default height */
+    position: relative; /* Add this to position the tooltip */
+}
+
+#myChart {
+    border-radius: 1rem;
+    padding-right: 3rem;
+    padding-left: 3rem;
+    background-color: #FFFFFF;
+    max-width: 36rem;
+}
+
+.tooltip_c {
     position: absolute;
-    width: 1.5rem;
-    margin-left: 0.2rem;
-    margin-top: -4rem;
+    top: 0;
+    left: 0;
+    z-index: 1;
 }
-.tooltip_c{
-    padding-top: 3.5rem;
-    position: relative;
-    display: inline-block;
-}
-.tooltip_c .tooltiptext_c{
-    width: 45rem;
+
+.tooltiptext_c {
+    width: 20rem;
     visibility: hidden;
     background-color: #555;
     color: #fff;
@@ -22,75 +35,30 @@
     position: absolute;
     z-index: 1;
     bottom: 100%;
-    left: 100%;
+    left: 0;
     opacity: 0;
     transition: opacity 0.3s;
 }
-.tooltip_c .tooltiptext_c::after{
-    content: "";
-    position: absolute;
-    top: 100%;
-    right: 96%;
-    margin-left: -5px;
-    border-width: 5px;
-    border-style: solid;
-    border-color: #555 transparent transparent transparent;
-}
-.tooltip_c:hover  .tooltiptext_c{
-  visibility: visible;
-  opacity: 1;
+
+.tooltip_c:hover .tooltiptext_c {
+    visibility: visible;
+    opacity: 1;
 }
 
-/* end */
-
-
-.chart {
-    font-family: Arial, sans-serif;
-    text-align: center;
-    margin-top: 1rem;
-    margin-left: 2rem;
-    padding: 0;
-    display: flex;
-    height: 24rem;
-    
-}
-#myChart {
-    border-radius: 1rem;
-    padding-right: 3rem;
-    padding-left: 3rem;
-    background-color: #FFFFFF;
-    max-width: 36rem;
-}
-@media (min-width :1440px ){
+@media (min-width: 1440px) {
     .chart {
-        height: 25rem;
-        
+        height: 24rem;
     }
     #myChart {
         max-width: 40rem;
     }
 }
 
-@media (min-width :1701px ){
+@media (min-width: 1701px) {
     .chart {
         height: 31rem;
-        
     }
     #myChart {
-        max-width: 65rem;
+        max-width: 45rem;
     }
-
-}
-
-@media(min-width: 2500px){
-    .chart {
-        height: 51rem;
-        
-    }
-    #myChart {
-        
-        max-width: 81rem;
-    }
-
-
 }

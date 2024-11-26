@@ -86,6 +86,9 @@
 .item_ins2 input[type=text]{
     width: 2.5rem;
 }
+.item_ins2 input[type=number]{
+    width: 2.5rem;
+}
 .item_ins2 button{
     background-color: #5A246B;
     color: white;
@@ -115,11 +118,15 @@
     .item_ins2 input[type=text]{
         width: 2.5rem;
     }
+    .item_ins2 input[type=number]{
+        width: 2.5rem;
+    }
     .item_ins2 button{
         padding: 0.2rem 0.5rem;
         font-size: 0.8rem;
     }
 }
+
 @media (min-width :1701px ){
     .c_t_con{
         padding: 0 2rem;
@@ -138,6 +145,9 @@
         padding: 0 0 0 10rem;
     }
     .item_ins2 input[type=text]{
+        width: 2.5rem;
+    }
+    .item_ins2 input[type=number]{
         width: 2.5rem;
     }
     .item_ins2 button{
@@ -181,4 +191,5 @@
         padding: 0.2rem 0.8rem;
         font-size: 1rem;
     }
+
 }
