@@ -5,8 +5,8 @@
     margin-left: 2rem;
     padding: 0;
     display: flex;
-    height: 24rem; /* Default height */
-    position: relative; /* Add this to position the tooltip */
+    height: 24rem; 
+    position: relative;
 }
 
 #myChart {
@@ -15,6 +15,7 @@
     padding-left: 3rem;
     background-color: #FFFFFF;
     max-width: 36rem;
+    height: 24rem; 
 }
 
 .tooltip_c {
@@ -50,7 +51,8 @@
         height: 24rem;
     }
     #myChart {
-        max-width: 40rem;
+        max-width: 40rem;     
+        height: 24rem;
     }
 }
 
@@ -60,5 +62,6 @@
     }
     #myChart {
         max-width: 45rem;
+        height: 31rem; /* Match drag area height */
     }
 }
