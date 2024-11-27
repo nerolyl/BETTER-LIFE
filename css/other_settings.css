@@ -1,7 +1,8 @@
 /*Nero was here */
+/*stop using "Nero" for everything Please */
 
 .other_con{
-    font-family: IBM Plex Sans;
+    font-family: Abril Fatface;
     margin-left: 28rem;
 }
 .other_title h1{
@@ -33,14 +34,14 @@
     margin: 0.5rem;
     border-radius: 0.5rem;
     font-weight: bold;
-    font-family: IBM Plex Sans;
+    font-family: Abril Fatface;
     font-size: 1.5rem;
     color: #5A246B;
     border: 2px solid #000000;
 }
 
 .body_info label{
-    font-family: IBM Plex Sans;
+    font-family: Abril Fatface;
     padding-left: 0.8rem;
     font-size: 1.5rem;
     color: #000000;
@@ -63,7 +64,7 @@
     height: 3.5rem;
     border-radius: 0.5rem;
     font-weight: bold;
-    font-family: IBM Plex Sans;
+    font-family: Abril Fatface;
     font-size: 1.5rem;
     color: #5A246B;
     border: 2px solid #000000;
@@ -75,13 +76,13 @@
     padding-left: rem;
     border-radius: 0.5rem;
     font-weight: bold;
-    font-family: IBM Plex Sans;
+    font-family: Abril Fatface;
     font-size: 1.5rem;
     color: #5A246B;
     border: 2px solid #000000;
 }
 .account_info label{
-    font-family: IBM Plex Sans;
+    font-family: Abril Fatface;
     padding-left: 0.8rem;
     font-size: 1.5rem;
     color: #000000;

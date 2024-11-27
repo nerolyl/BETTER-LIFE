@@ -95,6 +95,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $_SESSION["user_age"] = htmlspecialchars($result["age"]);
         $_SESSION["user_height"] = htmlspecialchars($result["height"]);
         $_SESSION["user_weight_goal"] = htmlspecialchars($result["weight_goal"]);
+        $_SESSION["user_activity_level"] = htmlspecialchars($result["activity_level"]);
         $_SESSION["last_regeneration"] = time(); // Set the time of the last session regeneration
 
         // Check if the user logged in today
