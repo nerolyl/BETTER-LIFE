@@ -1,8 +1,8 @@
 <?php
 
 // Configure session settings for improved security
-ini_set('set.use_only_cookies', 1); // Forces the use of cookies to store session IDs (disabling URL-based session IDs)
-ini_set('set.use_strict_mode', 1);  // Enables strict mode for session use, preventing attacks with reused session IDs
+ini_set('session.use_only_cookies', 1); // Forces the use of cookies to store session IDs (disabling URL-based session IDs)
+ini_set('session.use_strict_mode', 1);  // Enables strict mode for session use, preventing attacks with reused session IDs
 
 // Set the parameters for the session cookie to enhance security
 session_set_cookie_params([
@@ -19,27 +19,27 @@ session_start();
 // If the user is logged in (i.e., session contains 'user_id')
 if (isset($_SESSION["user_id"])) {
     // If there's no record of the last session regeneration, regenerate the session ID
-    if (!isset($_SESSION["last_regeneation"])) {
+    if (!isset($_SESSION["last_regeneration"])) {
         session_regenerate_id_loggedin(); // Regenerate session ID with user logged in
-        $_SESSION["last_regeneation"] = time(); // Record the time of regeneration
+        $_SESSION["last_regeneration"] = time(); // Record the time of regeneration
     } else {
         // Set the regeneration interval to 30 minutes
         $interval = 60 * 30;
         // If the last regeneration was 30 minutes ago or longer, regenerate the session ID
-        if (time() - $_SESSION["last_regeneation"] >= $interval) {
+        if (time() - $_SESSION["last_regeneration"] >= $interval) {
             session_regenerate_id_loggedin();
         }
     }
 } else {
     // If the user is not logged in and there's no record of last regeneration, regenerate the session ID
-    if (!isset($_SESSION["last_regeneation"])) {
-        session_regenerate_id(); // Regenerate session ID for anonymous user
-        $_SESSION["last_regeneation"] = time(); // Record the time of regeneration
+    if (!isset($_SESSION["last_regeneration"])) {
+        regenerate_session_id(); // Regenerate session ID for anonymous user
+        $_SESSION["last_regeneration"] = time(); // Record the time of regeneration
     } else {
         // Set the regeneration interval to 30 minutes
         $interval = 60 * 30;
         // If the last regeneration was 30 minutes ago or longer, regenerate the session ID
-        if (time() - $_SESSION["last_regeneation"] >= $interval) {
+        if (time() - $_SESSION["last_regeneration"] >= $interval) {
             regenerate_session_id();
         }
     }
@@ -49,7 +49,7 @@ if (isset($_SESSION["user_id"])) {
 function regenerate_session_id()
 {
     session_regenerate_id(true); // Regenerate session ID and delete the old one
-    $_SESSION["last_regeneation"] = time(); // Update the last regeneration time
+    $_SESSION["last_regeneration"] = time(); // Update the last regeneration time
 }
 
 // Function to regenerate session ID for logged-in users
@@ -64,11 +64,6 @@ function session_regenerate_id_loggedin()
     $sessionid = $newSessionId . "_" . $userId;
     session_id($sessionid); // Set the new session ID
 
-    $_SESSION["last_regeneation"] = time(); // Update the last regeneration time
-}
-
-if (session_status() == PHP_SESSION_NONE) {
-    session_start();
+    $_SESSION["last_regeneration"] = time(); // Update the last regeneration time
 }
 ?>
-
