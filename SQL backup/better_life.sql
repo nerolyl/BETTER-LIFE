@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Nov 25, 2024 at 12:22 PM
+-- Generation Time: Nov 28, 2024 at 11:42 PM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -51,7 +51,7 @@ CREATE TABLE `users` (
   `thursday_nutrition` varchar(255) DEFAULT '0,0,0,0',
   `friday_nutrition` varchar(255) DEFAULT '0,0,0,0',
   `saturday_nutrition` varchar(255) DEFAULT '0,0,0,0',
-  `last_login` timestamp(6) NOT NULL DEFAULT current_timestamp(6) ON UPDATE current_timestamp(6),
+  `last_login` date NOT NULL DEFAULT curdate(),
   `points` int(11) NOT NULL DEFAULT 0,
   `reset_token_hash` varchar(64) DEFAULT NULL,
   `reset_token_expires_at` datetime DEFAULT NULL,
@@ -64,9 +64,9 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `username`, `pwd`, `email`, `weight`, `age`, `height`, `gender`, `calorie`, `max_calorie`, `protein`, `max_protein`, `carbs`, `max_carbs`, `fat`, `max_fat`, `sunday_nutrition`, `monday_nutrition`, `tuesday_nutrition`, `wednesday_nutrition`, `thursday_nutrition`, `friday_nutrition`, `saturday_nutrition`, `last_login`, `points`, `reset_token_hash`, `reset_token_expires_at`, `weight_goal`, `activity_level`) VALUES
-(9, 'JohnDoe', '$2y$12$ZQmOkO/YIk2JPLyd7djTruld0RnIMGtgO.juh0CaM7q93bDHWl7FO', 'johndoe@gmail.com', 75, 30, 180, -5, 0, 1730, 0, 94, 0, 281, 0, 154, '0, 0, 0, 0', '', '0,0,0,0', '0,0,0,0', '0,0,0,0', '0,0,0,0', '0,0,0,0', '2024-10-12 14:32:11.874068', 0, NULL, NULL, 1.0, 0.000),
-(10, 'Jane Doe', '$2y$10$z5MIitB2Csv6Ujz2J2GOoeuC1J6Mna7C7PzIWFHkKpS2EIUKncFQO', 'racanalmuqbil@gmail.com', 63, 24, 172, 161, 0, 1709, 161, 79, 0, 194, 138, 106, '1464, 75, 238, 130', '1400, 70, 200, 100', '0,0,0,0', '0,0,0,0', '0,0,0,0', '0,0,0,0', '0,0,0,0', '2024-11-25 10:49:59.536578', 17, '9cb7e8f74161e1486d4bacc4c589539c2a25e0e4c72a83983308993f91d1fd2f', '2024-11-13 00:04:40', 1.0, 1.200),
-(12, 'Test', '$2y$12$KzEEOZye1Bl3JTzprkqqGeFh7Zg7qtmO1x8bQP9uZGOyCwt57Xo0W', 'Test@gmail.com', 75, 30, 180, -5, 0, 1730, 0, 94, 0, 281, 0, 154, '0, 0, 0, 0', '0, 0, 0, 0', '0,0,0,0', '0,0,0,0', '0,0,0,0', '0,0,0,0', '0,0,0,0', '2024-10-12 14:32:11.874068', 0, NULL, NULL, 1.0, 0.000);
+(9, 'JohnDoe', '$2y$12$ZQmOkO/YIk2JPLyd7djTruld0RnIMGtgO.juh0CaM7q93bDHWl7FO', 'johndoe@gmail.com', 75, 30, 180, -5, 0, 1730, 0, 94, 0, 281, 0, 154, '0, 0, 0, 0', '', '0,0,0,0', '0,0,0,0', '0,0,0,0', '0,0,0,0', '0,0,0,0', '2024-10-12', 0, NULL, NULL, 1.0, 0.000),
+(10, 'Jane Doe', '$2y$10$z5MIitB2Csv6Ujz2J2GOoeuC1J6Mna7C7PzIWFHkKpS2EIUKncFQO', 'racanalmuqbil@gmail.com', 66, 24, 170, 161, 194, 1730, 168, 83, 24, 281, 145, 154, '1464, 75, 238, 130', '1400, 70, 200, 100', '0,0,0,0', '0,0,0,0', '0,0,0,0', '0,0,0,0', '0,0,0,0', '2024-11-29', 7, 'e1446d583a29295b4a615314b1cc87f11b8b88a2cd5dd3d1dd08162f07026ba8', '2024-11-28 18:34:10', 1.0, 1.200),
+(12, 'Test', '$2y$12$KzEEOZye1Bl3JTzprkqqGeFh7Zg7qtmO1x8bQP9uZGOyCwt57Xo0W', 'Test@gmail.com', 75, 30, 180, -5, 0, 1730, 0, 94, 0, 281, 0, 154, '0, 0, 0, 0', '0, 0, 0, 0', '0,0,0,0', '0,0,0,0', '0,0,0,0', '0,0,0,0', '0,0,0,0', '2024-10-12', 0, NULL, NULL, 1.0, 0.000);
 
 --
 -- Triggers `users`
@@ -123,7 +123,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 DELIMITER $$
 --

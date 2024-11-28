@@ -102,7 +102,7 @@ require_once 'includes/settings_view.inc.php';
       </div>
       <div class="line">
       </div>
-      <?php output_check_in5(); ?>
+      <?php output_check_in6(); ?>
         <div class="items_3">
           <h3 <?php output_check_in_text6(); ?>>Day</h3>
           <h1 <?php output_check_in_text6(); ?>>6</h1>

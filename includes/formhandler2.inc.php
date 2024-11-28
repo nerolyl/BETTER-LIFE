@@ -1,31 +1,12 @@
 <?php
 session_start();
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+
 require_once 'dbh.inc.php'; // Database handler for connecting to the database
 require_once 'login_model.inc.php'; // Contains helper functions for login
 require_once 'login_contr.inc.php'; // Contains validation and login control logic
-
-// Function to update the user's points and last login time
-function update_user_points_and_login(object $pdo, string $username) {
-    try {
-        $query = "UPDATE users SET points = points + 1, last_login = NOW() WHERE username = :username;";
-        $stmt = $pdo->prepare($query);
-        $stmt->bindParam(":username", $username);
-        $stmt->execute();
-
-        // Check if the update was successful
-        if ($stmt->rowCount() > 0) {
-            error_log("Successfully updated points and last login for user: " . $username);
-            return true;
-        } else {
-            error_log("No rows affected when updating points and last login for user: " . $username);
-            return false;
-        }
-    } catch (PDOException $e) {
-        // Log the error message
-        error_log("Error updating user points and last login: " . $e->getMessage());
-        return false;
-    }
-}
+require_once 'points_formhandler.inc.php'; // Contains the function to update user points and last login time
 
 // Check if the request method is POST (i.e., the form has been submitted)
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -97,16 +78,20 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $_SESSION["user_weight_goal"] = htmlspecialchars($result["weight_goal"]);
         $_SESSION["user_activity_level"] = htmlspecialchars($result["activity_level"]);
         $_SESSION["last_regeneration"] = time(); // Set the time of the last session regeneration
+        $_SESSION["user_last_login"] = htmlspecialchars($result["last_login"]);
 
         // Check if the user logged in today
         $lastLogin = new DateTime($result['last_login']);
         $currentDate = new DateTime();
+
+        // Compare only the day part
         if ($lastLogin->format('Y-m-d') !== $currentDate->format('Y-m-d')) {
             // Update points and last login time
             if (update_user_points_and_login($pdo, $username)) {
                 // Refresh user data to update session with new points and last login time
                 $result = get_user($pdo, $username);
-                $_SESSION["user_data"] = $result;
+                $_SESSION["user_points"] = htmlspecialchars($result["points"]);
+                $_SESSION["user_last_login"] = htmlspecialchars($result["last_login"]);
             } else {
                 // Log an error message if the update failed
                 error_log("Failed to update user points and last login for user: " . $username);
@@ -115,19 +100,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         // Redirect to the Home Page after successful login
         header("Location: ../home_page.php");
-
-        // Close the database connection
-        $pdo = null;
-        $stmt = null;
-
-        die();
+        exit();
     } catch (PDOException $e) {
         // If an exception occurs, display an error message
         die("Query failed: " . $e->getMessage());
     }
 } else {
     // If the request method is not POST, redirect to the login page
-    header("Location: ../Login.php");
-    die();
+    header("Location: ../login.php");
+    exit();
 }
 ?>
