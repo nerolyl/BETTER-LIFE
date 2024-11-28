@@ -37,15 +37,15 @@ require_once 'includes/login_view.inc.php';
                 <button class="btn1">Log in</button>
             </div>
         </form>
-        
+        <br>
+        <div class="forgot_password">
+            <a style="text-align: center; display: block;" href="Forgot_password.php">Forgot Password?</a>
+        </div>
         
         <?php
         check_login_error();
 
         ?>
-        <div class="forgot_password">
-            <a href="Forgot_password.php">Forgot Password?</a>
-        </div>
     </div>
 </div>
     </section>
