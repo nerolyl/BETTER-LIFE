@@ -148,13 +148,11 @@ margin-bottom: -7rem;
     margin-left: 1rem;
     font-size: 1rem;
   }
+
   .result1{
     width: 23.5rem;
     font-size: 1.1rem;
     padding-top: 1rem;
-  }
-  .result_bg{
-    height: 27rem; /* Make result_bg same height as drag-area */
   }
   .result_bg form{
     padding: 0.5rem 0 0 22rem;

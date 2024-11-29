@@ -158,10 +158,16 @@ input[type=radio]{
 }
 
 
+
 .form_error {
     color: red;
-    margin-top: 2rem;
-    margin-left: 14rem;
+    text-align: center;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 100%; /* Ensure it takes the full height of the parent */
+    width: 100%; /* Ensure it takes the full width of the parent */
+    text-align: center; /* Center-align text content */
+    padding-left: -30rem;
 }
 
 #Nero{
