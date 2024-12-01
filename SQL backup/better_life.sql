@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Nov 28, 2024 at 11:42 PM
+-- Generation Time: Dec 01, 2024 at 09:54 PM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -52,7 +52,7 @@ CREATE TABLE `users` (
   `friday_nutrition` varchar(255) DEFAULT '0,0,0,0',
   `saturday_nutrition` varchar(255) DEFAULT '0,0,0,0',
   `last_login` date NOT NULL DEFAULT curdate(),
-  `points` int(11) NOT NULL DEFAULT 0,
+  `points` int(11) NOT NULL DEFAULT 1,
   `reset_token_hash` varchar(64) DEFAULT NULL,
   `reset_token_expires_at` datetime DEFAULT NULL,
   `weight_goal` decimal(3,1) NOT NULL DEFAULT 1.0,
@@ -65,8 +65,10 @@ CREATE TABLE `users` (
 
 INSERT INTO `users` (`id`, `username`, `pwd`, `email`, `weight`, `age`, `height`, `gender`, `calorie`, `max_calorie`, `protein`, `max_protein`, `carbs`, `max_carbs`, `fat`, `max_fat`, `sunday_nutrition`, `monday_nutrition`, `tuesday_nutrition`, `wednesday_nutrition`, `thursday_nutrition`, `friday_nutrition`, `saturday_nutrition`, `last_login`, `points`, `reset_token_hash`, `reset_token_expires_at`, `weight_goal`, `activity_level`) VALUES
 (9, 'JohnDoe', '$2y$12$ZQmOkO/YIk2JPLyd7djTruld0RnIMGtgO.juh0CaM7q93bDHWl7FO', 'johndoe@gmail.com', 75, 30, 180, -5, 0, 1730, 0, 94, 0, 281, 0, 154, '0, 0, 0, 0', '', '0,0,0,0', '0,0,0,0', '0,0,0,0', '0,0,0,0', '0,0,0,0', '2024-10-12', 0, NULL, NULL, 1.0, 0.000),
-(10, 'Jane Doe', '$2y$10$z5MIitB2Csv6Ujz2J2GOoeuC1J6Mna7C7PzIWFHkKpS2EIUKncFQO', 'racanalmuqbil@gmail.com', 66, 24, 170, 161, 194, 1730, 168, 83, 24, 281, 145, 154, '1464, 75, 238, 130', '1400, 70, 200, 100', '0,0,0,0', '0,0,0,0', '0,0,0,0', '0,0,0,0', '0,0,0,0', '2024-11-29', 7, 'e1446d583a29295b4a615314b1cc87f11b8b88a2cd5dd3d1dd08162f07026ba8', '2024-11-28 18:34:10', 1.0, 1.200),
-(12, 'Test', '$2y$12$KzEEOZye1Bl3JTzprkqqGeFh7Zg7qtmO1x8bQP9uZGOyCwt57Xo0W', 'Test@gmail.com', 75, 30, 180, -5, 0, 1730, 0, 94, 0, 281, 0, 154, '0, 0, 0, 0', '0, 0, 0, 0', '0,0,0,0', '0,0,0,0', '0,0,0,0', '0,0,0,0', '0,0,0,0', '2024-10-12', 0, NULL, NULL, 1.0, 0.000);
+(10, 'Jane Doe', '$2y$10$FAQZUiUSyr6l3CSdX9GpjeNqiqfcUYSPUu1fV8bqZMA7lCi8j1jqu', 'racanalmuqbil@gmail.com', 66, 24, 170, 161, 619, 1730, 198, 83, 53, 281, 163, 154, '1464, 75, 238, 130', '1400, 70, 200, 100', '0,0,0,0', '0,0,0,0', '0,0,0,0', '0,0,0,0', '0,0,0,0', '2024-11-29', 2, NULL, NULL, 1.0, 1.200),
+(12, 'Test', '$2y$12$KzEEOZye1Bl3JTzprkqqGeFh7Zg7qtmO1x8bQP9uZGOyCwt57Xo0W', 'Test@gmail.com', 75, 30, 180, -5, 0, 1730, 0, 94, 0, 281, 0, 154, '0, 0, 0, 0', '0, 0, 0, 0', '0,0,0,0', '0,0,0,0', '0,0,0,0', '0,0,0,0', '0,0,0,0', '2024-10-12', 0, NULL, NULL, 1.0, 0.000),
+(18, 'Demo', '$2y$12$P7NBo7JDRT2lxSdFtika6udc5NwL.GEo3ygrjqOwZE6cgJ/Uxj5Za', 'example2@gmail.com', 66, 22, 170, 161, 200, 1996, 4, 83, 33, 324, 0, 177, '0, 0, 0, 0', '0, 0, 0, 0', '0,0,0,0', '0,0,0,0', '0,0,0,0', '0,0,0,0', '0,0,0,0', '2024-11-29', 0, NULL, NULL, 1.0, 1.375),
+(19, 'Demo2', '$2y$12$2KuFSzQUr2jHZoBkO.e5oe/DLes3F24elOdEIGToOoNphAvIWFn9q', 'example4@gmail.com', 55, 23, 167, 161, 625, 1268, 34, 69, 34, 206, 22, 113, '0, 0, 0, 0', '0, 0, 0, 0', '0,0,0,0', '0,0,0,0', '0,0,0,0', '0,0,0,0', '0,0,0,0', '2024-11-29', 1, NULL, NULL, 0.7, 1.375);
 
 --
 -- Triggers `users`
@@ -80,11 +82,11 @@ CREATE TRIGGER `insert_max_carbs` BEFORE INSERT ON `users` FOR EACH ROW SET NEW.
 $$
 DELIMITER ;
 DELIMITER $$
-CREATE TRIGGER `insert_max_fat` BEFORE INSERT ON `users` FOR EACH ROW SET NEW.max_fat = (NEW.max_calorie * 0.80) / 9
+CREATE TRIGGER `insert_max_fat` BEFORE INSERT ON `users` FOR EACH ROW SET NEW.max_fat = (NEW.max_calorie - (NEW.max_protein * 4) - (NEW.max_carbs * 4)) / 9
 $$
 DELIMITER ;
 DELIMITER $$
-CREATE TRIGGER `insert_max_protein` BEFORE INSERT ON `users` FOR EACH ROW SET NEW.max_protein = (NEW.weight / 0.8)
+CREATE TRIGGER `insert_max_protein` BEFORE INSERT ON `users` FOR EACH ROW SET NEW.max_protein = (NEW.weight / new.activity_level)
 $$
 DELIMITER ;
 DELIMITER $$
@@ -96,11 +98,11 @@ CREATE TRIGGER `update_max_carbs` BEFORE UPDATE ON `users` FOR EACH ROW SET NEW.
 $$
 DELIMITER ;
 DELIMITER $$
-CREATE TRIGGER `update_max_fat` BEFORE UPDATE ON `users` FOR EACH ROW SET NEW.max_fat = (NEW.max_calorie * 0.80) / 9
+CREATE TRIGGER `update_max_fat` BEFORE UPDATE ON `users` FOR EACH ROW set NEW.max_fat = (NEW.max_calorie - (NEW.max_protein * 4) - (NEW.max_carbs * 4)) / 9
 $$
 DELIMITER ;
 DELIMITER $$
-CREATE TRIGGER `update_max_protein` BEFORE UPDATE ON `users` FOR EACH ROW SET NEW.max_protein = (NEW.weight / 0.8)
+CREATE TRIGGER `update_max_protein` BEFORE UPDATE ON `users` FOR EACH ROW SET NEW.max_protein = (NEW.weight / new.activity_level)
 $$
 DELIMITER ;
 
@@ -123,7 +125,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 DELIMITER $$
 --
